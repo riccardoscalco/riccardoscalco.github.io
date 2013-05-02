@@ -1,0 +1,36 @@
+html{height:100%;}/* make sure it is at least as tall as the viewport */
+
+body {
+    font-family: serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height:100% ;
+    color: #36454f;
+    font-weight: bold;
+    line-height:2;
+    //background-color: #f5f5f5;
+}
+
+#wrap {
+    text-align:center;
+    min-height: 100%;
+}
+
+ul {
+    list-style-type:none;
+    margin:0;
+    padding-top:3px;
+}
+
+
+h1 {
+    padding-top:100px;
+}
+
+img {
+    border:1px solid #36454f;
+    z-index:0;
+}
+
+
