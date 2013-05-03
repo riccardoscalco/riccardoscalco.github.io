@@ -5,19 +5,19 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Irbis Bokanovsky Blog</title>
- <link href="http://riccardoscalco.github.io/atom.xml" rel="self"/>
- <link href="http://riccardoscalco.github.io"/>
+ <link href="http://eidogram.com/atom.xml" rel="self"/>
+ <link href="http://eidogram.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://riccardoscalco.github.io</id>
+ <id>http://eidogram.com/</id>
  <author>
    <name>RS</name>
-   <email>riccardo.scalco@gmail.com</email>
+   <email>info@eidogram.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://riccardoscalco.github.io{{ post.url }}"/>
+   <link href="http://eidogram.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://eidogram.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
