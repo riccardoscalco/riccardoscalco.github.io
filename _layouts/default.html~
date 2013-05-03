@@ -8,16 +8,16 @@
     <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="eidogram">
 	<link rel="icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/normalize.css" type="text/css">
-	<link rel="stylesheet" href="/style.css" type="text/css">
+	<link rel="stylesheet" href="/styleblog.css" type="text/css">
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
     </head>
   <body id="top">
     <div class="head">
     <p>Irbis Bokanovsky Blog 2.0</p>
     <ul>
-    <a href="/"><i class="icon-envelope"></i></a>
+    <a href="mailto:riccardo.scalco@gmail.com"><i class="icon-envelope"></i></a>
     <a href="/"><i class="icon-twitter"></i></a>
-    <a href="/"><i class="icon-rss"></i></a>
+    <a href="http://riccardoscalco.github.io/atom.xml"><i class="icon-rss"></i></a>
     </ul>
     </div>
     <div id="cont" class="container">
