@@ -1,12 +1,25 @@
 body {
-    font-family: 'BreeSerifRegular', serif;
-    font-size:17px;
+    //font-family: 'BitterRegular', serif;
+    font-family: 'GentiumBasicRegular', serif;
+    font-size:18px;
+    font-weight: normal;
     background-image:url('./body.jpg');
     background-color: #f5f5f5;
+
 }
 time {
     font-size:11px;
 }
+
+article p{
+    font-family: 'GentiumBasicRegular', serif;
+    line-height:150%
+}
+
+article time{
+    font-size:13px;
+}
+
 .container {
     margin:0 auto;
     //display: block;
@@ -33,6 +46,7 @@ time {
     position: fixed;
     color:#f5f5f5;
     font-size: 14px;
+    //font-family: monospace;
     top:0px;
     left:0px;
     width:100%;
@@ -47,19 +61,55 @@ background: -webkit-linear-gradient(left, rgba(143,2,34,1) 0%,rgba(169,3,41,0.22
     background: linear-gradient(to right, rgba(143,2,34,1) 0%,rgba(169,3,41,0.22) 35%,rgba(169,3,41,0.2) 36%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', endColorstr='#33a90329',GradientType=1 ); /* IE6-9 */
    }
-.head p {
+.head p,a {
     float:left;
     margin:0px;
-    padding:0px;
-    padding-right:10px;
+    padding-top:3px;
+    padding-right:0px;
     padding-left:15px;
 }
 
-ul {
-    margin:0;
-    padding:0;
+
+
+@font-face {
+    font-family: 'GentiumBasicRegular';
+    src: url('./font/GenBasR-webfont.eot');
+    src: url('./font/GenBasR-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/GenBasR-webfont.woff') format('woff'),
+         url('./font/GenBasR-webfont.ttf') format('truetype'),
+         url('./font/GenBasR-webfont.svg#GentiumBasicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+@font-face {
+    font-family: 'GentiumBasicRegular';
+    src: url('./font/GenBasI-webfont.eot');
+    src: url('./font/GenBasI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/GenBasI-webfont.woff') format('woff'),
+         url('./font/GenBasI-webfont.ttf') format('truetype'),
+         url('./font/GenBasI-webfont.svg#GentiumBasicItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'BitterRegular';
+    src: url('./font/Bitter-Regular-webfont.eot');
+    src: url('./font/Bitter-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/Bitter-Regular-webfont.woff') format('woff'),
+         url('./font/Bitter-Regular-webfont.ttf') format('truetype'),
+         url('./font/Bitter-Regular-webfont.svg#BitterRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
 @font-face {
     font-family: 'BreeSerifRegular';
     src: url('./font/BreeSerif-Regular-webfont.eot');
@@ -70,6 +120,7 @@ ul {
     font-weight: normal;
     font-style: normal;
 }
+*/
 
 @font-face {
   font-family: 'FontAwesome';
