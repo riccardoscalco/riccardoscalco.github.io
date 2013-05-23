@@ -11,4 +11,4 @@ s = str(d.year)+'-'+str(d.month)+'-'+str(d.day)+'-'+r+'.md'
 with open(s,'w') as f:
     f.write('---\nlayout: post\npost: false\ntitle:\n---\n')
 os.system('mv '+s+' ./_posts')
-os.system('vim ./_posts/'+s)
+os.system('leafpad ./_posts/'+s)

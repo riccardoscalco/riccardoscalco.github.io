@@ -8,6 +8,7 @@ body {
     height:100% ;
     color: #36454f;
     font-weight: bold;
+    line-height:2;
     //background-color: #f5f5f5;
 }
 
@@ -18,13 +19,11 @@ body {
 
 ul {
     list-style-type:none;
+    text-align:left;
     margin:0;
     padding-top:3px;
 }
 
-li {
-    padding-top:3px;
-}
 
 h1 {
     padding-top:100px;
