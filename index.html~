@@ -19,15 +19,20 @@
      <div id="wrap">
          <h1>Riccardo Scalco's home page</h1>
          <p>
-         I love maths, graphical design and wolfdogs, and I survive playing with data.<br>
-         Btw, I have also a blog about.. stuff (only in italian sorry :/)
-         </p>
+         I love maths, graphical design and wolfdogs,<br> and I survive playing with data.<br>
          <img src="img.png" alt="Anju and me" width="600" height="208">
+         <div class="container">
          <ul>
-             <li><a href="http://eidogram.com/">eidogram</a></li>
-             <li><a href="blog.html">blog</a></li>
-             <li><a href="http://riccardoscalco.github.io/Pykov/">pykov</a></li>
+             <li><a href="http://eidogram.com/">eidogram</a>: my data laboratory, here I collect client work as well as personal projects and experiments.
+             </li>
+             <li><a href="blog.html">blog</a>: a non-sense blog about ..., about life I would say (only in italian sorry :/).
+             </li>
+             <li><a href="http://riccardoscalco.github.io/Rohmetric/">rohmetric</a>: my scientific work, Influenza virus is investigated by means of entropic metric measures.
+             </li>
+             <li><a href="http://riccardoscalco.github.io/Pykov/">pykov</a>: the documentation of a python module on Markov chains, have fun!</li>
          </ul>
+         </div>
+         <em>- made in my way -</em>
      </div>
  </body>
 </html>
