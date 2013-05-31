@@ -58,7 +58,7 @@ aside {
     float:left;
     width:300px;
     font-size:11px;
-    font-family:monospace;
+    font-family:'OpenSans', sans-serif, monospace;
     color:#1a1a1a;
 }
 
@@ -77,3 +77,14 @@ article {
     margin-top:100px;
 }
 
+@font-face {
+    font-family: 'OpenSans';
+    src: url('font/OpenSans-Regular-webfont.eot');
+    src: url('font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/OpenSans-Regular-webfont.woff') format('woff'),
+         url('font/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('font/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
