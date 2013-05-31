@@ -29,7 +29,7 @@
          <p id="descr">
          {{ page.descr }}
          </p>
-         <p>
+         <p id="credits">
          created by <a href="http://riccardoscalco.github.io/">Riccardo Scalco</a><br>
          All rights reverved
          </p>
