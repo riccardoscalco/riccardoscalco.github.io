@@ -23,9 +23,11 @@
          <img src="img.png" alt="Anju and me" width="600" height="208">
          <div class="container">
          <ul>
-             <li><a href="http://eidogram.com/">eidogram</a>: my data laboratory, here I collect client work as well as personal projects and experiments.
+             <li><a href="http://eidogram.com/">eidogram</a>: my data/design laboratory, here I collect client work as well as personal projects and experiments.
              </li>
              <li><a href="blog.html">blog</a>: a non-sense blog about ..., about life I would say (only in italian sorry :/).
+             </li>
+             <li><a href="http://riccardoscalco.github.io/art/index.html">almost art</a>: actually I do not know why I do this, maybe for fun..
              </li>
              <li><a href="http://riccardoscalco.github.io/Rohmetric/">rohmetric</a>: my scientific work, Influenza virus is investigated by means of entropic metric measures.
              </li>
