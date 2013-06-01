@@ -14,7 +14,7 @@ layout: nil
    <email>riccardo.scalco@gmail.com</email>
  </author>
 
- {% for post in site.posts %}{% if post.post == 'true' %}
+ {% for post in site.posts %}{% if post.post == true %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="http://riccardoscalco.github.io{{ post.url }}"/>
