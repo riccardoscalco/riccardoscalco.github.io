@@ -1,6 +1,7 @@
 body {
     //font-family: 'BitterRegular', serif;
-    font-family: 'GentiumBasicRegular', serif;
+    //font-family: 'GentiumBasicRegular', serif;
+    font-family: 'GoudyStM', serif;    
     font-size:18px;
     font-weight: normal;
     background-image:url('./body.jpg');
@@ -11,8 +12,14 @@ time {
     font-size:11px;
 }
 
+article h1{
+  font-style: italic;
+}
+
 article p{
-    font-family: 'GentiumBasicRegular', serif;
+    //font-family: 'GentiumBasicRegular', serif;
+    font-family: 'GoudyStM', serif;
+
     line-height:150%
 }
 
@@ -66,13 +73,41 @@ background: -webkit-linear-gradient(left, rgba(143,2,34,1) 0%,rgba(169,3,41,0.22
     margin:0px;
     padding-top:3px;
     padding-right:0px;
-    padding-left:15px;
+    padding-left:10px;
 }
 
 
 
 @font-face {
-    font-family: 'GentiumBasicRegular';
+    font-family: 'GoudyStM';
+    src: url('./font/GoudyStM-webfont.eot');
+    src: url('./font/GoudyStM-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/GoudyStM-webfont.woff') format('woff'),
+         url('./font/GoudyStM-webfont.ttf') format('truetype'),
+         url('./font/GoudyStM-webfont.svg#sorts_mill_goudyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'GoudyStM';
+    src: url('./font/GoudyStM-Italic-webfont.eot');
+    src: url('./font/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./font/GoudyStM-Italic-webfont.woff') format('woff'),
+         url('./font/GoudyStM-Italic-webfont.ttf') format('truetype'),
+         url('./font/GoudyStM-Italic-webfont.svg#sorts_mill_goudyitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'GentiumBasic';
     src: url('./font/GenBasR-webfont.eot');
     src: url('./font/GenBasR-webfont.eot?#iefix') format('embedded-opentype'),
          url('./font/GenBasR-webfont.woff') format('woff'),
@@ -84,7 +119,7 @@ background: -webkit-linear-gradient(left, rgba(143,2,34,1) 0%,rgba(169,3,41,0.22
 }
 
 @font-face {
-    font-family: 'GentiumBasicRegular';
+    font-family: 'GentiumBasic';
     src: url('./font/GenBasI-webfont.eot');
     src: url('./font/GenBasI-webfont.eot?#iefix') format('embedded-opentype'),
          url('./font/GenBasI-webfont.woff') format('woff'),
@@ -147,9 +182,9 @@ a [class^="icon-"],
 a [class*=" icon-"] {
   display: inline-block;
   text-decoration: inherit;
-  font-size:14px;
+  font-size:13px;
   color:#f5f5f5;
-  padding-right:5px;
+  padding-right:1px;
 
 }
 
