@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Irbis Bokanovsky Blog</title>
- <link href="http://riccardoscalco.github.io/atom.xml" rel="self"/>
+ <link type="application/atom+xml" href="http://riccardoscalco.github.io/atom.xml" rel="self"/>
  <link href="http://riccardoscalco.github.io"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://riccardoscalco.github.io</id>
  <author>
-   <name>RS</name>
+   <name>Riccardo Scalco</name>
    <email>riccardo.scalco@gmail.com</email>
  </author>
 
  {% for post in site.posts %}{% if post.post == true %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://riccardoscalco.github.io{{ post.url }}"/>
+   <link type="text/html" rel="alternate" href="http://riccardoscalco.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://eidogram.com{{ post.id }}</id>
+   <id>http://riccardoscalco.github.io{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endif %}{% endfor %}
