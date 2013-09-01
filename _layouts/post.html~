@@ -1,8 +1,0 @@
----
-layout: default
----
-<article>
-  <h1>{{ page.title }}</h1>
-  {{ content }}
-  <p style="text-align:right"><a href="/">../</a></p>
-</article>

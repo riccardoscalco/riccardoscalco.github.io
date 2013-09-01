@@ -1,4 +1,0 @@
-permalink: /:title.html
-markdown: kramdown
-server: true
-pygments: false
