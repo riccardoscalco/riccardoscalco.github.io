@@ -1,6 +1,0 @@
----
-layout: post
-post: true
-title: Cinismo terapeutico
----
-Se il terribile desiderio di togliersi la vita è indotto da uno stato di sofferenza psicologica non più sopportabile, a cui si vuole solo porre termine, una soluzione è *educare alla sofferenza*: l’idea è di insegnare a sopportare le sofferenze della vita in senso lato, con fatalismo o, spingendosi oltre alla pura e semplice inerzia, giustificando la sofferenza come garanzia di un bene futuro. Per esempio, questo è stato fatto con il Cristianesimo per mezzo dell’invenzione della vita eterna. La vita terrena è diventata così una *valle di lacrime* da peregrinare in attesa di una vita beata. Un’altra soluzione, meno idiota della precedente, è quella di *demolire* la sofferenza facendo saltare le assunzioni su cui posa, cioè togliendo loro importanza. Questa è una educazione che va in senso opposto alla prima, qui non si crea una nuova regola, quel che si fà invece è di romperne una di già esistente, quella per cui si è portati a soffrire. E’ questa una educazione al cinismo che non pretende disprezzo,  ma solo indifferenza e che sfrutta la capacità, assai umana, di attaccarsi presto a nuovi valori e nuove verità per rimanere felici. Ben inteso, qui ci vuole ben altro che placida rassegnazione, occorre la potenza di lottare contro concetti morali, mode e da ultimo contro il radicato buon senso.

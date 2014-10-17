@@ -1,50 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Riccardo Scalco home page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./style.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <img class="img-responsive" src="./img/foto.jpg" alt="Anju and I">
-    <div class="box">
-      <h1>I am Riccardo Scalco, an italian freelancer in Data Visualization.<br>
-        See my work at <a href="http://eidogram.com">eidogram.com</a>.
-      </h1>
-      <p>
-        My favourite tools are <a href="http://d3js.org/">D3js</a> and <a href="http://www.meteor.com/">Meteor</a>. 
-      </p>
+---
+layout: default
+---
 
+<div class="home">
+  <h1>Welcome :)</h1>
+  <!--
+  <h1 class="page-heading">Posts</h1>
 
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-      <p>
-        You can follow me on
-        <a href="https://github.com/riccardoscalco">github</a> and <a href="https://twitter.com/eidogram">twitter</a>.
-      </p>
-      <!--<p>
-        Occasionally I write non-sense stuff on my personal <a href="blog.html">blog</a>.
-      </p>-->
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-      <img id="logo" class="img-responsive" src="./img/logo.png" alt="logo">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  -->
 
-    </div>
-    <!--<div>
-      <p style="font-size:11px">I am a theoretical physicist with a PhD in Computational Biochemistry.<br>
-      For the time being, I am living in Parma (Italy) and I am experimenting a new kind of job.</p>
-      <ul>
-        <li><a href="http://eidogram.com/">eidogram</a>: my data/design laboratory, here I collect projects and experiments.
-        </li>
-        <li><a href="blog.html">blog</a>: a non-sense blog about ..., about life I would say (only in italian sorry :/).
-        </li>
-        <li><a href="art/index.html">almost art</a>: actually I do not know why I do this, maybe for fun..
-        </li>
-        <li><a href="http://riccardoscalco.github.io/Rohmetric/">rohmetric</a>: my scientific work, Influenza virus is investigated by means of entropic metric measures.
-        </li>
-        <li><a href="http://riccardoscalco.github.io/Pykov/">pykov</a>: the documentation of a python module on Markov chains, have fun!</li>
-        <li><a href="http://seofon.co">seofon</a>: a weekly linkblog on Data Visualization, made with <a href="http://meteor.com">Meteor</a></li>
-      </ul>
-      </div>
-      <em>- made in my way -</em><br>
-    </div>-->
-  </body>
-</html>
+</div>
