@@ -510,12 +510,12 @@ table {
 body {
   padding: 10px;
   background-color: #fff;
-  color: #333;
-  max-width: 700px;
-  margin: auto;
-  font-family: "Lato", sans-serif;
+  color: #444;
+  max-width: 550px;
+  margin-left: 20px;
+  font-family: "Vollkorn", sans-serif;
   line-height: 1.4em;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 h1, h2 {
@@ -523,20 +523,6 @@ h1, h2 {
   font-weight: normal;
 }
 
-footer, header {
-  background: #eee;
-  padding: 10px;
-}
-
-header {
-  margin-top: 0px;
-  margin-bottom: 30px;  
-}
-
-footer {
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
 
 p {
   padding: 10px;
@@ -545,17 +531,14 @@ p {
 
 a {
   text-decoration: none;
-  color: orange;
+  color: #131313;
+  font-style: italic;
 }
 
 a:hover {
-  color: red;
+  text-decoration: underline;
 }
 
 ul {
   list-style: none;
-}
-
-li {
-
 }
