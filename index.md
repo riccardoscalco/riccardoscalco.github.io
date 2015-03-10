@@ -63,8 +63,8 @@ J Phys Chem B. 2011 May 19;115(19):6358-65
 
 # Education
 
-**University of Zurich** *2009 – 2012*  
+**University of Zurich** 2009 – 2012  
 Doctor of Philosophy (PhD), Computational Biochemistry
 
-**University of Parma** *2005 – 2008*  
+**University of Parma** 2005 – 2008  
 Master's degree, Theoretical Physics
