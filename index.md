@@ -11,8 +11,14 @@ from complex phenomena and to the creation of expressive graphical representatio
 
 # Independent Projects
 
+## Open Source
+
 *[Pykov](https://github.com/riccardoscalco/Pykov)* - Python
 module on finite regular Markov chains.
+
+## Data Visualizations
+
+*Piedmont municipalities: population density vs voter turnout*. [[link]](http://eidogram.com/projects/piemVisCont/)
 
 
 # Client Projects
