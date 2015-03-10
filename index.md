@@ -14,15 +14,13 @@ between the abstract mathematical thinking and the guidelines drawn by
 the semiotic of graphics. I therefore offer a peculiar expertise on the
 creation of expressive graphical representations of complex scenarios.
 
-Independent Projects
-====================
+# Independent Projects
 
-[**Pykov**](https://github.com/riccardoscalco/Pykov) - Python
+[*Pykov*](https://github.com/riccardoscalco/Pykov) - Python
 module on finite regular Markov chains.
 
 
-Client Projects
-===============
+# Client Projects
 
 ## 2015
 
@@ -34,8 +32,7 @@ collaboration with [Zadig](http://en.zadig.it/).
 
 *Design and development of graphical representations of data compatible
 with Drupal environments.*
-[[link]](http://seremi.stage-zadig2.it/)
-Requested by [SSepi-SeREMI](http://seremi.stage-zadig2.it/),
+Requested by [SSepi-SeREMI](http://seremi.it/),
 epidemiology service on monitoring and prevention of infectious deseases,
 and developed in collaboration with [Zadig](http://en.zadig.it/)
 and [Studio Demade](http://www.demade.net/).
@@ -52,8 +49,8 @@ web analytics data.*
 Requested by [Powerspace](http://www.powerspace.com/).
 
 
-Publications
-------------
+# Publications
+
 [*Ultrametricity in Protein Folding Dynamics*](http://www.biochem-caflisch.uzh.ch/static/pdf/riccardos12jctc.pdf)  
 J. Chem. Theory Comput., 2012, 8 (5), pp 1580–1588
 
@@ -64,8 +61,8 @@ PLOS ONE 6(12): e27924
 J Phys Chem B. 2011 May 19;115(19):6358-65
 
 
-Education
----------
+# Education
+
 **University of Zurich** *2009 – 2012*  
 Doctor of Philosophy (PhD), Computational Biochemistry
 

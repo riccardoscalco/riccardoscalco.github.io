@@ -510,29 +510,42 @@ table {
 body {
   padding: 10px;
   background-color: #fff;
-  color: #444;
-  max-width: 550px;
-  margin-left: 20px;
-  font-family: "Vollkorn", sans-serif;
+  color: #5b5b5b;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: "Lato", serif;
   line-height: 1.4em;
-  font-size: 19px;
+  font-size: 16px;
+  max-width: 30em;
+  line-height: 1.5em;
+  letter-spacing: normal;
 }
 
 h1, h2 {
-  margin-top: 50px;
-  font-weight: normal;
+  padding-top: 1em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 
 p {
-  padding: 10px;
+  padding: 0px;
   padding-bottom: 0px;
 }
 
 a {
   text-decoration: none;
-  color: #131313;
+  color: #242424;
   font-style: italic;
+  font-weight: bold;
 }
 
 a:hover {
