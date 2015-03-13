@@ -14,7 +14,8 @@ from complex phenomena and to the creation of expressive graphical representatio
 ## Open Source
 
 *[Pykov](https://github.com/riccardoscalco/Pykov)* - Python
-module on finite regular Markov chains.
+module on finite regular Markov chains.  
+*[Textures](http://riccardoscalco.github.io/textures/)* - JavaScript library for creating SVG patterns.
 
 ## Data Visualizations
 
@@ -30,7 +31,7 @@ Research Map](http://irm.scienceonthenet.eu/)* dataset. Project developed in col
 
 *Research and development of mathematical methods relevant on selecting
 most influential users on Twitter.* Project developed in
-collaboration with [Zadig](http://en.zadig.it/).
+collaboration with [Zadig](http://en.zadig.it/) [[link](./assets/Zadig_MarkovTwitter_research.pdf)] 
 
 ## 2014
 
