@@ -19,7 +19,8 @@ module on finite regular Markov chains.
 
 ## Data Visualizations
 
-*Piedmont municipalities: population density vs voter turnout*. [[link]](http://eidogram.com/projects/piemVisCont/)
+*Piedmont municipalities: population density vs voter turnout*
+[[link]](http://eidogram.com/projects/piemVisCont/).
 
 
 # Client Projects
@@ -30,8 +31,10 @@ module on finite regular Markov chains.
 Research Map](http://irm.scienceonthenet.eu/)* dataset. Project developed in collaboration with [Zadig](http://en.zadig.it/) and [Studio Demade](http://www.demade.net/).
 
 *Research and development of mathematical methods relevant on selecting
-most influential users on Twitter.* Project developed in
-collaboration with [Zadig](http://en.zadig.it/) [[link](./assets/Zadig_MarkovTwitter_research.pdf)] 
+most influential users on Twitter*
+[[link]](./assets/Zadig_MarkovTwitter_research.pdf).
+Project developed in
+collaboration with [Zadig](http://en.zadig.it/).
 
 ## 2014
 
