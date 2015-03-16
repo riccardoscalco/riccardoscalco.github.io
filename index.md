@@ -9,6 +9,8 @@ I operate on the research activities within private and public
 institutions, giving support to the visualization of patterns emerging
 from complex phenomena and to the creation of expressive graphical representations of big datasets.
 
+You can view some of my projects at *[eidogram.com](http://eidogram.com/)*.
+
 # Independent Projects
 
 ## Open Source
@@ -20,7 +22,7 @@ module on finite regular Markov chains.
 ## Data Visualizations
 
 *Piedmont municipalities: population density vs voter turnout*
-[[link]](http://eidogram.com/projects/piemVisCont/).
+[[link]](http://riccardoscalco.github.io/populationDensityVsVoterTurnout/).
 
 
 # Client Projects
