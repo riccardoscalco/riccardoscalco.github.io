@@ -270,7 +270,7 @@
      height="20.173313"
      x="37.722054"
      y="40.455082" /><g
-     style="font-size:10px;font-family:Lato"
+     style="font-size:10px;font-family:'Lato'"
      id="g229"
      transform="matrix(0.48686738,0,0,0.48686738,333.27051,342.515)"><rect
        x="0"
@@ -278,7 +278,7 @@
        width="480"
        height="25"
        class="fr fr0"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect231-1" /><rect
        transform="translate(0,25)"
        x="0"
@@ -286,7 +286,7 @@
        width="480"
        height="25"
        class="fr fr1"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect233-5" /><rect
        transform="translate(0,50)"
        x="0"
@@ -294,7 +294,7 @@
        width="480"
        height="25"
        class="fr fr2"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect235-7" /><rect
        transform="translate(0,75)"
        x="0"
@@ -302,7 +302,7 @@
        width="480"
        height="25"
        class="fr fr3"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect237-2" /><rect
        transform="translate(0,100)"
        x="0"
@@ -310,7 +310,7 @@
        width="480"
        height="25"
        class="fr fr4"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect239-5" /><rect
        transform="translate(0,125)"
        x="0"
@@ -318,7 +318,7 @@
        width="480"
        height="25"
        class="fr fr5"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect241-1" /><rect
        transform="translate(0,150)"
        x="0"
@@ -326,7 +326,7 @@
        width="480"
        height="25"
        class="fr fr6"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect243-4" /><rect
        transform="translate(0,175)"
        x="0"
@@ -334,7 +334,7 @@
        width="480"
        height="25"
        class="fr fr7"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect245-8" /><rect
        transform="translate(0,200)"
        x="0"
@@ -342,7 +342,7 @@
        width="480"
        height="25"
        class="fr fr8"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect247-2" /><rect
        transform="translate(0,225)"
        x="0"
@@ -350,7 +350,7 @@
        width="480"
        height="25"
        class="fr fr9"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect249-4" /><rect
        transform="translate(0,250)"
        x="0"
@@ -358,7 +358,7 @@
        width="480"
        height="25"
        class="fr fr10"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect251-5" /><rect
        transform="translate(0,275)"
        x="0"
@@ -366,7 +366,7 @@
        width="480"
        height="25"
        class="fr fr11"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect253-4" /><rect
        transform="translate(0,300)"
        x="0"
@@ -374,7 +374,7 @@
        width="480"
        height="25"
        class="fr fr12"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect255-4" /><rect
        transform="translate(0,325)"
        x="0"
@@ -382,7 +382,7 @@
        width="480"
        height="25"
        class="fr fr13"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect257-5" /><rect
        transform="translate(0,350)"
        x="0"
@@ -390,7 +390,7 @@
        width="480"
        height="25"
        class="fr fr14"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect259-6" /><rect
        transform="translate(0,375)"
        x="0"
@@ -398,7 +398,7 @@
        width="480"
        height="25"
        class="fr fr15"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect261-7" /><rect
        transform="translate(0,400)"
        x="0"
@@ -406,7 +406,7 @@
        width="480"
        height="25"
        class="fr fr16"
-       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       style="font-size:10px;font-family:'Lato';fill-opacity:0;stroke-width:0px"
        id="rect263-3" /></g><circle
      style="opacity:1;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1"
      id="path111475"
@@ -436,7 +436,7 @@
        dx="0"
        dy="0"
        id="text3036"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">1999</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">1999</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,167.50731,301.54727)"
      id="g3038"><line
@@ -451,7 +451,7 @@
        dx="0"
        dy="0"
        id="text3042"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2000</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2000</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,220.24428,301.54727)"
      id="g3044"><line
@@ -466,7 +466,7 @@
        dx="0"
        dy="0"
        id="text3048"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2001</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2001</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,272.98126,301.54727)"
      id="g3050"><line
@@ -481,7 +481,7 @@
        dx="0"
        dy="0"
        id="text3054"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2002</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2002</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,325.71824,301.54727)"
      id="g3056"><line
@@ -496,7 +496,7 @@
        dx="0"
        dy="0"
        id="text3060"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2003</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2003</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,378.45521,301.54727)"
      id="g3062"><line
@@ -511,7 +511,7 @@
        dx="0"
        dy="0"
        id="text3066"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2004</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2004</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,431.19218,301.54727)"
      id="g3068"><line
@@ -526,7 +526,7 @@
        dx="0"
        dy="0"
        id="text3072"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2005</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2005</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,483.92916,301.54727)"
      id="g3074"><line
@@ -541,7 +541,7 @@
        dx="0"
        dy="0"
        id="text3078"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2006</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2006</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,536.66613,301.54727)"
      id="g3080"><line
@@ -556,7 +556,7 @@
        dx="0"
        dy="0"
        id="text3084"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2007</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2007</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,589.40311,301.54727)"
      id="g3086"><line
@@ -571,7 +571,7 @@
        dx="0"
        dy="0"
        id="text3090"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2008</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2008</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,642.14008,301.54727)"
      id="g3092"><line
@@ -586,7 +586,7 @@
        dx="0"
        dy="0"
        id="text3096"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2009</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2009</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,694.87705,301.54727)"
      id="g3098"><line
@@ -601,7 +601,7 @@
        dx="0"
        dy="0"
        id="text3102"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2010</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2010</text>
 </g><g
      transform="matrix(0.98164471,0,0,0.98164471,747.61403,301.54727)"
      id="g3104"><line
@@ -616,7 +616,7 @@
        dx="0"
        dy="0"
        id="text3108"
-       style="font-weight:bold;font-size:11px;font-family:Lato;text-anchor:middle;fill:#535353">2011</text>
+       style="font-weight:bold;font-size:11px;font-family:'Lato';text-anchor:middle;fill:#535353">2011</text>
 </g><path
      d="m 88.40185,307.43713 0,-5.88986 685.58067,0 0,5.88986"
      id="path3110"
@@ -633,7 +633,7 @@
      dx="0"
      dy="0"
      id="text3116"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">321</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">321</text>
 <rect
      width="13.592004"
      height="108.81268"
@@ -646,7 +646,7 @@
      dx="0"
      dy="0"
      id="text3122"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">301</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">301</text>
 <rect
      width="13.592004"
      height="119.65779"
@@ -659,7 +659,7 @@
      dx="0"
      dy="0"
      id="text3128"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">331</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">331</text>
 <rect
      width="13.592004"
      height="111.7047"
@@ -672,7 +672,7 @@
      dx="0"
      dy="0"
      id="text3134"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">309</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">309</text>
 <rect
      width="13.592004"
      height="117.12727"
@@ -685,7 +685,7 @@
      dx="0"
      dy="0"
      id="text3140"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">324</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">324</text>
 <rect
      width="13.592004"
      height="100.85958"
@@ -698,7 +698,7 @@
      dx="0"
      dy="0"
      id="text3146"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">279</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">279</text>
 <rect
      width="13.592004"
      height="107.00515"
@@ -711,7 +711,7 @@
      dx="0"
      dy="0"
      id="text3152"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">296</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">296</text>
 <rect
      width="13.592004"
      height="104.47462"
@@ -724,7 +724,7 @@
      dx="0"
      dy="0"
      id="text3158"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">289</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">289</text>
 <rect
      width="13.592004"
      height="116.76575"
@@ -737,7 +737,7 @@
      dx="0"
      dy="0"
      id="text3164"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">323</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">323</text>
 <rect
      width="13.592004"
      height="120.7423"
@@ -750,7 +750,7 @@
      dx="0"
      dy="0"
      id="text3170"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">334</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">334</text>
 <rect
      width="13.592004"
      height="114.95824"
@@ -763,7 +763,7 @@
      dx="0"
      dy="0"
      id="text3176"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">318</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">318</text>
 <rect
      width="13.592004"
      height="108.08966"
@@ -776,7 +776,7 @@
      dx="0"
      dy="0"
      id="text3182"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">299</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">299</text>
 <rect
      width="13.592004"
      height="94.71402"
@@ -789,7 +789,7 @@
      dx="0"
      dy="0"
      id="text3188"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#a6c0d6">262</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#a6c0d6">262</text>
 <rect
      width="13.592004"
      height="53.864079"
@@ -802,7 +802,7 @@
      dx="0"
      dy="0"
      id="text3194"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">149</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">149</text>
 <rect
      width="13.592004"
      height="50.610542"
@@ -815,7 +815,7 @@
      dx="0"
      dy="0"
      id="text3200"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">140</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">140</text>
 <rect
      width="13.592004"
      height="49.164528"
@@ -828,7 +828,7 @@
      dx="0"
      dy="0"
      id="text3206"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">136</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">136</text>
 <rect
      width="13.592004"
      height="45.910995"
@@ -841,7 +841,7 @@
      dx="0"
      dy="0"
      id="text3212"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">127</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">127</text>
 <rect
      width="13.592004"
      height="32.896851"
@@ -854,7 +854,7 @@
      dx="0"
      dy="0"
      id="text3218"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">91</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">91</text>
 <rect
      width="13.592004"
      height="37.234901"
@@ -867,7 +867,7 @@
      dx="0"
      dy="0"
      id="text3224"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">103</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">103</text>
 <rect
      width="13.592004"
      height="35.788887"
@@ -880,7 +880,7 @@
      dx="0"
      dy="0"
      id="text3230"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">99</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">99</text>
 <rect
      width="13.592004"
      height="37.234901"
@@ -893,7 +893,7 @@
      dx="0"
      dy="0"
      id="text3236"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">103</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">103</text>
 <rect
      width="13.592004"
      height="24.22076"
@@ -906,7 +906,7 @@
      dx="0"
      dy="0"
      id="text3242"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">67</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">67</text>
 <rect
      width="13.592004"
      height="29.281816"
@@ -919,7 +919,7 @@
      dx="0"
      dy="0"
      id="text3248"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">81</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">81</text>
 <rect
      width="13.592004"
      height="24.582264"
@@ -932,7 +932,7 @@
      dx="0"
      dy="0"
      id="text3254"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">68</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">68</text>
 <rect
      width="13.592004"
      height="27.112791"
@@ -945,7 +945,7 @@
      dx="0"
      dy="0"
      id="text3260"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">75</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">75</text>
 <rect
      width="13.592004"
      height="22.41324"
@@ -958,7 +958,7 @@
      dx="0"
      dy="0"
      id="text3266"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:start;fill:#535353">62</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:start;fill:#535353">62</text>
 <rect
      width="27.184008"
      height="123.68723"
@@ -1068,7 +1068,7 @@
          y="0"
          dy="0"
          id="text3310"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">0</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">0</text>
 </g><g
        transform="translate(0,108.63147)"
        id="g3312"><line
@@ -1082,7 +1082,7 @@
          y="0"
          dy="0"
          id="text3316"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">1,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">1,000</text>
 </g><g
        transform="translate(0,91.26294)"
        id="g3318"><line
@@ -1096,7 +1096,7 @@
          y="0"
          dy="0"
          id="text3322"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">2,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">2,000</text>
 </g><g
        transform="translate(0,73.89441)"
        id="g3324"><line
@@ -1110,7 +1110,7 @@
          y="0"
          dy="0"
          id="text3328"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">3,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">3,000</text>
 </g><g
        transform="translate(0,56.52588)"
        id="g3330"><line
@@ -1124,7 +1124,7 @@
          y="0"
          dy="0"
          id="text3334"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">4,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">4,000</text>
 </g><g
        transform="translate(0,39.157351)"
        id="g3336"><line
@@ -1138,7 +1138,7 @@
          y="0"
          dy="0"
          id="text3340"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">5,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">5,000</text>
 </g><g
        transform="translate(0,21.788821)"
        id="g3342"><line
@@ -1152,7 +1152,7 @@
          y="0"
          dy="0"
          id="text3346"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">6,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">6,000</text>
 </g><g
        transform="translate(0,4.4202909)"
        id="g3348"><line
@@ -1166,7 +1166,7 @@
          y="0"
          dy="0"
          id="text3352"
-         style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:start;fill:#535353">7,000</text>
+         style="font-weight:bold;font-size:10px;font-family:'Lato';text-anchor:start;fill:#535353">7,000</text>
 </g></g><rect
      width="27.184008"
      height="333.75922"
@@ -1256,7 +1256,7 @@
      y="95.824997"
      dy="0"
      id="text3410"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#535353">Nuove diagnosi di infezione da HIV</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#535353">Nuove diagnosi di infezione da HIV</text>
 <rect
      width="17.669605"
      height="17.669605"
@@ -1268,7 +1268,7 @@
      y="115.45788"
      dy="0"
      id="text3416"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#535353">Nuove diagnosi di AIDS</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#535353">Nuove diagnosi di AIDS</text>
 <rect
      width="17.669605"
      height="17.669605"
@@ -1280,7 +1280,7 @@
      y="95.949997"
      dy="0"
      id="text3424"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#535353">Casi prevalenti di infezione da HIV/AIDS</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#535353">Casi prevalenti di infezione da HIV/AIDS</text>
 <rect
      width="17.669605"
      height="17.669605"
@@ -1292,7 +1292,7 @@
      y="115.58288"
      dy="0"
      id="text3432"
-     style="font-weight:bold;font-size:10.79809189px;font-family:Lato;text-anchor:end;fill:#535353">Casi prevalenti con diagnosi di AIDS</text>
+     style="font-weight:bold;font-size:10.79809189px;font-family:'Lato';text-anchor:end;fill:#535353">Casi prevalenti con diagnosi di AIDS</text>
 <rect
      width="15.171885"
      height="3.5158591"
