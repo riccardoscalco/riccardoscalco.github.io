@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="box3SVG"
+   viewBox="0 0 540 540"
+   preserveAspectRatio="xMidYMid"
+   width="540"
+   height="540"
+   version="1.1"
+   style="font-family:Lato;font-size:10px;height:540px;width:540px;perspective-origin:270px 270px;-webkit-perspective-origin:270px 270px;transform-origin:270px 270px;-webkit-transform-origin:270px 270px;"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="box3SVG.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     id="namedview265"
+     showgrid="false"
+     inkscape:zoom="0.6180637"
+     inkscape:cx="-265.65492"
+     inkscape:cy="58.12095"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="box3SVG" />
+  <metadata
+     id="metadata269">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs267" />
+  <g
+     class="title"
+     style="font-weight:bold;font-size:17px;font-family:Lato;text-transform:uppercase;fill:#333333"
+     id="g7"
+     transform="translate(30,100)">
+    <line
+       class="main-line"
+       x1="0"
+       y1="-35"
+       x2="480"
+       y2="-35"
+       style="font-weight:bold;font-size:17px;font-family:Lato;text-transform:uppercase;fill:none;stroke:#333333;stroke-width:2px"
+       id="line9" />
+    <text
+       class="thetitle"
+       x="0"
+       y="-45"
+       style="font-weight:bold;font-size:17px;font-family:Lato;letter-spacing:1.70000005px;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+       id="text11">
+      <tspan
+         style="letter-spacing:5px"
+         id="tspan9221">MAIN PARTNERS</tspan>
+    </text>
+    <rect
+       x="0"
+       y="-25"
+       height="3"
+       width="25"
+       style="font-weight:bold;font-size:17px;font-family:Lato;text-transform:uppercase;fill:#333333;fill-opacity:0;stroke:#828282;stroke-width:1px"
+       id="rect13" />
+    <text
+       x="28"
+       y="-20"
+       class="legend1"
+       style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+       id="text15">Total</text>
+    <rect
+       x="70"
+       y="-28"
+       height="10"
+       width="81"
+       style="font-weight:bold;font-size:17px;font-family:Lato;text-transform:uppercase;fill:#d4ef4c;stroke-width:0px"
+       id="rect17" />
+    <rect
+       x="70"
+       y="-25"
+       height="3"
+       width="25"
+       style="font-weight:bold;font-size:17px;font-family:Lato;text-transform:uppercase;fill:#828282;stroke-width:0px"
+       id="rect19" />
+    <text
+       x="98"
+       y="-20"
+       class="legend1"
+       style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+       id="text21">Selection</text>
+  </g>
+  <g
+     style="font-size:10px;font-family:Lato"
+     id="g23"
+     transform="translate(30,100)">
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br0 selected"
+       style="font-size:10px;font-family:Lato;fill:#d4ef4c;stroke:#ffffff;stroke-width:0px"
+       id="rect25" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br1"
+       transform="translate(0,25)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect27" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br2"
+       transform="translate(0,50)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect29" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br3"
+       transform="translate(0,75)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect31" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br4"
+       transform="translate(0,100)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect33" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br5"
+       transform="translate(0,125)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect35" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br6"
+       transform="translate(0,150)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect37" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br7"
+       transform="translate(0,175)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect39" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br8"
+       transform="translate(0,200)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect41" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br9"
+       transform="translate(0,225)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect43" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br10"
+       transform="translate(0,250)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect45" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br11"
+       transform="translate(0,275)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect47" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br12"
+       transform="translate(0,300)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect49" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br13"
+       transform="translate(0,325)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect51" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br14"
+       transform="translate(0,350)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect53" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br15"
+       transform="translate(0,375)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect55" />
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="br br16"
+       transform="translate(0,400)"
+       style="font-size:10px;font-family:Lato;fill:none;stroke:#ffffff;stroke-width:0px"
+       id="rect57" />
+  </g>
+  <rect
+     x="30"
+     y="105"
+     class="rects"
+     width="432"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect59" />
+  <rect
+     x="30"
+     y="130"
+     class="rects"
+     width="249.75"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect61" />
+  <rect
+     x="30"
+     y="155"
+     class="rects"
+     width="205.875"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect63" />
+  <rect
+     x="30"
+     y="180"
+     class="rects"
+     width="172.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect65" />
+  <rect
+     x="30"
+     y="205"
+     class="rects"
+     width="148.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect67" />
+  <rect
+     x="30"
+     y="230"
+     class="rects"
+     width="131.625"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect69" />
+  <rect
+     x="30"
+     y="255"
+     class="rects"
+     width="128.25"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect71" />
+  <rect
+     x="30"
+     y="280"
+     class="rects"
+     width="114.75"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect73" />
+  <rect
+     x="30"
+     y="305"
+     class="rects"
+     width="111.375"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect75" />
+  <rect
+     x="30"
+     y="330"
+     class="rects"
+     width="111.375"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect77" />
+  <rect
+     x="30"
+     y="355"
+     class="rects"
+     width="104.625"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect79" />
+  <rect
+     x="30"
+     y="380"
+     class="rects"
+     width="94.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect81" />
+  <rect
+     x="30"
+     y="405"
+     class="rects"
+     width="94.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect83" />
+  <rect
+     x="30"
+     y="430"
+     class="rects"
+     width="94.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect85" />
+  <rect
+     x="30"
+     y="455"
+     class="rects"
+     width="94.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect87" />
+  <rect
+     x="30"
+     y="480"
+     class="rects"
+     width="91.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect89" />
+  <rect
+     x="30"
+     y="505"
+     class="rects"
+     width="91.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:none;stroke:#828282;stroke-width:1px"
+     id="rect91" />
+  <rect
+     x="30"
+     y="105"
+     class="rects-ratio"
+     width="432"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect93" />
+  <rect
+     x="30"
+     y="130"
+     class="rects-ratio"
+     width="40.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect95" />
+  <rect
+     x="30"
+     y="155"
+     class="rects-ratio"
+     width="94.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect97" />
+  <rect
+     x="30"
+     y="180"
+     class="rects-ratio"
+     width="81"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect99" />
+  <rect
+     x="30"
+     y="205"
+     class="rects-ratio"
+     width="67.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect101" />
+  <rect
+     x="30"
+     y="230"
+     class="rects-ratio"
+     width="47.25"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect103" />
+  <rect
+     x="30"
+     y="255"
+     class="rects-ratio"
+     width="37.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect105" />
+  <rect
+     x="30"
+     y="280"
+     class="rects-ratio"
+     width="54"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect107" />
+  <rect
+     x="30"
+     y="305"
+     class="rects-ratio"
+     width="16.875"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect109" />
+  <rect
+     x="30"
+     y="330"
+     class="rects-ratio"
+     width="40.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect111" />
+  <rect
+     x="30"
+     y="355"
+     class="rects-ratio"
+     width="40.5"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect113" />
+  <rect
+     x="30"
+     y="380"
+     class="rects-ratio"
+     width="37.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect115" />
+  <rect
+     x="30"
+     y="405"
+     class="rects-ratio"
+     width="37.125"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect117" />
+  <rect
+     x="30"
+     y="430"
+     class="rects-ratio"
+     width="30.375"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect119" />
+  <rect
+     x="30"
+     y="455"
+     class="rects-ratio"
+     width="33.75"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect121" />
+  <rect
+     x="30"
+     y="480"
+     class="rects-ratio"
+     width="20.25"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect123" />
+  <rect
+     x="30"
+     y="505"
+     class="rects-ratio"
+     width="57.375"
+     height="3"
+     style="font-size:10px;font-family:Lato;fill:#828282;stroke-width:0px"
+     id="rect125" />
+  <text
+     x="30"
+     y="100"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text127">CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE</text>
+  <text
+     x="30"
+     y="125"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text129">FRAUNHOFER-GESELLSCHAFT ZUR FOERDERUNG DER ANGEWANDTEN F...</text>
+  <text
+     x="30"
+     y="150"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text131">AGENCIA ESTATAL CONSEJO SUPERIOR DE INVESTIGACIONES CIEN...</text>
+  <text
+     x="30"
+     y="175"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text133">MAX PLANCK GESELLSCHAFT ZUR FOERDERUNG DER WISSENSCHAFTE...</text>
+  <text
+     x="30"
+     y="200"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text135">COMMISSARIAT A L ENERGIE ATOMIQUE ET AUX ENERGIES ALTERN...</text>
+  <text
+     x="30"
+     y="225"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text137">NATURAL ENVIRONMENT RESEARCH COUNCIL</text>
+  <text
+     x="30"
+     y="250"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text139">DANMARKS TEKNISKE UNIVERSITET</text>
+  <text
+     x="30"
+     y="275"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text141">EIDGENOSSISCHE TECHNISCHE HOCHSCHULE ZURICH</text>
+  <text
+     x="30"
+     y="300"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text143">FUNDACION TECNALIA RESEARCH &amp; INNOVATION</text>
+  <text
+     x="30"
+     y="325"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text145">THE CHANCELLOR, MASTERS AND SCHOLARS OF THE UNIVERSITY O...</text>
+  <text
+     x="30"
+     y="350"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text147">JRC -JOINT RESEARCH CENTRE- EUROPEAN COMMISSION</text>
+  <text
+     x="30"
+     y="375"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text149">FOUNDATION FOR RESEARCH AND TECHNOLOGY HELLAS</text>
+  <text
+     x="30"
+     y="400"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text151">KATHOLIEKE UNIVERSITEIT LEUVEN</text>
+  <text
+     x="30"
+     y="425"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text153">ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE</text>
+  <text
+     x="30"
+     y="450"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text155">INSTITUT FRANCAIS DE RECHERCHE POUR L'EXPLOITATION DE LA...</text>
+  <text
+     x="30"
+     y="475"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text157">POLITECNICO DI MILANO</text>
+  <text
+     x="30"
+     y="500"
+     dy="3"
+     class="legend"
+     style="font-size:10px;font-family:Lato;text-transform:uppercase;white-space:nowrap;display:block;fill:#333333"
+     id="text159">THE CHANCELLOR, MASTERS AND SCHOLARS OF THE UNIVERSITY O...</text>
+  <text
+     x="479.34857"
+     y="100"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text161">128</text>
+  <text
+     x="479.34857"
+     y="125"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text163">74</text>
+  <text
+     x="479.34857"
+     y="150"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text165">61</text>
+  <text
+     x="479.34857"
+     y="175"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text167">51</text>
+  <text
+     x="479.34857"
+     y="200"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text169">44</text>
+  <text
+     x="479.34857"
+     y="225"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text171">39</text>
+  <text
+     x="479.34857"
+     y="250"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text173">38</text>
+  <text
+     x="479.34857"
+     y="275"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text175">34</text>
+  <text
+     x="479.34857"
+     y="300"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text177">33</text>
+  <text
+     x="479.34857"
+     y="325"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text179">33</text>
+  <text
+     x="479.34857"
+     y="350"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text181">31</text>
+  <text
+     x="479.34857"
+     y="375"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text183">28</text>
+  <text
+     x="479.34857"
+     y="400"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text185">28</text>
+  <text
+     x="479.34857"
+     y="425"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text187">28</text>
+  <text
+     x="479.34857"
+     y="450"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text189">28</text>
+  <text
+     x="479.34857"
+     y="475"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text191">27</text>
+  <text
+     x="479.34857"
+     y="500"
+     dy="3"
+     dx="-25"
+     class="total"
+     style="font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#333333"
+     id="text193">27</text>
+  <text
+     class="text-ratio selection"
+     x="509.28076"
+     y="100"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text195">128</text>
+  <text
+     class="text-ratio selection"
+     x="508.87628"
+     y="125"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text197">12</text>
+  <text
+     class="text-ratio selection"
+     x="509.28076"
+     y="150"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text199">28</text>
+  <text
+     class="text-ratio selection"
+     x="508.95135"
+     y="175"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text201">24</text>
+  <text
+     class="text-ratio selection"
+     x="508.66528"
+     y="200"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text203">20</text>
+  <text
+     class="text-ratio selection"
+     x="508.37927"
+     y="225"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text205">14</text>
+  <text
+     class="text-ratio selection"
+     x="508.80829"
+     y="250"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text207">11</text>
+  <text
+     class="text-ratio selection"
+     x="509.09436"
+     y="275"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text209">16</text>
+  <text
+     class="text-ratio selection"
+     x="508.95135"
+     y="300"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text211">5</text>
+  <text
+     class="text-ratio selection"
+     x="508.95135"
+     y="325"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text213">12</text>
+  <text
+     class="text-ratio selection"
+     x="508.80829"
+     y="350"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text215">12</text>
+  <text
+     class="text-ratio selection"
+     x="509.09436"
+     y="375"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text217">11</text>
+  <text
+     class="text-ratio selection"
+     x="509.38037"
+     y="400"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text219">11</text>
+  <text
+     class="text-ratio selection"
+     x="508.80829"
+     y="425"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text221">9</text>
+  <text
+     class="text-ratio selection"
+     x="508.52228"
+     y="450"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text223">10</text>
+  <text
+     class="text-ratio selection"
+     x="508.80829"
+     y="475"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text225">6</text>
+  <text
+     class="text-ratio selection"
+     x="508.66528"
+     y="500"
+     dy="3"
+     style="font-weight:bold;font-size:10px;font-family:Lato;text-anchor:end;white-space:nowrap;display:block;fill:#828282"
+     id="text227">17</text>
+  <g
+     style="font-size:10px;font-family:Lato"
+     id="g229"
+     transform="translate(30,100)">
+    <rect
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr0"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect231" />
+    <rect
+       transform="translate(0,25)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr1"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect233" />
+    <rect
+       transform="translate(0,50)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr2"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect235" />
+    <rect
+       transform="translate(0,75)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr3"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect237" />
+    <rect
+       transform="translate(0,100)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr4"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect239" />
+    <rect
+       transform="translate(0,125)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr5"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect241" />
+    <rect
+       transform="translate(0,150)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr6"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect243" />
+    <rect
+       transform="translate(0,175)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr7"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect245" />
+    <rect
+       transform="translate(0,200)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr8"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect247" />
+    <rect
+       transform="translate(0,225)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr9"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect249" />
+    <rect
+       transform="translate(0,250)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr10"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect251" />
+    <rect
+       transform="translate(0,275)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr11"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect253" />
+    <rect
+       transform="translate(0,300)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr12"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect255" />
+    <rect
+       transform="translate(0,325)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr13"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect257" />
+    <rect
+       transform="translate(0,350)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr14"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect259" />
+    <rect
+       transform="translate(0,375)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr15"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect261" />
+    <rect
+       transform="translate(0,400)"
+       x="0"
+       y="-4"
+       width="480"
+       height="25"
+       class="fr fr16"
+       style="font-size:10px;font-family:Lato;fill-opacity:0;stroke-width:0px"
+       id="rect263" />
+  </g>
+</svg>

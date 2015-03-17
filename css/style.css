@@ -1,0 +1,60 @@
+body {
+  padding: 10px;
+  background-color: #fff;
+  color: #5b5b5b;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: "Lato", sans-serif;
+  line-height: 1.4em;
+  font-size: 17px;
+  max-width: 30em;
+  line-height: 1.5em;
+  letter-spacing: normal;
+}
+
+footer {
+  padding-bottom: 20px;
+}
+
+h1, h2 {
+  font-weight: 300;
+  font-style: italic;
+}
+
+h1 {
+  padding-top: 2em;
+  font-size: 25px;
+}
+
+h1::before { 
+    content: "§ ";
+}
+
+h2 {
+  padding-top: 1em;
+  font-size: 20px;
+}
+
+em {
+  color: #242424;
+}
+
+p {
+  padding: 0px;
+  padding-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: firebrick;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
