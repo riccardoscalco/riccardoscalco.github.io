@@ -76,6 +76,7 @@ a {
   color: darkred;
   text-decoration: none;
   font-style: italic;
+  font-weight: normal;
 }
 
 a:hover {
@@ -125,7 +126,7 @@ figure {
   display: block;
   padding-top: 50px;
   margin: auto;
-  width: 95%;
+  width: 100%;
   max-width: 960px;
 }
 
