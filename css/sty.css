@@ -29,6 +29,14 @@ article, footer, section, header {
   padding-bottom: 40px;
 }
 
+@media (max-width: 640px) {
+  article, footer, section, header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+
 article {
   padding-bottom: 0;
 }
