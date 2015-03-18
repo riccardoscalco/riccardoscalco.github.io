@@ -5,7 +5,7 @@ body {
   background: whitesmoke;
   font-weight: 300;
   font-size: 20px;
-  color: #1a1a1a;
+  color: #343434;
   border-top: 5px solid darkred;
 }
 
@@ -14,7 +14,6 @@ body {
     font-size: 16px;
   }
 }
-
 
 footer {
   background: #eee;
@@ -31,8 +30,8 @@ article, footer, section, header {
 
 @media (max-width: 640px) {
   article, footer, section, header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -45,7 +44,7 @@ header {
 /*  background: #eee;*/
 }
 
-h1, h2 {
+h1, h2, h3 {
   line-height: inherit;
 }
 
@@ -60,7 +59,12 @@ header h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: inherit;
+}
+
+h3 {
+  font-size: 1.1em;
   font-weight: inherit;
 }
 
@@ -106,6 +110,7 @@ div.container {
 figcaption {
   font-size: 0.9em;
   line-height: 1.3em;
+  padding-top: 10px;
 }
 
 img {
@@ -119,9 +124,26 @@ strong {
 figure {
   width: 90%;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
+
+@media (min-width: 640px) {
+  figure.small {
+    width: 60%;
+  }
+}
+
+
+/*figure.small {
+  width: 50%;
+}
+
+.small img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}*/
 
 .items-list {
   padding-top: 20px;
@@ -148,20 +170,3 @@ figure {
 div.footer {
   border-bottom: 5px solid darkred;
 }
-
-div.header {
-
-}
-
-
-
-/*@media (max-width: 960px) {
-  .big {
-    min-width: 0;
-  }
-  .big figcaption {
-    position: relative;
-    left: -50%;
-    width: 100%;
-  }
-}*/
