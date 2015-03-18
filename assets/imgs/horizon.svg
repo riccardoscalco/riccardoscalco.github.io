@@ -8,14 +8,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="500.11099"
-   height="40"
-   viewBox="0 0 500.11099 40"
+   height="72.468353"
+   viewBox="0 0 500.11099 72.468353"
    preserveAspectRatio="xMidYMidmeet"
    version="1.1"
    style="display:block"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="reactive-data-visualization.svg">
+   sodipodi:docname="horizon.svg">
   <metadata
      id="metadata131">
     <rdf:RDF>
@@ -48,15 +48,15 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="1.7555556"
-     inkscape:cx="301.74202"
-     inkscape:cy="-59.340603"
+     inkscape:cx="196.36228"
+     inkscape:cy="-64.751997"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <g
      id="g6"
-     transform="translate(-399.692,0)">
+     transform="matrix(1,0,0,1.8117088,-399.692,0)">
     <defs
        id="defs8">
       <clipPath
@@ -100,11 +100,11 @@
   <g
      id="g23"
      class="notes"
-     transform="translate(-288.04643,-2.911393)" />
+     transform="translate(-288.04643,29.556961)" />
   <g
      id="g119"
      style="display:none"
-     transform="translate(611.75757,-2.911393)"
+     transform="translate(611.75757,29.556961)"
      class="focus">
     <line
        x2="0"
@@ -127,5 +127,5 @@
      style="fill:none"
      id="rect125"
      x="-288.04642"
-     y="-2.9113929" />
+     y="29.556961" />
 </svg>

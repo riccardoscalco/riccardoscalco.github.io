@@ -4,10 +4,17 @@ body {
   line-height: 1.5em;
   background: whitesmoke;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: 20px;
   color: #1a1a1a;
   border-top: 5px solid darkred;
 }
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 
 footer {
   background: #eee;
@@ -35,7 +42,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 1.3em;
   font-weight: inherit;
   font-style: italic;
 }
@@ -45,7 +52,7 @@ header h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1em;
   font-weight: inherit;
 }
 
@@ -69,7 +76,7 @@ li {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1em;
 }
 
 a {
@@ -85,11 +92,11 @@ a:hover {
 
 div.container {
   margin: auto;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 figcaption {
-  font-size: 16px;
+  font-size: 0.9em;
   line-height: 1.3em;
 }
 
@@ -117,7 +124,7 @@ figure {
   line-height: 1.3em;
   display: block;
   font-family: monospace;
-  font-size: 13px;
+  font-size: 0.8em;
   font-weight: normal;
   color: #666;
 }
