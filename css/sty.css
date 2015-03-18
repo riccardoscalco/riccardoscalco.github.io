@@ -76,7 +76,7 @@ article h1 {
 article h2 {
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #1a1a1a;
+  margin-top: 40px;
 }
 
 ul {
