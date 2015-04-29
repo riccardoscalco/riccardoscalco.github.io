@@ -178,12 +178,12 @@ a:hover {
 
 figcaption {
   font-size: 0.8em;
-  line-height: 1.4em;
+  line-height: 1.6em;
   padding-top: 1em;
 }
 
 figure {
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 10px;
