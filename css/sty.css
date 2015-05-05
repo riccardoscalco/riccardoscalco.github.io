@@ -115,6 +115,7 @@ html {
     font-size: 14px;
     color: slategray;
     text-rendering: optimizeLegibility;
+    min-height: 100%;
 }
 
 @media screen and (min-width: 640px) {
@@ -128,6 +129,7 @@ body {
     width: 90%;
     max-width: 550px;
     margin: auto;
+    min-height: 100%;
 }
 
 footer {
