@@ -263,3 +263,8 @@ pre {
 #mc-embedded-subscribe:focus {
     outline: 0;
 }
+
+.graybg {
+    /* background-color: #f7f7f7; */
+    /* border-left: 1px solid slategray; */
+}
