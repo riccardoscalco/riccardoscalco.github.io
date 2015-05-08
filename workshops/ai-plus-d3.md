@@ -5,6 +5,18 @@ layout: default-comments
 Ai + D3.js
 =====
 
+<figure>
+  <img src="../assets/imgs/aiplusd3/h1.jpg">
+  <figcaption>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="../assets/imgs/aiplusd3/h2.jpg">
+  <figcaption>
+  </figcaption>
+</figure>
+
 Adobe Illustrator (AI) e la libreria JavaScript D3.js sono strumenti utilizzati universalmente nell'ambito dell'*Information Design* e *Data Visualization*.
 
  Il corso trae spunto dalla difficoltà pratica da un lato di creare infografiche complesse con il solo uso di D3, dall'altro di introdurre transizioni dinamiche e data driven all'interno di infografiche create con AI.
