@@ -127,7 +127,7 @@ html {
 
 body {
     width: 90%;
-    max-width: 550px;
+    max-width: 600px;
     margin: auto;
     min-height: 100%;
 }
@@ -189,6 +189,10 @@ figure {
   margin: auto;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+figure img {
+  width: 100%;
 }
 
 pre {
@@ -268,3 +272,47 @@ pre {
     /* background-color: #f7f7f7; */
     /* border-left: 1px solid slategray; */
 }
+
+/* masorny like with flexbox
+   by http://codepen.io/dudleystorey/pen/eAqzk
+*/
+
+/*div.masonry {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100vw;
+  max-height: 800px;
+  font-size: 0;
+}
+div.masonry img {
+  width: 33.3%;
+  -webkit-transition: .8s opacity;
+          transition: .8s opacity;
+}
+
+div.masonry img {
+  border: 3px solid #f9f9f9;
+}*/
+
+/*div.masonry:hover img { opacity: 0.3; }
+div.masonry:hover img:hover { opacity: 1; }*/
+
+/* fallback for earlier versions of Firefox */
+
+/*@supports not ((-webkit-flex-wrap: wrap) or (-ms-flex-wrap: wrap) or (flex-wrap: wrap)) {
+  div.masonry { display: block; }
+  div.masonry img {
+  display: inline-block;
+  vertical-align: top;
+  }
+}*/
