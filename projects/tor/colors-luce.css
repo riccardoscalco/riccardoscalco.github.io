@@ -1,0 +1,160 @@
+svg {
+  margin-top: 0;
+}
+
+/* colors */
+
+/* profile up text (colli) */
+#g5649 > text[id*="text4164"] tspan {
+  fill: blue !important;
+  font-weight: 700 !important;
+}
+
+/* basi */
+rect {
+  fill: gold !important;
+  stroke-width: 1px !important;
+  stroke: black !important;
+}
+
+/* basivita */
+#basivita rect {
+  fill: black !important;
+  stroke-width: 0px !important;
+}
+
+#basivita text > tspan {
+  fill: gold !important;
+}
+
+/* rifugi  */
+#rifugi > rect {
+  fill: blue !important;
+}
+
+/* profile up down (basi) */
+#g4889 > text[id*="text4164"] tspan {
+  fill: black !important;
+  font-weight: 700 !important;
+}
+
+/* paths (tratteggi) */
+path {
+  stroke: black !important;
+}
+
+/* profile */
+#profile {
+  stroke: black !important;
+  stroke-width: 1px !important;
+}
+
+/* runners */
+.runner {
+  fill: black;
+  stroke-width: 0;
+}
+
+.selected {
+  fill: red;
+}
+
+.pulse {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+}
+
+.pulse_selected {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+}
+
+/* liste */
+
+span.pettorale {
+  background-color: gold;
+  color: black;
+  border: 2px solid black;
+}
+
+span.posizione {
+  background-color: black;
+  color: gold;
+}
+
+.list li {
+  border-color: black;
+  border-width: 0 0 2px 0;
+  font-weight: 700;
+}
+
+/* timer */
+
+.timer {
+  background-color: red;
+  color: black;
+  border: 10px double gold;
+  font-weight: 700;
+}
+
+
+/* colore testo */
+
+html,
+body {
+  color: black;
+  background-color: gold;
+}
+
+html {
+  border: 1rem solid gold;
+  /*border: 1rem dashed black;*/
+  /*background-color: gold;
+  background-image: radial-gradient(black 15%, transparent 16%), radial-gradient(black 15%, transparent 16%);
+  background-size:20px 20px;
+  background-position: 0 0, 40px 40px;*/
+}
+
+body {
+  background-image: url('./images/logoTOR.png');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center -100px;
+}
+/* meteo */
+
+.dati-meteo {
+  fill: black;
+  font-weight: 700;
+}
+
+/* barre ingara/ritirati */
+
+.bars-ritirati,
+.bars-ritirati-text {
+  fill: red !important;
+}
+
+.bars-ritirati {
+  stroke: red!important;
+}
+
+.bars-ingara,
+.bars-ingara-text {
+  fill: black!important;
+  font-weight: 700;
+}
+
+.bars-ingara {
+  stroke: black!important;
+}
+
+
+.bars-zeroline {
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+  stroke: black;
+}

@@ -1,0 +1,311 @@
+/* Fonts declarations */
+
+@font-face {
+    font-family: 'radiolandregular';
+    src: url('usedfonts/RADIOLAND-webfont.eot');
+    src: url('usedfonts/RADIOLAND-webfont.eot?#iefix') format('embedded-opentype'),
+         url('usedfonts/RADIOLAND-webfont.woff') format('woff'),
+         url('usedfonts/RADIOLAND-webfont.ttf') format('truetype'),
+         url('usedfonts/RADIOLAND-webfont.svg#radiolandregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bpdotsregular';
+    src: url('usedfonts/BPdots-webfont.eot');
+    src: url('usedfonts/BPdots-webfont.eot?#iefix') format('embedded-opentype'),
+         url('usedfonts/BPdots-webfont.woff') format('woff'),
+         url('usedfonts/BPdots-webfont.ttf') format('truetype'),
+         url('usedfonts/BPdots-webfont.svg#bpdotsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bpdotsregular';
+    src: url('usedfonts/BPdotsBold-webfont.eot');
+    src: url('usedfonts/BPdotsBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('usedfonts/BPdotsBold-webfont.woff') format('woff'),
+         url('usedfonts/BPdotsBold-webfont.ttf') format('truetype'),
+         url('usedfonts/BPdotsBold-webfont.svg#bpdotsbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'minisystemregular';
+    src: url('usedfonts/minisystem-webfont.eot');
+    src: url('usedfonts/minisystem-webfont.eot?#iefix') format('embedded-opentype'),
+         url('usedfonts/minisystem-webfont.woff2') format('woff2'),
+         url('usedfonts/minisystem-webfont.woff') format('woff'),
+         url('usedfonts/minisystem-webfont.ttf') format('truetype'),
+         url('usedfonts/minisystem-webfont.svg#minisystemregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* End Fonts declarations */
+
+/* Misc */
+
+html {
+  border: 1rem solid #00ef00;
+  /*padding: 2rem 2rem 2rem 2rem;*/
+  padding: 3rem 3rem 3rem 3rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  background-color: #131313;
+  color: #00ef00;
+  font-size: 100%;
+}
+
+body {
+  /*padding: 3rem 3rem 3rem 3rem;
+  border: 1rem solid #00ef00;*/
+}
+
+body,
+svg {
+  border: 0px solid red;
+}
+
+/* End Misc */
+
+/* Timer */
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  min-height: 15vh;
+  margin-bottom: 35px;
+}
+
+.timer {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.scroll {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.timer {
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+  border: 1px solid #00ef00;
+}
+
+.timer span {
+  display: block;
+  padding: 1rem 1rem 1rem 1rem;
+  font-family: 'minisystemregular', monospace;
+  font-size: 3vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+.scroll p {
+  font-family: 'bpdotsregular', monospace;
+  font-family: 'minisystemregular', monospace;
+  font-size: 3vw;
+  font-weight: 400;
+  text-align: center;
+  font-weight: 400;
+}
+
+.Aligner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Aligner img {
+  display: none;
+  width: 20%;
+  max-width: 250px;
+  position: absolute;
+  top: 5%;
+  right: 23%;
+  opacity: 0.1; 
+}
+
+/* End Timer */
+
+/* Lists */
+
+.lists {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 5px;
+}
+
+.list {
+  padding-top: 20px;
+  min-width: 400px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.list li {
+  font-family: 'minisystemregular', monospace;
+  text-align: left;
+  font-size: 1.5vw;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-right: 20px;
+  border-width: 0 0 1px 0;
+  border-color: #00ef00;
+  border-style: dashed;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+}
+
+@media (max-width: 640px) {
+  .list {
+    min-width: 80%;
+  }
+  .list li {
+    margin-right: 0;
+  }
+}
+
+
+span.posizione {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0;
+  background-color: #00ef00;
+  color: #131313;
+  font-weight: 700;
+  text-align: right;
+  max-width:3vw;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+span.flag-icon {
+  padding: 0 0.6rem 0 0.6rem;
+  font-size: 2.2rem;
+}
+
+span.pettorale {
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
+  max-width: 4vw;
+  text-align: center;
+  background-color: gold;
+  color: #131313;
+  font-weight: 700;
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+span.nome {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+span.info {
+  margin-right: 0;
+  margin-left: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+/* End Lists */
+
+/* Viz */
+
+svg {
+  margin-top: 1rem;
+}
+
+.viz {
+  min-height: 50vh;
+}
+
+/* dati meteo */
+
+.dati-meteo {
+  font-family: 'bpdotsregular', monospace;
+  font-size: 10px;
+  text-anchor: start;
+}
+
+.bars-ingara-text,
+.bars-ritirati-text {
+  font-family: 'bpdotsregular', monospace;
+  font-size: 12px;
+  text-anchor: start;
+}
+
+/* communication */
+.communication {
+  text-align: center;
+  max-width: 620px;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.communication p {
+  color: red;
+  padding: 1rem 1rem 1rem 1rem;
+  font-family: 'minisystemregular', monospace;
+  font-size: 3vw;
+  font-weight: 400;
+  text-transform: uppercase;
+}

@@ -1,0 +1,401 @@
+{
+    "B1": {
+        "nome": "Partenza",
+        "km": "0",
+        "next": "11",
+        "dislivelloAccumulato": "0",
+        "baseVita": false
+    },
+    "B2": {
+        "nome": "Youlaz",
+        "km": "11",
+        "next": "6",
+        "dislivelloAccumulato": "1364",
+        "baseVita": false
+    },
+    "B3": {
+        "nome": "La Thuile",
+        "km": "17",
+        "next": "15",
+        "dislivelloAccumulato": "1364",
+        "baseVita": false
+    },
+    "B4": {
+        "nome": "Promoud",
+        "km": "32",
+        "next": "5",
+        "dislivelloAccumulato": "3206",
+        "baseVita": false
+    },
+    "B5": {
+        "nome": "Crosatie",
+        "km": "37",
+        "next": "6",
+        "dislivelloAccumulato": "4206",
+        "baseVita": false
+    },
+    "B6": {
+        "nome": "Planaval",
+        "km": "43",
+        "next": "6",
+        "dislivelloAccumulato": "4206",
+        "baseVita": false
+    },
+    "B7": {
+        "nome": "Valgris. IN",
+        "km": "49",
+        "next": "0",
+        "dislivelloAccumulato": "4206",
+        "baseVita": true
+    },
+    "B8": {
+        "nome": "Valgris. OUT",
+        "km": "49",
+        "next": "8",
+        "dislivelloAccumulato": "4206",
+        "baseVita": true
+    },
+    "B9": {
+        "nome": "Epée",
+        "km": "57",
+        "next": "8",
+        "dislivelloAccumulato": "4706",
+        "baseVita": false
+    },
+    "B10": {
+        "nome": "Rhemes",
+        "km": "65",
+        "next": "5",
+        "dislivelloAccumulato": "5418",
+        "baseVita": false
+    },
+    "B11": {
+        "nome": "Entrelor",
+        "km": "70",
+        "next": "9",
+        "dislivelloAccumulato": "6701",
+        "baseVita": false
+    },
+    "B12": {
+        "nome": "Eaux Rousses",
+        "km": "79",
+        "next": "10",
+        "dislivelloAccumulato": "6701",
+        "baseVita": false
+    },
+    "B13": {
+        "nome": "Loson",
+        "km": "89",
+        "next": "3",
+        "dislivelloAccumulato": "8343",
+        "baseVita": false
+    },
+    "B14": {
+        "nome": "Sella",
+        "km": "92",
+        "next": "10",
+        "dislivelloAccumulato": "8343",
+        "baseVita": false
+    },
+    "B15": {
+        "nome": "Cogne IN",
+        "km": "102",
+        "next": "0",
+        "dislivelloAccumulato": "8343",
+        "baseVita": true
+    },
+    "B16": {
+        "nome": "Cogne OUT",
+        "km": "102",
+        "next": "5",
+        "dislivelloAccumulato": "8343",
+        "baseVita": true
+    },
+    "B17": {
+        "nome": "Goilles",
+        "km": "107",
+        "next": "9",
+        "dislivelloAccumulato": "8843",
+        "baseVita": false
+    },
+    "B18": {
+        "nome": "Sogno",
+        "km": "116",
+        "next": "7",
+        "dislivelloAccumulato": "9362",
+        "baseVita": false
+    },
+    "B19": {
+        "nome": "Dondena",
+        "km": "123",
+        "next": "6",
+        "dislivelloAccumulato": "9655",
+        "baseVita": false
+    },
+    "B20": {
+        "nome": "Chardonney",
+        "km": "129",
+        "next": "10",
+        "dislivelloAccumulato": "9655",
+        "baseVita": false
+    },
+    "B21": {
+        "nome": "Pontboset",
+        "km": "139",
+        "next": "9",
+        "dislivelloAccumulato": "9655",
+        "baseVita": false
+    },
+    "B22": {
+        "nome": "Donnas IN",
+        "km": "148",
+        "next": "0",
+        "dislivelloAccumulato": "9655",
+        "baseVita": true
+    },
+    "B23": {
+        "nome": "Donnas OUT",
+        "km": "148",
+        "next": "6",
+        "dislivelloAccumulato": "9655",
+        "baseVita": true
+    },
+    "B24": {
+        "nome": "Perloz",
+        "km": "154",
+        "next": "7",
+        "dislivelloAccumulato": "10287",
+        "baseVita": false
+    },
+    "B25": {
+        "nome": "Sassa",
+        "km": "161",
+        "next": "4",
+        "dislivelloAccumulato": "11095",
+        "baseVita": false
+    },
+    "B26": {
+        "nome": "Rifugio Coda",
+        "km": "165",
+        "next": "7",
+        "dislivelloAccumulato": "12014",
+        "baseVita": false
+    },
+    "B27": {
+        "nome": "Lago Vargno",
+        "km": "172",
+        "next": "6",
+        "dislivelloAccumulato": "12014",
+        "baseVita": false
+    },
+    "B28": {
+        "nome": "Lago Chiaro",
+        "km": "178",
+        "next": "3",
+        "dislivelloAccumulato": "12214",
+        "baseVita": false
+    },
+    "B29": {
+        "nome": "Colle Vecchia",
+        "km": "181",
+        "next": "5",
+        "dislivelloAccumulato": "12414",
+        "baseVita": false
+    },
+    "B30": {
+        "nome": "Niel",
+        "km": "186",
+        "next": "5",
+        "dislivelloAccumulato": "12655",
+        "baseVita": false
+    },
+    "B31": {
+        "nome": "Loo",
+        "km": "191",
+        "next": "9",
+        "dislivelloAccumulato": "13487",
+        "baseVita": false
+    },
+    "B32": {
+        "nome": "Gressoney IN",
+        "km": "200",
+        "next": "0",
+        "dislivelloAccumulato": "13847",
+        "baseVita": true
+    },
+    "B33": {
+        "nome": "Gressoney OUT",
+        "km": "200",
+        "next": "7",
+        "dislivelloAccumulato": "13847",
+        "baseVita": true
+    },
+    "B34": {
+        "nome": "Alpenzu",
+        "km": "207",
+        "next": "3",
+        "dislivelloAccumulato": "14004",
+        "baseVita": false
+    },
+    "B35": {
+        "nome": "Crest",
+        "km": "210",
+        "next": "12",
+        "dislivelloAccumulato": "15004",
+        "baseVita": false
+    },
+    "B36": {
+        "nome": "Saint Jacques",
+        "km": "222",
+        "next": "4",
+        "dislivelloAccumulato": "15128",
+        "baseVita": false
+    },
+    "B37": {
+        "nome": "Tournalin",
+        "km": "226",
+        "next": "10",
+        "dislivelloAccumulato": "15828",
+        "baseVita": false
+    },
+    "B38": {
+        "nome": "Valtourn. IN",
+        "km": "236",
+        "next": "0",
+        "dislivelloAccumulato": "16248",
+        "baseVita": true
+    },
+    "B39": {
+        "nome": "Valtourn. OUT",
+        "km": "236",
+        "next": "13",
+        "dislivelloAccumulato": "16248",
+        "baseVita": true
+    },
+    "B40": {
+        "nome": "Barmasse",
+        "km": "249",
+        "next": "1",
+        "dislivelloAccumulato": "16848",
+        "baseVita": false
+    },
+    "B41": {
+        "nome": "Vareton",
+        "km": "250",
+        "next": "2",
+        "dislivelloAccumulato": "17340",
+        "baseVita": false
+    },
+    "B42": {
+        "nome": "Reboulaz",
+        "km": "252",
+        "next": "4",
+        "dislivelloAccumulato": "17842",
+        "baseVita": false
+    },
+    "B43": {
+        "nome": "Cuney",
+        "km": "256",
+        "next": "4",
+        "dislivelloAccumulato": "18173",
+        "baseVita": false
+    },
+    "B44": {
+        "nome": "Clermont",
+        "km": "260",
+        "next": "10",
+        "dislivelloAccumulato": "18173",
+        "baseVita": false
+    },
+    "B45": {
+        "nome": "Oyace",
+        "km": "270",
+        "next": "4",
+        "dislivelloAccumulato": "18607",
+        "baseVita": false
+    },
+    "B46": {
+        "nome": "Bruson Arp",
+        "km": "274",
+        "next": "2",
+        "dislivelloAccumulato": "19207",
+        "baseVita": false
+    },
+    "B47": {
+        "nome": "Bruson Colle",
+        "km": "276",
+        "next": "2",
+        "dislivelloAccumulato": "19652",
+        "baseVita": false
+    },
+    "B48": {
+        "nome": "Berio",
+        "km": "278",
+        "next": "5",
+        "dislivelloAccumulato": "19652",
+        "baseVita": false
+    },
+    "B49": {
+        "nome": "Ollomont IN",
+        "km": "283",
+        "next": "0",
+        "dislivelloAccumulato": "19652",
+        "baseVita": true
+    },
+    "B50": {
+        "nome": "Ollomont OUT",
+        "km": "283",
+        "next": "5",
+        "dislivelloAccumulato": "19652",
+        "baseVita": true
+    },
+    "B51": {
+        "nome": "Champillon",
+        "km": "288",
+        "next": "4",
+        "dislivelloAccumulato": "20963",
+        "baseVita": false
+    },
+    "B52": {
+        "nome": "Ponteille",
+        "km": "292",
+        "next": "11",
+        "dislivelloAccumulato": "20963",
+        "baseVita": false
+    },
+    "B53": {
+        "nome": "Bosses",
+        "km": "303",
+        "next": "11",
+        "dislivelloAccumulato": "21104",
+        "baseVita": false
+    },
+    "B54": {
+        "nome": "Frassati",
+        "km": "314",
+        "next": "7",
+        "dislivelloAccumulato": "22304",
+        "baseVita": false
+    },
+    "B55": {
+        "nome": "Bonatti",
+        "km": "321",
+        "next": "7",
+        "dislivelloAccumulato": "23114",
+        "baseVita": false
+    },
+    "B56": {
+        "nome": "Bertone",
+        "km": "328",
+        "next": "4",
+        "dislivelloAccumulato": "23214",
+        "baseVita": false
+    },
+    "B57": {
+        "nome": "Arrivo",
+        "km": "332",
+        "next": "0",
+        "dislivelloAccumulato": "23300",
+        "baseVita": false
+    }
+}

@@ -1,0 +1,109 @@
+/* colors */
+
+
+/* profile up text (colli) */
+#g5649 > text[id*="text4164"] tspan {
+  fill: white !important;
+}
+
+/* rifugi  */
+#rifugi > rect {
+  fill: white !important;
+}
+
+/* profile up down (basi) */
+#g4889 > text[id*="text4164"] tspan {
+  fill: #00ef00 !important;
+}
+
+/* paths (tratteggi) */
+path {
+  stroke: #00ef00 !important;
+}
+
+/* profile */
+#profile {
+  stroke: #00ef00 !important;
+}
+
+/* runners */
+.runner {
+  fill: gold;
+  stroke-width: 0;
+}
+
+.selected {
+  fill: red;
+}
+
+.pulse {
+  fill: none;
+  stroke: gold;
+  stroke-width: 3;
+}
+
+.pulse_selected {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+}
+
+/* liste */
+
+span.pettorale {
+  background-color: gold;
+  color: #131313;
+}
+
+span.posizione {
+  background-color: #00ef00;
+  color: #131313;
+}
+
+.list li {
+  border-color: #00ef00;
+}
+
+/* timer */
+
+.timer {
+  border: 1px solid #00ef00;
+  color: #00ef00;
+}
+
+/* colore testo */
+
+html,
+body {
+  color: #00ef00;
+  background-color: #131313;
+}
+
+html {
+  border: 1rem solid #131313;
+}
+
+
+/* meteo */
+
+.dati-meteo {
+  fill: gold;
+}
+
+/* barre ingara/ritirati */
+
+.bars-ritirati,
+.bars-ritirati-text {
+  fill: red;
+}
+
+.bars-ingara,
+.bars-ingara-text {
+  fill: #00ef00;
+}
+
+.bars-zeroline {
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+  stroke: #00ef00;
+}

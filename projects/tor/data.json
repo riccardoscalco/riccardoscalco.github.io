@@ -1,0 +1,42 @@
+{
+  "listaMaschi": [
+    {
+      "nome": "Andrea",
+      "idUltimaBase": "B2",
+      "nazionalità": "IT",
+      "pettorale": "432",
+      "timeDiUscitaDaUltimaBase": "42:23:15",
+      "oreDiCorsa": "38",
+      "velocitàMedia": "15"
+    },
+    {
+      "nome": "Giovanni",
+      "idUltimaBase": "B3",
+      "nazionalità": "FR",
+      "pettorale": "23",
+      "timeDiUscitaDaUltimaBase": "37:16:17",
+      "oreDiCorsa": "23",
+      "velocitàMedia": "20"
+    }
+  ],
+  "listaFemmine": [
+    {
+      "nome": "Andrea",
+      "idUltimaBase": "B1",
+      "nazionalità": "IT",
+      "pettorale": "432",
+      "timeDiUscitaDaUltimaBase": "42:23:15",
+      "oreDiCorsa": "38",
+      "velocitàMedia": "15"
+    },
+    {
+      "nome": "Giovanni",
+      "idUltimaBase": "B3",
+      "nazionalità": "FR",
+      "pettorale": "23",
+      "timeDiUscitaDaUltimaBase": "37:16:17",
+      "oreDiCorsa": "23",
+      "velocitàMedia": "20"
+    }
+  ]
+}

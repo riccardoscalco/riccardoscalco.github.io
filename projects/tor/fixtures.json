@@ -1,0 +1,568 @@
+[
+    {
+        "pettorale": "1",
+        "posizione": "1",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            },
+            {
+                "postazione": "B18",
+                "timeIn": "1441909101"
+            },
+            {
+                "postazione": "B19",
+                "timeIn": "1441909181"
+            },
+            {
+                "postazione": "B20",
+                "timeIn": "1441909226"
+            },
+            {
+                "postazione": "B21",
+                "timeIn": "1441909269"
+            },
+            {
+                "postazione": "B22",
+                "timeIn": "1441909305"
+            },
+            {
+                "postazione": "B23",
+                "timeOut": "1441909459"
+            },
+            {
+                "postazione": "B30",
+                "timeIn": "1441909547"
+            },
+            {
+                "postazione": "B32",
+                "timeIn": "1441909647"
+            },
+            {
+                "postazione": "B35",
+                "timeIn": "1441909814"
+            },
+            {
+                "postazione": "B36",
+                "timeIn": "1441910285"
+            }
+        ]
+    },
+    {
+        "pettorale": "3",
+        "posizione": "2",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            },
+            {
+                "postazione": "B18",
+                "timeIn": "1441909101"
+            },
+            {
+                "postazione": "B19",
+                "timeIn": "1441909181"
+            },
+            {
+                "postazione": "B20",
+                "timeIn": "1441909226"
+            },
+            {
+                "postazione": "B21",
+                "timeIn": "1441909269"
+            },
+            {
+                "postazione": "B22",
+                "timeIn": "1441909305"
+            },
+            {
+                "postazione": "B23",
+                "timeOut": "1441909459"
+            }
+        ]
+    },
+    {
+        "pettorale": "5",
+        "posizione": "3",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            },
+            {
+                "postazione": "B18",
+                "timeIn": "1441909101"
+            },
+            {
+                "postazione": "B19",
+                "timeIn": "1441909181"
+            },
+            {
+                "postazione": "B20",
+                "timeIn": "1441909226"
+            }
+        ]
+    },
+    {
+        "pettorale": "6",
+        "posizione": "4",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            },
+            {
+                "postazione": "B18",
+                "timeIn": "1441909101"
+            }
+        ]
+    },
+    {
+        "pettorale": "7",
+        "posizione": "5",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            },
+            {
+                "postazione": "B18",
+                "timeIn": "1441909101"
+            }
+        ]
+    },
+    {
+        "pettorale": "22",
+        "posizione": "6",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            },
+            {
+                "postazione": "B14",
+                "timeIn": "1441909000"
+            },
+            {
+                "postazione": "B15",
+                "timeIn": "1441909038"
+            },
+            {
+                "postazione": "B17",
+                "timeIn": "1441909088"
+            }
+        ]
+    },
+    {
+        "pettorale": "32",
+        "posizione": "7",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            },
+            {
+                "postazione": "B10",
+                "timeIn": "1441908319"
+            },
+            {
+                "postazione": "B11",
+                "timeIn": "1441908423"
+            },
+            {
+                "postazione": "B12",
+                "timeIn": "1441908881"
+            },
+            {
+                "postazione": "B13",
+                "timeIn": "1441908973"
+            }
+        ]
+    },
+    {
+        "pettorale": "46",
+        "posizione": "8",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            },
+            {
+                "postazione": "B8",
+                "timeOut": "1441908200"
+            }
+        ]
+    },
+    {
+        "pettorale": "93",
+        "posizione": "9",
+        "stato": "In gara",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            },
+            {
+                "postazione": "B7",
+                "timeIn": "1441908167"
+            }
+        ]
+    },
+    {
+        "pettorale": "99",
+        "posizione": "99",
+        "stato": "Ritirato",
+        "dinamica": [
+            {
+                "postazione": "B1",
+                "timeIn": "1441906873"
+            },
+            {
+                "postazione": "B2",
+                "timeIn": "1441906901"
+            },
+            {
+                "postazione": "B3",
+                "timeIn": "1441906998"
+            },
+            {
+                "postazione": "B4",
+                "timeIn": "1441907967"
+            }
+        ]
+    }
+]
