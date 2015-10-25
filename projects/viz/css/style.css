@@ -1,0 +1,54 @@
+/*
+
+Notes
+-----
+
+* Colors may vary.
+
+
+*/
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: #353839;
+}
+
+#viz {
+  height: 95vh;
+  width: 95vw;
+}
+
+/* horizontal and vertical centering */
+.Aligner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.node {
+  stroke: #333;
+  stroke-width: 0;
+  fill: white;
+  fill-opacity: 1;
+
+}
+
+.link {
+  stroke: white;
+  stroke-opacity: 0.3;
+  stroke-width: 0.1;
+}
