@@ -20,7 +20,7 @@ body {
 
 #viz {
   height: 95vh;
-  width: 95vw;
+  width: 100vw;
 }
 
 /* horizontal and vertical centering */
@@ -51,4 +51,33 @@ body {
   stroke: white;
   stroke-opacity: 0.3;
   stroke-width: 0.1;
+}
+
+.qU {
+  fill: gray;
+}
+.q1 {
+  fill: red;
+}
+.q2 {
+  fill: yellow;
+}
+.q3 {
+  fill: green;
+}
+.q4 {
+  fill: blue;
+}
+.q5 {
+  fill: darkcyan;
+}
+.q6 {
+  fill: hotpink;
+}
+.q7 {
+  fill: lime;
+}
+
+.focus {
+  fill: red;
 }
