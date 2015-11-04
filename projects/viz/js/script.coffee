@@ -305,8 +305,8 @@ drawNebula = (topic) ->
       "stroke": topicColors[topic]
       "fill": "transparent" 
 
-#for t in session.topics
-#  drawNebula t
+for t in session.topics
+  drawNebula t
 
 # ---------------------------------------------------
 
