@@ -1,0 +1,126 @@
+/*
+
+Notes
+-----
+
+* Colors may vary.
+
+
+*/
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: #353839;
+}
+
+#viz,
+#vizBack {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 95vh;
+  width: 100vw;
+}
+
+#viz {
+  z-index: 1000;
+}
+
+/* horizontal and vertical centering */
+.Aligner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.node {
+  stroke: #333;
+  stroke-width: 0;
+  fill: white;
+  fill-opacity: 1;
+
+}
+
+.link {
+  stroke: white;
+  stroke-opacity: 0.3;
+  stroke-width: 0.1;
+}
+
+.qU {
+  fill: gray;
+}
+.q1 {
+  fill: red;
+}
+.q2 {
+  fill: yellow;
+}
+.q3 {
+  fill: green;
+}
+.q4 {
+  fill: blue;
+}
+.q5 {
+  fill: darkcyan;
+}
+.q6 {
+  fill: hotpink;
+}
+.q7 {
+  fill: lime;
+}
+
+.focus {
+  fill: red;
+  stroke-width: 1;
+}
+
+
+.pulse_selected {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+}
+
+img {
+  opacity: 1;
+  width: 1920px;
+}
+
+.emergent {
+  fill: white;
+  stroke: white;
+}
+
+.new {
+  fill: #01ff02;
+  stroke: #01ff02;
+}
+
+.outlier {
+  fill: yellow;
+  stroke: yellow;
+}
+
+.pulse {
+  fill: yellow;
+  stroke-width: 0;
+  fill-opacity: 0.5;
+}
+
