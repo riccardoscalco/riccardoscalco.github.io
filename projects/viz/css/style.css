@@ -18,9 +18,17 @@ body {
   background-color: #353839;
 }
 
-#viz {
+#viz,
+#vizBack {
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 95vh;
   width: 100vw;
+}
+
+#viz {
+  z-index: 1000;
 }
 
 /* horizontal and vertical centering */
@@ -80,4 +88,38 @@ body {
 
 .focus {
   fill: red;
+  stroke-width: 1;
 }
+
+
+.pulse_selected {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+}
+
+img {
+  opacity: 1;
+  width: 1920px;
+}
+
+.emergent {
+  fill: white;
+  stroke: white;
+}
+
+.new {
+  fill: #01ff02;
+  stroke: #01ff02;
+}
+
+.outlier {
+  fill: yellow;
+  stroke: yellow;
+}
+
+.pulse {
+  fill: none;
+  stroke: yellow;
+}
+

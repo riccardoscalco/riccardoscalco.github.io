@@ -27,10 +27,19 @@ dist =  () -> Math.random() * Math.random()
 randomChoice = (array) -> 
   array[Math.floor(Math.random() * array.length)]
 
-randomBoolean = () ->
-  a = (false for i in [0..7])
+randomBoolean = (em=0) ->
+  if em > 0.9
+    a = (false for i in [0..0])
+  else
+    a = (false for i in [0..20])
   a.push true
   randomChoice a
+
+randomBooleanOutlier = () ->
+  a = (false for i in [0..130])
+  a.push true
+  randomChoice a
+
 
 randomSourcesList = () ->
   ({"name": "Source " + i, "degree": randomFloat()} for i in [1..4])
@@ -104,6 +113,8 @@ randEdge = (l1, l2, graph) ->
         addEdge e, k, graph
 
 nodeObject = (n, type, isnew) ->
+  em = dist()
+  setNew = randomBoolean em
   {
     "name": n
     "topics": {}
@@ -112,9 +123,9 @@ nodeObject = (n, type, isnew) ->
       "metric": dist()
     }
     "emergence": {
-      "new": isnew
-      "metric": dist()
-      "outlier": randomBoolean()
+      "new": setNew
+      "metric": em
+      "outlier": if setNew then false else randomBooleanOutlier()
     }
     "source": randomSourcesList()
     "neighbours": []

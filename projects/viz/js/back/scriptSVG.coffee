@@ -1,20 +1,6 @@
-save = (node, filename) ->
-  window.xx = node
-  a = document.createElement "a"
-  document.body.appendChild a
-  a.style = "display: none"
-  blob = new Blob([node], { "type" : "text\/html" })
-  url = window.URL.createObjectURL blob
-  a.href = url
-  a.download = filename
-  a.click()
-  window.URL.revokeObjectURL url
-
-
 # variables
 session = {}
 session.graph = window.fixtures[0]
-session.cutoff = 0.85
 
 # random string
 rand = () ->
@@ -70,7 +56,6 @@ xCoords = (n) ->
 viz = document.getElementById('viz')
 width = 900
 height = 900 / viz.offsetWidth * viz.offsetHeight
-height1 = 600 / viz.offsetWidth * viz.offsetHeight
 m =
   top: 10
   bottom: 10
@@ -82,42 +67,9 @@ h = height - m.top - m.bottom
 session.dw = w / (session.topics.length + 1)
 session.topicPoints = topicPoints session.topics
 
-rScale =  d3.scale.sqrt()
-    .domain([0, 1])
-    .range([0.3, 3])
-
-whiteScale = d3.scale.linear()
+rScale = d3.scale.linear()
     .domain [0, 1]
-    .range [0.5, 1]
-
-isNew = (n) ->
-  if n.emergence.new then " new" else ""
-
-isOutlier = (n) ->
-  if n.emergence.outlier then " outlier" else ""
-
-isEmergent = (n) ->
-  if n.emergence.metric > session.cutoff then " emergent" else ""
-
-setOpacity = (n) ->
-  #em = n.emergence
-  #if em.new or em.outlier or em.emergence > 0.9
-  #  return 1
-  #else
-  #  return em.metric
-  if isEmergent n then 1 else n.emergence.metric / 2
-
-radius = (n) ->
-  try
-    if n.type == "topic"
-      0
-    else
-      rScale n.weight.metric
-  catch error
-    0
-
-ring = (r) ->
-  d3.max [r * 2, 4]
+    .range [0.3, 3]
 
 svg = d3.select "#viz"
   .append "svg"
@@ -132,32 +84,18 @@ svg = d3.select "#viz"
   .append "g"
   .attr "transform", "translate(" + m.left + "," + m.top + ")"
 
-svgBack = d3.select "#vizBack"
-  .append "svg"
-  .attr "id", "nebulasSVG"
-  .attr
-    "viewBox": "0 0 " + width + " " + height
-    "preserveAspectRatio": "xMidYMin slice"
-    "width": "100%"
-  .style
-    "padding-bottom": (100 * height / width) + "%"
-    "height": "1px"
-    "overflow": "visible"
-  .append "g"
-  .attr "transform", "translate(" + m.left + "," + m.top + ")"
-
-nebulas = svgBack.append "svg:g"
+nebulas = svg.append "svg:g"
   .attr "id", "nebulas"
   .style "opacity", 0.5
 
 focus = svg.append "svg:g"
     .attr "class", "focus"
-    .style "opacity", 1
+    .style "opacity", 0
 
 focusCircle = focus.append "svg:circle"
-    .attr "r", "6"
+    .attr "r", "10"
     .style
-      "fill-opacity": 0.1
+      "fill-opacity": 0
       "stroke": "red"
 
 clips = svg.append "svg:g"
@@ -169,61 +107,29 @@ nodes = svg.append "svg:g"
 paths = svg.append "svg:g"
   .attr "id", "nodes-paths"
 
-nodeG = nodes.selectAll ".node"
+
+nodes.selectAll ".node"
     .data session.nodes
-  .enter().append "svg:g"
+  .enter().append "svg:circle"
     .attr "id", (d, i) -> "node-" + i
-    .attr "class", (d) ->
-      n = session.graph.nodes[d.name]
-      "node" + isEmergent(n) + isNew(n) + isOutlier(n)
-    .attr "transform", (d) ->
-      d.x = xCoords session.graph.nodes[d.name]
-      d.y = yCoords height / 2, 40, 1
-      "translate (" + d.x + "," + d.y + ")"
-
-nodeG.append "svg:circle"
+    .attr "cx", (d) -> d.x = xCoords session.graph.nodes[d.name]
+    .attr "cy", (d) -> d.y = yCoords height / 2, 30, 1
     .attr "r", (d) ->
-      n = session.graph.nodes[d.name]
-      radius n
-    .style "fill-opacity", (d) ->
-      n = session.graph.nodes[d.name]
-      setOpacity(n)
-
-nodes.selectAll ".emergent"
-  .append "svg:circle"
-    .attr "r", (d) ->
-      n = session.graph.nodes[d.name]
-      ring radius n
-    .style
-      "fill": "transparent"
-      "stroke-width": 1
-
-pulse = () ->
-  circle = d3.select(this)
-  r = ring circle.attr "r"
-  (repeat = () -> 
-    circle = circle.transition()
-    #.delay 1000 * Math.random()
-    .duration(2500 + 1000 * Math.random())
-    .attr "r", r * 2
-    .style "stroke-width", 0
-    .transition()
-    .duration(0)
-    .attr "r", 0
-    .style "stroke-width", 2
-    .each("end", repeat)
-    )()
-
-nodes.selectAll ".outlier"
-  .append "circle"
-    .attr "class", "pulse"
-    .attr "r", (d) ->
-      n = session.graph.nodes[d.name]
-      radius n
-    #.attr "class", "node"
-    .each(pulse)
-
-
+      try
+        #rScale graph.nodes[d.name].neighbours.length
+        if session.graph.nodes[d.name].type == "topic"
+          0
+        else
+          rScale session.graph.nodes[d.name].weight.metric
+      catch error
+        2
+    .attr "class", "node"
+    # .attr "class", (d) ->
+    #   try
+    #     t = d3.keys(session.graph.nodes[d.name].topics)
+    #     "node q" + t[0].split(" ")[1]
+    #   catch error
+    #     "node"
 
 # ---- focus on mousemove ------------------------------------------------------
 # based on http://bl.ocks.org/njvack/1405439
@@ -252,22 +158,22 @@ paths.selectAll "path"
     .style("stroke-opacity", 0)
   
 paths.selectAll "path"
-  #.on "click", (d,i) ->
-  #  nodes.select('circle#node-'+i)
-  #    .style("fill", "red")
   .on "mouseover", (d, i) ->
     #d3.select this
     #  .style('stroke-opacity', 1)
-    f = nodes.select('g#node-'+i)
+    f = nodes.select('circle#node-'+i)
     focusCircle
-      .attr "transform", f.attr "transform"
-    #focus.style "opacity", 1
+      .attr
+        "cx": f.attr "cx"
+        "cy": f.attr "cy"
+    focus.style "opacity", 1
+
       #.style('fill', "red")
       #.classed "focus", 1
-  #.on "mouseout", (d, i) ->
+  .on "mouseout", (d, i) ->
     #d3.select(this)
     #  .style('stroke-opacity', 0)
-    #nodes.select('circle#node-'+i)
+    nodes.select('circle#node-'+i)
     #  .style('fill', 'white')
       #.classed "focus", 0
 
@@ -280,29 +186,28 @@ nebulaLine = d3.svg.line()
 
 nebulaPoints = (nodes, topic, n) ->
   points = nodes
-    #.filter (d) -> (mainTopic(d.topics) == topic) and (height / 2 - 50 < d.y < height / 2 + 50)
-    .filter (d) -> (mainTopic(d.topics) == topic)
+    .filter (d) -> mainTopic(d.topics) == topic
     .map (d) -> [d.x, d.y]
   points[0..n]
 
 createFilter = (w, h, color) ->
 
   baseFrequency = "0.02"
-  numOctaves = "3"
+  numOctaves = "8"
   seed = randomInt(100) + ""
   stdDeviation = randomInt(6,4) + ""
   scale = "100"
   
   filterid = rand()
 
-  filter = d3.select "#nebulasSVG"
+  filter = d3.select "svg"
     .append "filter"
     .attr
       "id": filterid
-      #"width": w
+      "width": w
       "height": h
-      #"x": "-50%"
-      #"y": "-50%"
+      "x": "-50%"
+      "y": "-50%"
 
   filter
     .append "feFlood"
@@ -318,7 +223,7 @@ createFilter = (w, h, color) ->
       "numOctaves": numOctaves
       "seed": seed
       "result": "element_1"
-  #ok
+
   filter
     .append "feGaussianBlur"
     .attr
@@ -329,28 +234,29 @@ createFilter = (w, h, color) ->
   filter
     .append "feDisplacementMap"
     .attr
-      "scale": "100"
+      "scale": scale
       "in": "element_2"
       "in2": "element_1"
       "result": "element_3"
 
-  #filter
-  #  .append "feComposite"
-  #  .attr
-  #    "operator": "in"
-  #    "in": "element"
-  #    "in2": "element_3"
-  #    "result": "element_4"
+  filter
+    .append "feComposite"
+    .attr
+      "operator": "in"
+      "in": "element"
+      "in2": "element_3"
+      "result": "element_4"
 
-  #filter
-  #  .append "feMerge"
-  #  .append "feMergeNode"
-  #  .attr
-  #    "in": "element_4"
+  filter
+    .append "feMerge"
+    .append "feMergeNode"
+    .attr
+      "in": "element_4"
 
   filterid
 
-drawNebula = (index, topic) ->
+drawNebula = (topic) ->
+
   nebulaColors = _.shuffle [
     "#5fbed7",
     "#fd7c6e",
@@ -389,6 +295,7 @@ drawNebula = (index, topic) ->
 
   s = nebulas.append "g"
     .datum points
+    #.attr "transform", "scale(1.5)"
 
   s.append "path"
     .attr
@@ -396,36 +303,22 @@ drawNebula = (index, topic) ->
     .style
       "filter": "url(#" + filterid + ")"
       "stroke": topicColors[topic]
-      "fill": "transparent"
-        
-for t, i in session.topics
-  drawNebula i, t
+      "fill": "transparent" 
+
+for t in session.topics
+  drawNebula t
 
 # ---------------------------------------------------
 
-# popup = svg.append "rect"
-#   .style
-#     "fill": "red"
-#   .attr
-#     "id": "popup"
-#     "x": 0
-#     "y": 0
-#     "height": 10
-#     "width": 10
-#   .attr "transform", "translate(100, 200)"
-
-# test = svg.append "circle"
-#   #.attr "class", "pulse"
-#   .attr
-#     "cx": width / 2
-#     "cy": height / 2
-#     "r": 5
-#   .style
-#     "fill": "yellow"
-#   #.each(pulse)
-#   .on "click", () ->
-#     d3.select "#popup"
-#       .transition().duration(2000)
-#       .attr "transform", "translate(800, 200)"
-#     #sel = d3.select "#vizBack"
-#     #save sel.node().innerHTML, "snap.svg"
+test = svg.append "circle"
+  .attr
+    "cx": width / 2
+    "cy": height / 2
+    "r": 5
+  .style
+    "fill": "red"
+  .on "click", () ->
+    console.log "click"
+    d3.select this
+      .transition().duration(1000)
+      .attr "cx", width * 0.9
