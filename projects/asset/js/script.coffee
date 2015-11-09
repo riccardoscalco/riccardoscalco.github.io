@@ -46,6 +46,8 @@ nameDis = (dis) ->
   }
   o[dis]
 
+isOdd = (num) -> num % 2
+
 # data is refered to a disease
 averageCop = (data, countries, disease="") ->
   res = (copertures(data, fix(country)) for country in countries)
@@ -170,8 +172,27 @@ drawViz = (error, data) ->
           "width": ""
           "shape-rendering": "crispEdges"
           "stroke-width": 0
-          "fill-opacity": 0.8
+          "fill-opacity": (d, i) ->
+            if isOdd(i) then 0.4 else 0.5
           "fill": (d, i) ->
+            v = +d[disease]
+            if v - average[i] > 0 then "#44d7a8" else "#da2647"
+    lineBar = bars.selectAll ".valuelines"
+        .data copertures data, fix(country)
+      .enter()
+        .append "line"
+        .attr
+          "x1": (d, i) -> w * i + dw
+          "x2": (d, i) -> w * (i + 1) - dw
+          "y1": (d) ->
+            v = +d[disease]
+            yScale v
+          "y2": (d) ->
+            v = +d[disease]
+            yScale v
+          "class": "averageLine"
+        .style
+          "stroke": (d, i) ->
             v = +d[disease]
             if v - average[i] > 0 then "#44d7a8" else "#da2647"
     avBar = bars.selectAll "lines"
@@ -222,7 +243,7 @@ drawViz = (error, data) ->
   xLabels = svg.append "g"
     .attr "transform", "translate(180, 80)"
   xLabels.selectAll "text"
-      .data ["DTP3 (%)","Pol3 (%)","MCV2 (%)"]
+      .data ["Pertosse","Polio","Morbillo"]
     .enter()
       .append "text"
       .text (d) -> d
