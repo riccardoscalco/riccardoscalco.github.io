@@ -252,7 +252,7 @@ drawViz = (error, data) ->
 
 # ------------------------------------------------------------------------------
 
-__dirname = "../data/viz1/"
+__dirname = "./data/viz1/"
 queue()
     .defer d3.csv, __dirname + "obblibo_vaccini_europa.csv"
     .defer d3.csv, __dirname + "dtp3.csv"
