@@ -84,7 +84,7 @@
     var o;
     o = {
       "DTP3 (%)": "Pertussis",
-      "MCV2 (%)": "Measles-mumps-rubella",
+      "MCV1 (%)": "Measles-mumps-rubella",
       "Pol3 (%)": "Polio"
     };
     return o[dis];
@@ -149,7 +149,7 @@
     modData = data[0];
     countries = countries(data[0]);
     av1 = averageCop(data[1], countries, "DTP3 (%)");
-    av2 = averageCop(data[2], countries, "MCV2 (%)");
+    av2 = averageCop(data[2], countries, "MCV1 (%)");
     av3 = averageCop(data[3], countries, "Pol3 (%)");
     width = 900;
     height = 5050;
@@ -307,7 +307,7 @@
     }
     for (index = l = 0, len2 = countries.length; l < len2; index = ++l) {
       country = countries[index];
-      cell(data[2], country, "MCV2 (%)", av2, (widthCell + dw) * 2, index * (heightCell + dh), true);
+      cell(data[2], country, "MCV1 (%)", av2, (widthCell + dw) * 2, index * (heightCell + dh), true);
     }
     yLabels = svg.append("g").attr("transform", "translate(180, 180)");
     yLabels.selectAll("text").data(countries).enter().append("text").text(function(d) {
@@ -325,6 +325,6 @@
 
   __dirname = "./data/viz1/";
 
-  queue().defer(d3.csv, __dirname + "obblibo_vaccini_europa.csv").defer(d3.csv, __dirname + "dtp3.csv").defer(d3.csv, __dirname + "mcv2.csv").defer(d3.csv, __dirname + "pol3.csv").awaitAll(drawViz);
+  queue().defer(d3.csv, __dirname + "obblibo_vaccini_europa.csv").defer(d3.csv, __dirname + "dtp3.csv").defer(d3.csv, __dirname + "mcv1.csv").defer(d3.csv, __dirname + "pol3.csv").awaitAll(drawViz);
 
 }).call(this);

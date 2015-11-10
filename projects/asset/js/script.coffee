@@ -41,7 +41,7 @@ inverseFix = (country) ->
 nameDis = (dis) ->
   o = {
     "DTP3 (%)": "Pertussis"
-    "MCV2 (%)": "Measles-mumps-rubella"
+    "MCV1 (%)": "Measles-mumps-rubella"
     "Pol3 (%)": "Polio"
   }
   o[dis]
@@ -74,7 +74,7 @@ drawViz = (error, data) ->
   
   # calculate average
   av1 = averageCop data[1], countries, "DTP3 (%)"
-  av2 = averageCop data[2], countries, "MCV2 (%)"
+  av2 = averageCop data[2], countries, "MCV1 (%)"
   av3 = averageCop data[3], countries, "Pol3 (%)"
 
   width = 900
@@ -228,7 +228,7 @@ drawViz = (error, data) ->
     cell data[3], country, "Pol3 (%)", av3, widthCell + dw, index * (heightCell + dh)
 
   for country, index in countries
-    cell data[2], country, "MCV2 (%)", av2, (widthCell + dw) * 2, index * (heightCell + dh), true
+    cell data[2], country, "MCV1 (%)", av2, (widthCell + dw) * 2, index * (heightCell + dh), true
 
   yLabels = svg.append "g"
     .attr "transform", "translate(180, 180)"
@@ -256,6 +256,6 @@ __dirname = "./data/viz1/"
 queue()
     .defer d3.csv, __dirname + "obblibo_vaccini_europa.csv"
     .defer d3.csv, __dirname + "dtp3.csv"
-    .defer d3.csv, __dirname + "mcv2.csv"
+    .defer d3.csv, __dirname + "mcv1.csv"
     .defer d3.csv, __dirname + "pol3.csv"
     .awaitAll drawViz
