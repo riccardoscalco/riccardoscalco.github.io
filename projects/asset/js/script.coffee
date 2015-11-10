@@ -94,15 +94,18 @@ drawViz = (error, data) ->
     #   "overflow": "visible"
 
     ra = textures.circles()
-      .thicker()
-      .lighter()
-      .fill "#ccc"
+       .thicker()
+       .lighter()
+       .fill "#ccc"
     svg.call ra
 
-    ma = textures.circles()
-      .thicker()
+    # ma = textures.circles()
+    #   .thicker()
+    #   .lighter()
+    #   .fill "#da2647"
+    ma = textures.lines()
       .lighter()
-      .fill "#da2647"
+      .stroke "#da2647"
     svg.call ma
 
   mainG = svg.append "g"

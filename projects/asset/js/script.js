@@ -167,7 +167,7 @@
     });
     ra = textures.circles().thicker().lighter().fill("#ccc");
     svg.call(ra);
-    ma = textures.circles().thicker().lighter().fill("#da2647");
+    ma = textures.lines().lighter().stroke("#da2647");
     svg.call(ma);
     mainG = svg.append("g").attr("transform", "translate(" + 200 + "," + 100 + ")");
     widthCell = 150;
