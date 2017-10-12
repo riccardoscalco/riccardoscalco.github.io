@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		<main class="nonsense">
+			<figure>
+				<canvas
+					class="glslCanvas"
+					data-fragment-url="{{page.frag}}"
+					width="{{page.width}}"
+					height="{{page.height}}">
+				</canvas>
+				<figcaption>{{page.caption}}</figcaption>
+			</figure>
+		</main>
+		{% include footer.html %}
+	</body>
+	<script type="text/javascript" src="../../js/GlslCanvas.js"></script>
+</html>

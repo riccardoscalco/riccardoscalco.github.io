@@ -1,12 +1,18 @@
 # Site settings
-title: "Riccardo Scalco, graphic information processing"
-email: riccardo.scalco@gmail.com
-description: Riccardo Scalco is an independent consultant in graphic information processing and data science.
+title: "Riccardo Scalco"
+email: riccardo@riccardoscalco.it
+description: Riccardo Scalco creates graphical representations of data.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://riccardoscalco.github.io/" # the base hostname & protocol for your site
+url: "https://riccardoscalco.it" # the base hostname & protocol for your site
 twitter_username: eidogram
 github_username:  riccardoscalco
-keywords: "data visualization, big data, data science, infographics"
+keywords: "web design, frontend, data visualization, big data, data science, infographics"
 
 # Build settings
 markdown: kramdown
+
+defaults:
+  - scope:
+      path: "assets/frags"
+    values:
+      image: true

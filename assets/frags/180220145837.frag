@@ -1,0 +1,76 @@
+// Author: ricsca
+// Title: random truchet tile
+
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform vec2 u_resolution;
+
+#define PI 6.28318530718 / 2.
+
+float plot(vec2 st, float pct){
+	float delta = 0.1;
+    float k = 0.05;
+  	return  smoothstep( pct - k / 2. - delta, pct - k / 2., st.y) -
+    	    smoothstep( pct + k / 2., pct + k / 2. + delta, st.y);
+}
+
+vec2 rotate2D (vec2 _st, float _angle) {
+    _st -= 0.5;
+    _st =  mat2(cos(_angle),-sin(_angle),
+                sin(_angle),cos(_angle)) * _st;
+    _st += 0.5;
+    return _st;
+}
+
+float noise (float x) {
+    return fract(sin(x) * 10000.);
+}
+
+float randomInt (float s, float n) {
+    return floor(mod(noise(s) * 1000., n));
+}
+
+float isOdd (float n) {
+ return 2. * (mod(n, 2.) - .5);   
+}
+
+float angle (vec2 index, float N) {
+    float seed = index.x * index.y / (index.x + 1.);
+    return randomInt(seed, 4.) * PI / 2.;
+}
+
+vec4 tiling (vec2 st, float N) {
+    return vec4(fract(st * N), floor(st * N)); 
+}
+
+float circle (vec2 p, float r) {
+    float delta = 0.;
+    float d = distance(p, vec2(0.5, 0.5));
+    float g = smoothstep(r - delta / 2., r + delta / 2., d);
+    return g;
+}
+
+float ring (vec2 p, float R, float r) {
+    return circle(p, R) + 1. - circle(p, r);
+}
+
+float field (vec2 p) {
+    return plot(p, p.x);
+}
+
+float invertColor (float f) {
+    return -f + 1.;
+}
+
+void main() {
+    float N = 30.;
+    vec2 st = gl_FragCoord.xy/u_resolution;
+    vec2 st1 = rotate2D(st, PI / 4.);
+    vec4 tt = tiling(st1, N);
+    vec2 z = rotate2D(tt.xy, angle(tt.zw, N));
+    float f = field(z);
+    float g = 1. - circle(st, 0.3);
+    gl_FragColor = vec4(vec3(invertColor(f * g)), 1.0);
+}
