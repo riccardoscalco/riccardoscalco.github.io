@@ -35,7 +35,10 @@ main {
 }
 
 div {
+	display: block;
 	overflow: scroll;
+	overflow-y: hidden;
+	overflow-x: auto;
 }
 
 a {
