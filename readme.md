@@ -1,14 +1,22 @@
-Install bundler if not already present:
+#### Update Jekyll and gems
+
+Change the Jekyll version in file `Gemfile`, then run:
 
 ```
-gem install bundler
+bundle update jekyll
+bundle install
 ```
 
-Install gems and serve the website:
+Or use the flag `--path vendor/bundle` to install gems relative to the current directory:
 
 ```
 bundle install --path vendor/bundle
-bundle exec jekyll serve
 ```
 
 Note, add `vendor/bundle` to `.gitignore`.
+
+#### Run Jekyll
+
+```
+bundle exec jekyll serve
+```
