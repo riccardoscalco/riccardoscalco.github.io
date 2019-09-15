@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<title>Riccardo Scalco</title>
+		<meta name="description" content="Warp the coordinate space." />
+		<meta
+			name="keywords"
+			content="generative design, creative coding, computational art, mathematics, GLSL, fragment shader"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="" />
+		<!-- <link rel="canonical" href=/> -->
+		<meta property="og:type" content="website" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<meta property="og:url" content="https://riccardoscalco.it" />
+		<meta name="twitter:url" content="https://riccardoscalco.it" />
+		<meta property="og:title" content="Warp the coordinate space." />
+		<meta name="twitter:title" content="Warp the coordinate space." />
+		<meta property="og:image" content="./images/featured.png" />
+		<meta name="twitter:image" content="./images/featured.png" />
+		<meta name="twitter:card" content="" />
+		<meta property="og:description" content="Warp the coordinate space." />
+		<meta name="twitter:description" content="Warp the coordinate space." />
+	</head>
+	<body>
+		<header>
+			<p>§</p>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">warp the coordinate space</a>/</li>
+				</ul>
+			</nav>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<h1>
+					Warp the coordinate space.
+				</h1>
+				<section>
+					<h2>A bit of theory about the OpenGL graphic pipeline.</h2>
+					<p>
+						In the OpenGL graphics pipeline, the <b>fragment processor</b> is
+						the programmable unit that operates on fragment values. Shaders that
+						are intended to run in this processor are called
+						<b>fragment shaders</b>.
+						<small>
+							Refer to the book <em>OpenGL Shading Language</em> by R.J. Rost
+							and B. Licea-Jane for a deep understanding of the OpenGL graphics
+							pipeline.
+						</small>
+					</p>
+					<p>
+						The fragment values are computed between the vertex processor and
+						the fragment processor, and they are made available to the fragment
+						shader through <b>special input variables</b>. The primary inputs to
+						the fragment shader are the interpolated <em>varying</em> variables.
+					</p>
+					<p>
+						The window coordinate position of the fragment is communicated
+						through the special input varying variable
+						<code>vec4 gl_FragCoord</code>. This window position value is the
+						result of the fixed functionality that interpolates primitives after
+						vertex processing to generate fragments.
+					</p>
+				</section>
+				<section>
+					<h2>
+						A simple exercise: warp an image by transforming the space
+						coordinates.
+					</h2>
+					<p>
+						The fragment shader is executed on the fragment processor and
+						produces output values based on the input values that are provided.
+						One of the user-defined <strong>output variables</strong> is the
+						<code>vec4 gl_FragColor</code> variable, which assigns the RGB
+						colour to the fragment.
+						<small>
+							There is a notebook of this exercise, have look at
+							<a
+								href="https://observablehq.com/@riccardoscalco/warp-glsl-coordinate-space"
+								>https://observablehq.com/@riccardoscalco/warp-glsl-coordinate-space</a
+							>.
+						</small>
+					</p>
+					<p>
+						A fragment shader cannot change the fragment position
+						<code>gl_FragCoord</code>, its task is to define the
+						<code>gl_FragColor</code> variable as a function of
+						<code>gl_FragCoord</code>.
+					</p>
+					<p>
+						In the next examples, the fragment position is expressed by a
+						variable <code>vec2 p</code> with values in <code>[0, 1]</code>. The
+						exercise we are going to follow is based on two functions. The first
+						function defines the fragment colour taking the fragment position as
+						the argument: <code>vec4 colour = f(p)</code>. The second function
+						<code>vec2 g(p)</code> warps the coordinate space defined by the
+						values of <code>p</code>.
+					</p>
+					<p>
+						The composition of <code>f</code> and <code>g</code> will output a
+						distorted version of the original drawing:
+						<code>vec4 warpedColor = f(g(p))</code>.
+					</p>
+				</section>
+				<section>
+					<h2>Draw a lattice on the canvas.</h2>
+					<p>
+						To better visualize the space transformation, the function
+						<code>f</code> above implements a lattice.
+					</p>
+					<p>
+						<a href="#listing1">Listing 1</a> shows the implementation of the
+						<code>smoothSquare</code> function, which produces a smooth square
+						function along a given direction, with peaks nearly
+						<code>2 * delta</code> wide. The <code>lattice</code> function is
+						defined as the sum of two <code>smoothSquare</code> drawn at two
+						perpendicular directions: <code>p.x</code> and <code>p.y</code>.
+					</p>
+					<a id="listing1"></a>
+					<figure>
+						<pre><code>float smoothSquare (float x) {
+  float delta = 0.04;
+  float k = 0.5;
+  float w = fract(x);
+  return
+    smoothstep(k - delta, k, w) *
+    (1. - smoothstep(k, k + delta, w));
+}
+
+float lattice (vec2 p) {
+  return smoothSquare(p.x) + smoothSquare(p.y);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 1.</h3>
+							<p>
+								Function <code>lattice</code> draws a lattice on the space.
+								<img src="images/lattice.png" alt="Regular lattice." /> Note
+								that the number of cells per unit of area can be increased with
+								a scaling of the space coordinates, for example with
+								<code>p &rarr; p * s</code>, where <code>s</code> is the scaling
+								factor (see <a href="#listing2">listing 2</a> below).
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Warp the coordinate space with a rotation around a point.</h2>
+					<p>
+						For the sake of convenience, we are going to implement the space
+						transformation <code>g</code> as a rotation around the canvas
+						centre.
+					</p>
+					<p>
+						Function <code>translateAndScale</code> in
+						<a href="#listing2">listing 2</a> scales the vector
+						<code>p</code> of a factor <code>s</code> and translates
+						<code>p</code> so that the point <code>p = vec2(0., 0.)</code> would
+						be at the centre of the canvas.
+					</p>
+					<a id="listing2"></a>
+					<figure>
+						<pre><code>vec2 translateAndScale (vec2 p, float s) {
+  return p * s - s / 2.;
+}</code></pre>
+						<figcaption>
+							<h3>Listing 2.</h3>
+							<p>Scale and translate the space coordinates.</p>
+						</figcaption>
+					</figure>
+					<p>
+						Function <code>rotate2D</code> in
+						<a href="#listing3">listing 3</a> implements a two-dimensional
+						rotation of an angle <code>alpha</code>.
+					</p>
+					<p>
+						Function <code>warp</code> applies the rotation to the point
+						<code>p</code>, with an angle <code>alpha</code> that is
+						proportional to the distance of <code>p</code> from the canvas
+						centre.
+					</p>
+					<a id="listing3"></a>
+					<figure>
+						<pre><code>mat2 rotate2d(float alpha){
+  return mat2(
+    cos(alpha), -sin(alpha),
+    sin(alpha), cos(alpha)
+  );
+}
+
+vec2 warp (vec2 p) {
+  float t = 0.1;
+  float r = length(p);
+  float alpha = t * r;
+  return rotate2d(alpha) * p;
+}</code></pre>
+						<figcaption>
+							<h3>Listing 3.</h3>
+							<p>
+								Function <code>warp</code> rotates the two-dimensional vector
+								<code>p</code> of a variable angle.
+								<img src="images/warp.png" alt="Regular lattice." /> The angle
+								<code>alpha</code> is a function of the distance between the
+								canvas centre and the vector <code>p</code>.
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Distort the lattice with function composition.</h2>
+					<p>
+						Eventually, we make use of function composition to warp the lattice
+						drawn in <a href="#listing1">listing 1</a>. The function
+						<code>lattice(warp(p))</code> results from the composition of
+						functions <code>warp</code> and <code>lattice</code>.
+					</p>
+					<figure>
+						<pre><code>vec3 field(vec2 p) {</code>
+<mark><code>  float z = lattice(warp(p));</code></mark>
+<code>  return vec3(z, 0., 1. - z);
+}
+
+void main() {
+  vec3 c = field(st);
+  gl_FragColor = vec4(c, 1.0);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 4.</h3>
+							<p>
+								Function <code>lattice</code> has signature
+								<code>float lattice (vec2 p)</code>, whereas function
+								<code>warp</code> has signature <code>vec2 warp (vec2 p)</code>.
+								The composition of the two can only be
+								<code>h = lattice ∘ warp</code> with signature
+								<code>float h (vec2 p)</code>.
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p><span>©</span> Riccardo Scalco.</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

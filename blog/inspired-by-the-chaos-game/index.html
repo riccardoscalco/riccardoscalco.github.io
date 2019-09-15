@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<title>Riccardo Scalco</title>
+		<meta
+			name="description"
+			content="Implement a chaos-game like algorithm in GLSL."
+		/>
+		<meta
+			name="keywords"
+			content="generative design, creative coding, computational art, mathematics, chaos game, fractals, GLSL"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="" />
+		<!-- <link rel="canonical" href=/> -->
+		<meta property="og:type" content="website" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<meta property="og:url" content="https://riccardoscalco.it" />
+		<meta name="twitter:url" content="https://riccardoscalco.it" />
+		<meta property="og:title" content="Inspired by the chaos game." />
+		<meta name="twitter:title" content="Inspired by the chaos game." />
+		<meta property="og:image" content="./images/featured.png" />
+		<meta name="twitter:image" content="./images/featured.png" />
+		<meta name="twitter:card" content="" />
+		<meta
+			property="og:description"
+			content="Implement a chaos-game like algorithm in GLSL."
+		/>
+		<meta
+			name="twitter:description"
+			content="Implement a chaos-game like algorithm in GLSL."
+		/>
+	</head>
+	<body>
+		<header>
+			<p>§</p>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">inspired by the chaos game</a>/</li>
+				</ul>
+			</nav>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</header>
+
+		<main>
+			<article>
+				<h1>
+					Inspired by the chaos game.
+				</h1>
+				<section>
+					<h2>Looking for the chaos.</h2>
+					<p>
+						Reading about chaos theory and fractals, I discovered a family of
+						algorithms known as <strong>chaos game</strong>.
+						<small
+							>The term
+							<a href="https://en.wikipedia.org/wiki/Chaos_game">&ldquo;chaos game&rdquo;</a>
+							refers to a method of creating fractals, using a polygon and a
+							point selected at random inside it.</small
+						>
+						The chaos game is an iterative algorithm, it draws points in the
+						canvas iteratively, therefore GLSL is not the appropriate language
+						for this kind of artwork, the canvas APIs would be a more natural
+						choice. Nevertheless, I want to practice with GLSL and so I went on
+						with it.
+					</p>
+				</section>
+				<section>
+					<h2>A GLSL algorithm inspired by the chaos game.</h2>
+					<p>
+						The algorithm I came in, strictly speaking, is not the chaos game.
+						As with the chaos game, it starts with a polygon <code>V</code>,
+						defined as a list of <code>vec2</code> points in the set
+						<code>S = [0, 1] x [0, 1]</code>, and a further point
+						<code>p</code> in the same set. Given the point <code>p</code> and
+						the polygon <code>V</code>, the algorithm returns a point
+						<code>v</code> in <code>V</code>, i.e. one of the polygon vertices.
+						The returned vector <code>v</code> determines the colour of the
+						pixel at position <code>p</code>. Therefore, if the polygon
+						<code>V</code> has <code>N</code> vertices, the resulting image will
+						have <em>at most</em> <code>N</code> colours.
+					</p>
+					<figure class="grid-of-images">
+						<div>
+							<img
+								alt="Resulting picture with a polygon of 1 vertex."
+								src="./images/N_1.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 2 vertices."
+								src="./images/N_2.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 3 vertices."
+								src="./images/N_3.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 4 vertices."
+								src="./images/N_4.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 5 vertices."
+								src="./images/N_5.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 6 vertices."
+								src="./images/N_6.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 7 vertices."
+								src="./images/N_7.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 8 vertices."
+								src="./images/N_8.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 9 vertices."
+								src="./images/N_9.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 10 vertices."
+								src="./images/N_10.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 11 vertices."
+								src="./images/N_11.png"
+							/>
+							<img
+								alt="Resulting picture with a polygon of 12 vertices."
+								src="./images/N_12.png"
+							/>
+						</div>
+						<figcaption>
+							The image shows the output of the same algorithm started from
+							twelve different lists of vertices: from a list of one vertex at
+							top-left to a list of 12 vertices forming a regular polygon at
+							bottom-right. <a href="#listing1">Listing 1</a> describes the
+							implementation details.
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Find the polygon vertex nearest to a given point.</h2>
+					<p>
+						The algorithm iterates a couple of steps for a fixed and predefined
+						amount of times.
+					</p>
+					<p>
+						The first step finds the nearest vertex <code>v</code> in
+						<code>V</code> to a given point <code>p</code> in <code>S</code>. In
+						<a href="#listing1">listing 1</a>, <code>V</code> is defined as a
+						regular polygon of <code>N</code> vertices and the function
+						<code>nearest</code> returns the nearest vertex <code>v</code> to
+						the point <code>p</code> given as argument.
+					</p>
+					<a id="listing1"></a>
+					<figure>
+						<pre><code>vec2 nearest (vec2 p) {
+  const float PI = 3.141592653589793;
+  const float N = 3.; // number of vertices
+
+  vec2 v = vec2(1., 1.); // output initial value
+  float d = 10.; // distance initial value
+
+  for (float i = 0.; i &lt; N; i++) {
+    // vertex of a regular polygon of N vertices
+    vec2 k = vec2(
+      .5 + sin((2. * PI / N) * i),
+      .5 + cos((2. * PI / N) * i)
+    );
+
+    if (distance(p, k) &lt; d) {
+      v = k;
+      d = distance(p, k);
+    }
+  }
+
+  return v;
+}</code></pre>
+						<figcaption>
+							<h3>Listing 1.</h3>
+							<p>
+								Function <code>nearest</code> calculate the nearest vertex to
+								the point <code>p</code> given as argument. Using the variable
+								<code>k</code>, the <code>for</code> loop
+								<em>implicitly</em> defines the list of vertices. In the
+								example, the list contains the vertices of a regular polygon of
+								<code>N = 3</code> vertices.
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Calculate the initial point of the next iteration.</h2>
+					<p>
+						The second step takes inspiration from the chaos game, the idea is
+						to define the <em>new initial point</em>
+						<code>p<sub>1</sub></code> given the current initial point
+						<code>p</code> and its nearest vertex <code>v</code>.
+					</p>
+					<p>
+						I calculated the symmetric point of <code>v</code> with respect to
+						<code>p</code>, <a href="#listing2">listing 2</a> shows the actual
+						calculation. Anyway, this is just one of many solutions and it could
+						be interesting to explore alternative functions.
+						<small>
+							Note that the new initial point is not guaranteed to fall in
+							<code>S</code>.
+						</small>
+					</p>
+					<a id="listing2"></a>
+					<figure>
+						<pre><code>vec2 nextPoint (vec2 p) {
+  return p + p - nearest(p);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 2.</h3>
+							<p>
+								<code>p<sub>1</sub></code> is a function of <code>p</code> and
+								of its nearest vertex <code>v = nearest(p)</code>.
+							</p>
+						</figcaption>
+					</figure>
+					<p>
+						At this stage, a new iteration starts with
+						<code>p<sub>1</sub></code> as input point: we calculate the nearest
+						vertex <code>v<sub>1</sub></code> and its symmetric point
+						<code>p<sub>2</sub></code
+						>. The number <code>M</code> of iterations is fixed and the
+						algorithm returns a point <code>p<sub>M</sub></code
+						>.
+					</p>
+					<pre><code>vec2 pm (vec2 p) {
+  vec2 z = p;
+  const int M = 5;
+  for(int i = 0; i &lt; M; i++) {
+    z = nextPoint(z);
+  }
+
+  return z;
+}</code></pre>
+				</section>
+				<section>
+					<h2>Assign pixels colours in the fragment shader.</h2>
+					<p>
+						It is time to assign the colour to the pixel at position
+						<code>p</code>. Given <code>p<sub>M</sub></code
+						>, we calculate, for the last time, its nearest vertex. The nearest
+						vertex will define the red and green channels of the pixel colour.
+					</p>
+					<figure>
+						<pre><code>vec3 field (vec2 p) {
+  vec2 q = pm(p);
+  vec2 v = nearest(q);
+
+  return vec3(v, 1.);
+}
+
+void main() {
+  vec3 color = field(st);
+  gl_FragColor = vec4(color, 1.0);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 4.</h3>
+							<p>
+								Note that the iterative function <code>pm</code>, given the
+								initial point <code>p</code> in <code>S</code>, returns a point
+								<code>p<sub>M</sub></code> that, in general, may be outside
+								<code>S</code>.
+							</p>
+							<p>
+								The function <code>nearest</code> solves this problem in the
+								following way: if the nearest vertex has a distance lower than
+								the distance initial value (<code>d = 10.</code> in the example)
+								then we use that vertex for the pixel colour, otherwise we use
+								the vertex initial value (<code>v = vec2(1., 1.)</code> in the
+								example, which will map to <em>white</em>).
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Further explorations.</h2>
+					<p>
+						The algorithm is open to further explorations, you can easily modify
+						the polygon vertices <code>V</code> and the number of iterations
+						<code>M</code> to see how the resulting artwork is affected.
+					</p>
+				</section>
+			</article>
+		</main>
+
+		<footer>
+			<p><span>©</span> Riccardo Scalco.</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

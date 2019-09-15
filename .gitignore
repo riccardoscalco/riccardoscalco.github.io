@@ -1,6 +1,5 @@
-_site/
 *~
-.jekyll-metadata
 .DS_Store
-
-vendor/bundle
+node_modules
+*.log
+.vscode

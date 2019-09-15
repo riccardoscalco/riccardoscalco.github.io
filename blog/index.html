@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Riccardo Scalco</title>
+    <meta name="description" content="Blog of Riccardo Scalco." />
+    <meta
+      name="keywords"
+      content="generative design, creative coding, computational art, mathematics"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="author" href="humans.txt" />
+    <link rel="license" href="copyright.txt" />
+    <meta name="subject" content="" />
+    <link rel="canonical" href="https://riccardoscalco.it/blog" />
+    <meta property="og:type" content="website" />
+    <meta property="article:author" content="Riccardo Scalco" />
+    <meta property="og:site_name" content="riccardoscalco.it" />
+    <meta property="og:locale" content="en_US" />
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <meta property="og:url" content="https://riccardoscalco.it" />
+    <meta name="twitter:url" content="https://riccardoscalco.it" />
+    <meta property="og:title" content="" />
+    <meta name="twitter:title" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:card" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:description" content="" />
+    <style>
+      .posts {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        align-items: start;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+      }
+
+      @media screen and (min-width: 460px) {
+        .posts {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width: 760px) {
+        .posts {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .posts {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+
+      ul.posts {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .posts h3,
+      .posts p {
+        font-size: 17px;
+        line-height: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <p>§</p>
+      <nav>
+        <ul>
+          <li><a href="/">riccardoscalco.it</a>/</li>
+          <li><a href="./">blog</a>/</li>
+        </ul>
+      </nav>
+      <ul>
+        <li>
+          <a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+            <img src="/assets/observable.svg" alt="observable icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/riccardoscalco">
+            <img src="/assets/github.svg" alt="github icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/riccardoscalco_art/">
+            <img src="/assets/instagram.svg" alt="instagram icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/eidogram">
+            <img src="/assets/twitter.svg" alt="twitter icon" />
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <ul class="posts">
+          <li>
+            <a href="/blog/inspired-by-the-chaos-game/">
+              <img
+                src="/blog/inspired-by-the-chaos-game/images/featured.png"
+                alt="Image resulting from the glsl shader."
+              />
+            </a>
+            <h3>
+              <a href="/blog/inspired-by-the-chaos-game/"
+                >Inspired by the chaos game.</a
+              >
+            </h3>
+            <p>
+              Reading about chaos theory and fractals, I discovered a family of
+              algorithms known as chaos game. The term &ldquo;chaos game&rdquo;
+              refers to a method of creating fractals, using a polygon and a
+              point selected at random inside it. I created a similar
+              implementation in GLSL.
+            </p>
+          </li>
+
+          <li>
+            <a href="/blog/warp-the-coordinate-space/">
+              <img
+                src="/blog/warp-the-coordinate-space/images/featured.png"
+                alt="Featured image, a warped lattice on the plane."
+              />
+            </a>
+            <h3>
+              <a href="/blog/warp-the-coordinate-space/"
+                >Warp the coordinate space.</a
+              >
+            </h3>
+            <p>
+              Given a function drawing a regular lattice on the canvas and a
+              coordinate transformation, I used function composition to warp the
+              lattice. The present post offers a basic introduction to the
+              OpenGL graphics pipeline.
+            </p>
+          </li>
+
+          <li>
+            <a href="/blog/switch-space-quarters-iteratively/">
+              <img
+                src="/blog/switch-space-quarters-iteratively/images/featured.png"
+                alt="Image resulting from the glsl shader."
+              />
+            </a>
+            <h3>
+              <a href="/blog/switch-space-quarters-iteratively/"
+                >Switch space quarters iteratively.</a
+              >
+            </h3>
+            <p>
+              Subdivide the canvas in quarters and then switch the top-left
+              quarter with the bottom-right, and the top-right quarter with the
+              bottom-left. Then apply the same partition to each quarter, and
+              switch its quarters. The infinite iteration of the above procedure
+              result to be equivalent to a point reflection.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p><span>©</span> Riccardo Scalco.</p>
+      <p>
+        The content of this website is licensed under the
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+          >CC BY 4.0</a
+        >
+        license.
+      </p>
+      <ul>
+        <li>
+          <a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+            <img src="/assets/observable.svg" alt="observable icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/riccardoscalco">
+            <img src="/assets/github.svg" alt="github icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/riccardoscalco_art/">
+            <img src="/assets/instagram.svg" alt="instagram icon" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/eidogram">
+            <img src="/assets/twitter.svg" alt="twitter icon" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

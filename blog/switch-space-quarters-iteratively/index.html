@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<title>Riccardo Scalco</title>
+		<meta
+			name="description"
+			content="Switch space quarters iteratively in a GLSL fragment shader."
+		/>
+		<meta
+			name="keywords"
+			content="generative design, creative coding, computational art, mathematics, GLSL, fragment shader"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="" />
+		<!-- <link rel="canonical" href=/> -->
+		<meta property="og:type" content="website" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<meta property="og:url" content="https://riccardoscalco.it" />
+		<meta name="twitter:url" content="https://riccardoscalco.it" />
+		<meta property="og:title" content="Switch space quarters iteratively." />
+		<meta name="twitter:title" content="Switch space quarters iteratively." />
+		<meta property="og:image" content="./images/featured.png" />
+		<meta name="twitter:image" content="./images/featured.png" />
+		<meta name="twitter:card" content="" />
+		<meta
+			property="og:description"
+			content="Switch space quarters iteratively in a GLSL fragment shader."
+		/>
+		<meta
+			name="twitter:description"
+			content="Switch space quarters iteratively in a GLSL fragment shader."
+		/>
+	</head>
+	<body>
+		<header>
+			<p>§</p>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">switch space quarters iteratively</a>/</li>
+				</ul>
+			</nav>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<h1>
+					Switch space quarters iteratively.
+				</h1>
+				<section>
+					<h2>Motivations of a glsl experiment.</h2>
+					<p>
+						I asked myself how to randomly sort the tessellation of a glsl
+						shader. Thinking about that problem, I ran into a slightly different
+						problem: the challenge was to subdivide the canvas in quarters and
+						then switch the top-left quarter with the bottom-right, and the
+						top-right quarter with the bottom-left.
+						<small>
+							Observable notebook at
+							<a
+								href="https://observablehq.com/@riccardoscalco/switch-space-quarters-iteratively"
+								>https://observablehq.com/@riccardoscalco/switch-space-quarters-iteratively</a
+							>.
+						</small>
+					</p>
+					<p>
+						The solution was pretty easy: mapping each point <code>q</code> to
+						<code>mod((q - (.5, .5), 1)</code>.
+						<small>
+							The <code>mod</code> function computes the value of one parameter
+							<em>modulo</em> another,
+							<a href="https://khronos.org/registry/OpenGL-Refpages/gl4/"
+								>see the reference pages</a
+							>.
+						</small>
+					</p>
+					<p>
+						We can go further and repeat the same procedure for each quarter.
+						For example, take the (new) top-left quarter, subdivide it in
+						quarters (each is 1/16 of the whole area) and switch the top-left
+						with the bottom-right and the top-right with the bottom-left. Do
+						that for each of the four 1/4-quarters.
+					</p>
+					<p>
+						Then repeat the procedure for each of the 1/16-quarters, then for
+						each of the 1/32-quarters and so on... Of course, the iteration can
+						be infinite but, at a certain point, we start to move around pixels.
+					</p>
+					<figure class="grid-of-images">
+						<div>
+							<img alt="Initial image." src="./images/N_0.png" />
+							<img
+								alt="Output image after 1 iteration."
+								src="./images/N_1.png"
+							/>
+							<img
+								alt="Output image after 2 iterations."
+								src="./images/N_2.png"
+							/>
+							<img
+								alt="Output image after 3 iterations."
+								src="./images/N_3.png"
+							/>
+							<img
+								alt="Output image after 4 iterations."
+								src="./images/N_4.png"
+							/>
+							<img
+								alt="Output image after 5 iterations."
+								src="./images/N_5.png"
+							/>
+							<img
+								alt="Output image after 6 iterations."
+								src="./images/N_6.png"
+							/>
+							<img
+								alt="Output image after 7 iterations."
+								src="./images/N_7.png"
+							/>
+						</div>
+						<figcaption>
+							The image above shows the first seven iterations from
+							<code>N = 0</code> to <code>N = 7</code>. Note that for large N
+							the image recovers the original appearance but it results rotated
+							of 180 degrees. At that point, any new iteration moves portions of
+							the area smaller than pixels.
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Let's look at the code implementation.</h2>
+					<p>
+						The most interesting part of the fragment shader is the function
+						<code>g(q, v) = mod(q - v * (.5, .5), v) + floor(q / v) * v</code>.
+						That function is called at each iteration and applied to the result
+						of the previous iteration.
+					</p>
+					<p>
+						The resulting function applied to the point coordinate
+						<code>q</code> after each iteration is:
+						<small>
+							Note that the output <code>vec2</code> value of each iteration is
+							the input coordinate of the next iteration.
+						</small>
+					</p>
+					<ul>
+						<li>1 iteration: <code>g(q, 1/1)</code></li>
+						<li>2 iterations: <code>g(g(q, 1/1), 1/2)</code></li>
+						<li>3 iterations: <code>g(g(g(q, 1/1), 1/2), 1/4)</code></li>
+						<li>...</li>
+					</ul>
+					<p>
+						The block of GLSL code below defines the function <code>g</code> and
+						the function <code>field</code> resulting after 3 iterations.
+					</p>
+					<pre><code>vec2 g (vec2 st, float v) {
+  return mod(
+    (st - v * vec2(0.5, 0.5)),
+    v
+  ) + floor(st / v) * v;
+}
+
+vec2 field (vec2 st) {
+  vec2 f = st;
+  for (float i = 0.; i &lt; 3.; i += 1.) {
+    f = g(f, 1. / pow(2., i));
+  }
+  return f;
+}</code></pre>
+					<p>
+						Eventually, we can use the function <code>field</code> to assign the
+						value at the <code>gl_FragColor</code> variable.
+					</p>
+					<pre><code>void main() {
+  vec3 color = vec3(field(st), 1.);
+  gl_FragColor = vec4(color, 1.0);
+}
+</code></pre>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p><span>©</span> Riccardo Scalco.</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
