@@ -236,6 +236,7 @@ footer > ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	min-width: 130px;
 }
 
 @media screen and (min-width: 760px) {
@@ -264,7 +265,6 @@ header > ul {
 
 @media screen and (min-width: 760px) {
 	header > ul {
-		display: flex;
 		justify-content: flex-end;
 	}
 }
@@ -518,8 +518,14 @@ footer {
 
 @media screen and (min-width: 760px) {
 	footer {
-		grid-template-columns: 1fr 525px 1fr;
+		grid-template-columns: 1fr auto 1fr;
 		grid-template-areas: "left center right";
+	}
+}
+
+@media screen and (min-width: 960px) {
+	footer {
+		grid-template-columns: 1fr 525px 1fr;
 	}
 }
 
