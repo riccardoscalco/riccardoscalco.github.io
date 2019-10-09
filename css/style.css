@@ -9,6 +9,7 @@
 	--grid-column-gap: 30px;
 	--grid-row-gap: 0;
 	--black: #353839;
+	--red: #933;
 	--code: #ffd;
 	--gray: #ddd;
 }
@@ -304,13 +305,14 @@ header > nav > ul {
 /* a */
 
 a {
-	color: var(--black, #353839);
-	text-decoration-style: solid;
-
+	color: var(--red, #933);
+	text-decoration: none;
+	/* text-decoration-style: solid; */
 	/* text-underline-offset: 2.5px; */
 }
 
 header a {
+	color: var(--black, #353839);
 	text-decoration: none;
 }
 
@@ -318,9 +320,9 @@ header > nav > ul > li > a {
 	padding: 0 10px;
 }
 
-a:hover {
-	/* text-decoration-thickness: 0.1em; */
-}
+/* a:hover {
+	text-decoration-thickness: 0.1em;
+} */
 
 header > nav > ul > li:first-child > a {
 	padding-left: 0;
