@@ -290,13 +290,27 @@ header > nav > ul {
 	grid-template-columns: 1fr 1fr;
 	justify-items: start;
 	align-items: start;
-	grid-column-gap: 40px;
-	grid-row-gap: 40px;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
 }
 
 @media screen and (min-width: 560px) {
 	.grid-of-images > div {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 780px) {
+	.grid-of-images > div {
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.grid-of-images > div {
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
 	}
 }
 
