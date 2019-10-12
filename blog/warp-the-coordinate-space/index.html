@@ -7,8 +7,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-
-		<title>Riccardo Scalco</title>
+		<title>Warp the coordinate space.</title>
 		<meta name="description" content="Warp the coordinate space." />
 		<meta
 			name="keywords"
@@ -17,24 +16,32 @@
 		<meta name="robots" content="index,follow" />
 		<link rel="author" href="humans.txt" />
 		<link rel="license" href="copyright.txt" />
-		<meta name="subject" content="" />
-		<!-- <link rel="canonical" href=/> -->
-		<meta property="og:type" content="website" />
-		<meta property="article:author" content="Riccardo Scalco" />
-		<meta property="og:site_name" content="riccardoscalco.it" />
-		<meta property="og:locale" content="en_US" />
+		<meta name="subject" content="Generative Art" />
+		<link rel="canonical" href="https://riccardoscalco.it/blog/warp-the-coordinate-space/" />
 		<link href="/css/normalize.css" rel="stylesheet" />
 		<link href="/css/style.css" rel="stylesheet" />
 
-		<meta property="og:url" content="https://riccardoscalco.it" />
-		<meta name="twitter:url" content="https://riccardoscalco.it" />
+
+		<!-- Open Graph -->
 		<meta property="og:title" content="Warp the coordinate space." />
-		<meta name="twitter:title" content="Warp the coordinate space." />
-		<meta property="og:image" content="./images/featured.png" />
-		<meta name="twitter:image" content="./images/featured.png" />
-		<meta name="twitter:card" content="" />
-		<meta property="og:description" content="Warp the coordinate space." />
-		<meta name="twitter:description" content="Warp the coordinate space." />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="article:section" content="Generative Art" />
+		<meta
+			property="og:description"
+			content="Given a function drawing a regular lattice on the canvas and a coordinate transformation, I used function composition to warp the lattice."
+		/>
+		<meta property="og:image" content="https://riccardoscalco.it/blog/warp-the-coordinate-space/images/featured.png" />
+		<meta property="og:url" content="https://riccardoscalco.it/blog/warp-the-coordinate-space/" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="">
+		<meta name="twitter:creator" content="@eidogram">
+		<meta name="twitter:title" content="Warp the coordinate space.">
+		<meta name="twitter:description" content="Given a function drawing a regular lattice on the canvas and a coordinate transformation, I used function composition to warp the lattice.">
+		<meta name="twitter:image" content="https://riccardoscalco.it/blog/warp-the-coordinate-space/images/featured.png">
 	</head>
 	<body>
 		<header>
@@ -158,16 +165,16 @@
 					<a id="listing1"></a>
 					<figure>
 						<pre><code>float smoothSquare (float x) {
-  float delta = 0.04;
-  float k = 0.5;
-  float w = fract(x);
-  return
-    smoothstep(k - delta, k, w) *
-    (1. - smoothstep(k, k + delta, w));
+	float delta = 0.04;
+	float k = 0.5;
+	float w = fract(x);
+	return
+		smoothstep(k - delta, k, w) *
+		(1. - smoothstep(k, k + delta, w));
 }
 
 float lattice (vec2 p) {
-  return smoothSquare(p.x) + smoothSquare(p.y);
+	return smoothSquare(p.x) + smoothSquare(p.y);
 }</code></pre>
 						<figcaption>
 							<h3>Listing 1.</h3>
@@ -199,7 +206,7 @@ float lattice (vec2 p) {
 					<a id="listing2"></a>
 					<figure>
 						<pre><code>vec2 translateAndScale (vec2 p, float s) {
-  return p * s - s / 2.;
+	return p * s - s / 2.;
 }</code></pre>
 						<figcaption>
 							<h3>Listing 2.</h3>
@@ -220,17 +227,17 @@ float lattice (vec2 p) {
 					<a id="listing3"></a>
 					<figure>
 						<pre><code>mat2 rotate2d(float alpha){
-  return mat2(
-    cos(alpha), -sin(alpha),
-    sin(alpha), cos(alpha)
-  );
+	return mat2(
+		cos(alpha), -sin(alpha),
+		sin(alpha), cos(alpha)
+	);
 }
 
 vec2 warp (vec2 p) {
-  float t = 0.1;
-  float r = length(p);
-  float alpha = t * r;
-  return rotate2d(alpha) * p;
+	float t = 0.1;
+	float r = length(p);
+	float alpha = t * r;
+	return rotate2d(alpha) * p;
 }</code></pre>
 						<figcaption>
 							<h3>Listing 3.</h3>
@@ -259,8 +266,8 @@ vec2 warp (vec2 p) {
 }
 
 void main() {
-  vec3 c = field(st);
-  gl_FragColor = vec4(c, 1.0);
+	vec3 c = field(st);
+	gl_FragColor = vec4(c, 1.0);
 }</code></pre>
 						<figcaption>
 							<h3>Listing 4.</h3>
