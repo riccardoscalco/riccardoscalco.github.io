@@ -321,7 +321,9 @@ header > nav > ul {
 a {
 	color: var(--red, #933);
 	text-decoration: none;
+
 	/* text-decoration-style: solid; */
+
 	/* text-underline-offset: 2.5px; */
 }
 
