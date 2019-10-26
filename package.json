@@ -7,8 +7,8 @@
     "stylelint-fix": "stylelint --fix css/style.css",
     "vnu-html": "java -jar ./node_modules/vnu-jar/build/dist/vnu.jar --html ./**/*.html && java -jar ./node_modules/vnu-jar/build/dist/vnu.jar --html ./*.html",
     "vnu-css": "java -jar ./node_modules/vnu-jar/build/dist/vnu.jar --css css/style.css",
-    "prettier-html": "prettier --write ./**/*.html",
-    "prettier-css": "prettier --write ./css/style.css",
+    "prettier-html": "prettier --use-tabs --write ./**/*.html",
+    "prettier-css": "prettier --use-tabs --write ./css/style.css",
     "lint": "npm run prettier-html && npm run prettier-css && npm run stylelint-fix && npm run vnu-html && npm run vnu-css"
   },
   "repository": {
