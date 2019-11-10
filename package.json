@@ -25,7 +25,7 @@
     "prettier": "1.18.2",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
-    "vnu-jar": "^19.6.7"
+    "vnu-jar": "^19.9.4"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
