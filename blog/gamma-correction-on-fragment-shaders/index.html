@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Gamma correction on fragment shaders.</title>
+		<meta name="description" content="Gamma correction on fragment shaders." />
+		<meta
+			name="keywords"
+			content="gamma correction, generative design, creative coding, computational art, mathematics, GLSL, fragment shader"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="Generative Art" />
+		<link rel="canonical" href="https://riccardoscalco.it/blog/gamma-correction-on-fragment-shaders/" />
+
+		<!-- Katex -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
+		<!-- End Katex -->
+
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Gamma correction on fragment shaders." />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="article:section" content="Generative Art" />
+		<meta
+			property="og:description"
+			content="This post is about the usage of gamma correction on fragment shaders, what it is and when it is appropriate to apply gamma correction."
+		/>
+		<meta property="og:image" content="https://riccardoscalco.it/blog/gamma-correction-on-fragment-shaders/images/featured.png" />
+		<meta property="og:url" content="https://riccardoscalco.it/blog/gamma-correction-on-fragment-shaders/" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+
+	</head>
+	<body>
+		<header>
+			<p>§</p>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">gamma correction on fragment shaders</a>/</li>
+				</ul>
+			</nav>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<h1>
+					Gamma correction on fragment shaders.
+				</h1>
+				<section>
+					<p>
+						This post is about the usage of gamma correction on fragment shaders, what it is and when it is appropriate to apply gamma correction. I am going to present the argument without any claim of completeness. Instead, I'll try to simplify the reasoning as much as possible, giving space to the math behind gamma correction.
+						<small>Please suggest improvements and corrections opening an issue on the website <a href="https://github.com/riccardoscalco/riccardoscalco.github.io/issues">repository</a>, thanks.</small>
+					</p>
+				</section>
+				<section>
+					<h2>Input and output of a camera.</h2>
+					<p>
+						Let $l$ be the luminance of a ray of light of a given colour. Do not worry about what a ray of light is, for the sake of simplicity, we say that $l$ is a positive number in $[0, 1]$.
+					</p>
+					<p>
+						When a camera detects the ray of light it produces a new positive number $F_{\gamma_c}(l)$ in interval $[0, 1]$. For the moment, just note that the function $F_{\gamma_c}$ depends on the parameter $\gamma_c$, a camera-specific positive number.
+						<small>Somehow, we may treat the camera as a black box that takes in input the colour luminance $l$ and returns on output the value $F_{\gamma_c}(l)$.</small>
+					</p>
+					<p>
+						The final product of the camera elaboration is a digital image. Generally speaking, the digital image is defined by RGB values on each pixel. Each value on the red, green and blue channel is a value $F_{\gamma_c}(l)$ described above.
+					</p>
+				</section>
+				<section>
+					<h2>
+						Input and output of a monitor.
+					</h2>
+					<p>
+						Digital images are visualized on monitors. In order to get back the original luminance value, monitors apply function $F^{-1}$ &mdash; which is the inverse of function $F$ &mdash; to return the value $F^{-1}_{\gamma_m}(F_{\gamma_c}(l))$ in $[0, 1]$. Note that the camera gamma and the monitor gamma may be not equal, only with $\gamma_c = \gamma_m$ we get back the original luminance value $l = F^{-1}_{\gamma}(F_{\gamma}(l))$. In other words, when $\gamma_{m}$ is not equal to $\gamma_{c}$ the image on the screen will have slightly different colours than the original colours captured by the camera.
+						<small>As with the camera, you may treat the monitor like a black box that takes in input the value $F_{\gamma_c}(l)$ stored on the digital image and returns the new positive value $F^{-1}_{\gamma_m}(F_{\gamma_c}(l))$.</small>
+					</p>
+				</section>
+				<section>
+					<h2>The power-law expression.</h2>
+					<p>
+						Summing up, cameras transform the original signal $l$ to $F_{\gamma_c}(l)$. Monitors, on the contrary, apply the inverse operation to get back the original signal on the screen. The diagram below represents the series of operation performed on the original luminance value.
+						$$l \xrightarrow{\text{camera}} F_{\gamma_c}(l) \xrightarrow{\text{monitor}} F^{-1}_{\gamma_m}\Big(F_{\gamma_c}(l)\Big)$$
+					</p>
+					<p>
+						Function $F$ is the power-law expression $F_{\gamma}(l) = l^{\frac{1}{\gamma}}$. Function $F$ is monotonic in $[0,1]$, with $F_{\gamma}(0) = 0$ and $F_{\gamma}(1) = 1$. Most of the devices have a gamma in the interval around the value $2.2$. Taking $\gamma = 2.2$ we have $F_{\gamma}(0.5) \approx 0.73$, which means that the lower half of the domain is mapped to the $73\%$ of the codomain. In other words, the finite set of RGB colours privilege the encoding of lower luminance values over the higher ones.
+					</p>
+					<figure style="max-width: 320px; margin: auto;">
+						<img src="./images/chart.svg" alt="Gamma correction function on the cartesian plane." />
+						<figcaption>
+							<h3>Figure 1.</h3>
+							<p>Diagram of the function $F_{\gamma}(l) = l^{1/\gamma}$. The blue rectangle highlights the fact that half of the domain is mapped to nearly three-quarters of the codomain. As a consequence of the non-linearity of the function, most of the available RGB space encodes low values of the luminance.</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Gamma correction on fragment shaders.</h2>
+					<p>
+						When working with fragment shaders, colour settings <em>implicitly</em> depend on the gamma inverse transformation operated by monitors. Artists adjust the RGB value $x$ in the shader according the colour $F^{-1}_{\gamma}(x) = x^{\gamma}$ visible on the screen. <small>Note that the relationship between RGB values defined on the shader and the colours emitted on the screen is not linear.</small>
+					</p>
+					<p>
+						We may avoid the implicit dependence on gamma &mdash; and the non-linear relationship between input and output &mdash; by adding a gamma correction to the colour $x$. This operation <em>explicitly</em> introduces a gamma parameter on the fragment shader. <small>The gamma parameter on the shader may be tuned according to the gamma value of the output device.</small> The formula to apply is the inverse of the gamma transformation operated by the monitor, i.e. the gamma correction $F(x) = x^{\frac{1}{\gamma}}$. Consequently, the emitted colour $(x^{\frac{1}{\gamma}})^{\gamma}$ is equal to the RGB colour $x$ defined on the shader.
+					</p>
+					<p>
+						The GLSL code in <a href="#listing1">listing 1</a> produces two series of grey, both with RGB values between black and white. The first is linearly distributed in $[0, 1]$ and the second is gamma-corrected.
+					</p>
+					<a id="listing1"></a>
+					<figure>
+						<pre><code>vec3 gammaCorrection (vec3 colour, float gamma) {
+  return pow(colour, vec3(1. / gamma));
+}
+
+vec4 gradientOfGrays (vec2 p) {
+  float N = 10.;
+  float c = floor(p.x * N) / (N - 1.);
+  vec3 colour = vec3(c, c, c);
+  return p.y > .5 ?
+    vec4(colour, 1.) :
+    vec4(gammaCorrection(colour, 2.2), 1.);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 1.</h3>
+							<p>GLSL functions for the gamma correction and the visualisation of a gradient of greys. Usually, gamma correction happens at the very end of the fragment shader: <code>gl_Fragcolour = vec4(gammaCorrection(colour, 2.2), 1.);</code>.</p>
+						</figcaption>
+					</figure>
+					<p>
+						<a href="#figure2">Figure 2</a> is the resulting image. The gradient at the top shows the colours $x^{\gamma}$ obtained from the linearly distributed RGB values in $[0, 1]$. The gradient at the bottom shows the colours $(x^{1/\gamma})^{\gamma}$ obtained from the gamma-corrected RGB values.</p>
+						<p>At the bottom, despite the linear relationship between the RGB values and the emitted colours, <em>we do not perceive</em> a linear gradient. On the contrary, we perceive a linear gradient at the top of the image, where the emitted colours are $x^{\gamma}$.
+					</p>
+					<a id="figure2"></a>
+					<figure style="max-width: 520px; margin: auto;">
+						<img style="border: 1px solid var(--gray);" alt="Gradient of greys." src="./images/gradient.png" />
+						<figcaption>
+							<h3>Figure 2.</h3>
+							<p>Two gradients of greys, both going from black <code>vec3(0.0, 0.0, 0.0)</code> to white <code>vec3(1.0, 1.0, 1.0)</code>. On the gradient at the top gamma correction is <em>not</em> applied, intermediate RGB values at position <code>i</code> are <code>vec3(0.1, 0.1, 0.1) * i</code>. Gamma correction is instead applied on the gradient at the bottom, intermediate RGB values at position <code>i</code> are <code>pow(vec3(0.1, 0.1, 0.1) * i, 1./2.2)</code>. It is evident that, in spite of the linear distribution of luminance values at the bottom (i.e. the values emitted by the monitor), our perception of the resulting gradient of greys is not linear. At the top, on the contrary, where luminance values are not distributed linearly, we perceive a linear gradient.</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>Human colour perception.</h2>
+					<p>
+						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>humans do not perceive linear gradient of colours as linear</em>. We, as humans, are more susceptible to changes between low luminance values than between high values. For this reason, cameras take advantage of the non-linear perception of light to optimize the usage of bits when encoding an image, 
+						privileging the encoding of lower luminance values over the higher ones.
+						<small>Let say, we apply to input luminance the same gamma-correction applied by cameras $F_{\gamma}(l) = l^{\frac{1}{\gamma}}$. Consequently, we perceive a linear gradient of greys from the series $x^{\gamma}$ described above.</small>
+					</p>
+					<blockquote cite="https://poynton.ca/notes/colour/GammaFQA.html">
+						<p>
+							The main purpose of gamma correction in video, desktop graphics, prepress, JPEG, and MPEG is to code light power into a perceptually-uniform domain, so as to obtain the best perceptual performance from a limited number of bits in each of the R, G, and B (or C, M, Y, and K) components.
+						</p>
+						<footer>—Charles Poynton, <cite><a href="https://poynton.ca/notes/colour/GammaFQA.html">Frequently-questioned answers about gamma</a></cite></footer>
+					</blockquote>
+				</section>
+				<section>
+					<h2>Appropriate use of gamma correction.</h2>
+					<p>
+						Do we need to apply gamma correction on fragment shaders? It depends on the meaning we assign to the RGB values we are setting on the shader. Look at the formula $F^{-1}_{\gamma_m}(F_{\gamma_c}(l)) = l$, it means that the monitor emits the same colour observed by the camera. Instead, the colours stored on the digital image are not equal to the original colours, they are gamma-corrected. When we are setting RGB colours on a shader, are they the original colours or the gamma-corrected? If we think they are the original colours, then we need to apply the gamma correction so to have the same colour on output: $(x^{\frac{1}{\gamma}})^{\gamma} = x$.
+					</p>
+					<p>
+						Do we need to treat the RGB values like the original colours? It becomes convenient if we are using mathematical formulas related to light, because calculations are easier. For example, let say $x$ and $y$ are the colours of two light beams, the colour of the sum of the beams is proportional to $x + y$. What if $x$ and $y$ are the <em>implicitly</em> gamma-corrected colours of the beams? Then the gamma-corrected colour of the sum of the beams would be proportional to $(x^{\gamma} + y^{\gamma})^{\frac{1}{\gamma}}$. Describing the light in a 3D scene with implicitly gamma-corrected colours is error-prone, for this reason the gamma correction is convenient.
+						<small>Gamma-correction becomes convenient when the <a href="https://en.wikipedia.org/wiki/Rendering_equation">rendering equation</a> is involved, for example with <a href="https://en.wikipedia.org/wiki/Volume_ray_casting">volume ray casting</a>.</small>
+					</p>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p><span>©</span> Riccardo Scalco.</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
