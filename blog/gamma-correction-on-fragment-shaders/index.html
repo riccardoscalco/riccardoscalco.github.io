@@ -171,7 +171,10 @@ vec4 gradientOfGrays (vec2 p) {
 				<section>
 					<h2>Human colour perception.</h2>
 					<p>
-						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>humans do not perceive linear gradient of colours as linear</em>. We, as humans, are more susceptible to changes between low luminance values than between high values. For this reason, cameras take advantage of the non-linear perception of light to optimize the usage of bits when encoding an image, 
+						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>humans do not perceive linear gradient of colours as linear</em>.
+					</p>
+					<p>
+						We, as humans, are more susceptible to changes between low luminance values than between high values. For this reason, cameras take advantage of the non-linear perception of light to optimize the usage of bits when encoding an image, 
 						privileging the encoding of lower luminance values over the higher ones.
 						<small>Let say, we apply to input luminance the same gamma-correction applied by cameras $F_{\gamma}(l) = l^{\frac{1}{\gamma}}$. Consequently, we perceive a linear gradient of greys from the series $x^{\gamma}$ described above.</small>
 					</p>
