@@ -40,13 +40,23 @@ body {
 	align-items: center;
 }
 
+/* main */
+
 main {
 	width: 100%;
 	margin: 0;
-	padding: 0 25px;
+	padding: 0 15px;
 	box-sizing: border-box;
 	flex: 1 1 auto;
 }
+
+@media screen and (min-width: 460px) {
+	main {
+		padding: 0 25px;
+	}
+}
+
+/* end main */
 
 /* article */
 
