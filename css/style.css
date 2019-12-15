@@ -107,11 +107,6 @@ img {
 	border-radius: 2px;
 }
 
-figure > img {
-	max-width: calc(100% + 20px);
-	margin-left: -10px;
-}
-
 figcaption > p > img {
 	margin: 5px 0 5px 10px;
 	width: 50%;
@@ -463,11 +458,12 @@ pre {
 	background-color: var(--code, #eee);
 	padding: 10px 0;
 	border-radius: 2px;
-	max-width: calc(20px + var(--max-width, 520px));
+	max-width: calc(var(--max-width, 520px));
 	margin: 0 auto 10px auto;
 	overflow-y: hidden;
 	overflow-x: auto;
 	position: relative;
+	box-sizing: border-box;
 }
 
 /* end pre */
