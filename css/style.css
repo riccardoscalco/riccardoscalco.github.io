@@ -77,8 +77,15 @@ blockquote {
 	max-width: var(--max-width, 520px);
 	margin: 20px auto;
 	background: var(--light-gray);
-	padding: 30px 10px;
+	padding: 20px;
 	opacity: 0.9;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 460px) {
+	blockquote {
+		padding: 30px;
+	}
 }
 
 /* end blockquote */
@@ -87,7 +94,6 @@ blockquote {
 
 blockquote > footer {
 	text-align: right;
-	padding: 0 30px;
 }
 
 /* end footer */
@@ -234,10 +240,6 @@ aside > p {
 	line-height: 24px;
 	padding: 0;
 	margin: 0;
-}
-
-blockquote > p {
-	padding: 0 30px;
 }
 
 body > footer p {
