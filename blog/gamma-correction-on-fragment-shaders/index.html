@@ -171,12 +171,11 @@ vec4 gradientOfGrays (vec2 p) {
 				<section>
 					<h2>Human colour perception.</h2>
 					<p>
-						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>humans do not perceive linear gradient of colours as linear</em>.
+						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>human vision has a nonlinear perceptual response to luminance</em>.
 					</p>
 					<p>
-						We, as humans, are more susceptible to changes between low luminance values than between high values. For this reason, cameras take advantage of the non-linear perception of light to optimize the usage of bits when encoding an image, 
-						privileging the encoding of lower luminance values over the higher ones.
-						<small>Let say, we apply to input luminance the same gamma-correction applied by cameras $F_{\gamma}(l) = l^{\frac{1}{\gamma}}$. Consequently, we perceive a linear gradient of greys from the series $x^{\gamma}$ described above.</small>
+						The perceptual response to luminance is called <em>lightness</em> and we, as humans, are more susceptible to changes between low luminance values than between high values. For this reason, cameras take advantage of the non-linear perception of light to optimize the usage of bits when encoding an image, privileging the encoding of lower luminance values over the higher ones.
+						<small>Let say, we apply to input luminance the same gamma-correction applied by cameras $F_{\gamma}(l) = l^{\frac{1}{\gamma}}$. Consequently, we perceive a linear gradient of greys from the series $x^{\gamma}$ described above. Please have a look at the <a href="https://poynton.ca/notes/colour_and_gamma/GammaFAQ.html#lightness">GammaFAQ</a> by Charles Poynton for more details.</small>
 					</p>
 					<blockquote cite="https://poynton.ca/notes/colour/GammaFQA.html">
 						<p>
