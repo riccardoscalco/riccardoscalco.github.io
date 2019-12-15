@@ -1,5 +1,4 @@
-/* EB Garamond + Courier Prime */
-@import url("https://use.typekit.net/qbq4mxb.css");
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime|EB+Garamond:400,400i,600&display=swap');
 
 :root {
 	--max-width: 520px;
@@ -24,7 +23,7 @@ body {
 	min-height: 100vh;
 	max-width: var(--max-width-body, 1120px);
 	color: var(--black, #353839);
-	font-family: "eb-garamond", serif;
+	font-family: 'EB Garamond', serif;
 	font-variant: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -277,7 +276,7 @@ section article > p {
 	opacity: 0.8;
 	margin: 0;
 	padding: 0 0 5px 0;
-	font-family: "Courier New", Courier, monospace;
+	font-family: "Courier Prime", Courier, monospace;
 	font-size: 14px;
 	line-height: 24px;
 }
@@ -410,7 +409,7 @@ code {
 	background-color: var(--code, #eee);
 	padding: 3px 6px;
 	border-radius: 2px;
-	font-family: courier-prime, "Courier", monospace;
+	font-family: "Courier Prime", "Courier", monospace;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -548,7 +547,7 @@ section article > h3 {
 	margin: 0;
 	font-size: 16px;
 	line-height: 24px;
-	font-family: "Courier New", Courier, monospace;
+	font-family: "Courier Prime", Courier, monospace;
 }
 
 section > figure > figcaption > h3 {
