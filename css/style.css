@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Courier+Prime|EB+Garamond:400,400i,600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Courier+Prime|EB+Garamond:400,400i,600&display=swap");
 
 :root {
 	--max-width: 520px;
@@ -23,7 +23,7 @@ body {
 	min-height: 100vh;
 	max-width: var(--max-width-body, 1120px);
 	color: var(--black, #353839);
-	font-family: 'EB Garamond', serif;
+	font-family: "EB Garamond", serif;
 	font-variant: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -543,7 +543,7 @@ section > header > h2 {
 /* h3 */
 
 section article > h3 {
-	padding: 5px 0 0 0;
+	padding: 10px 0 5px 0;
 	margin: 0;
 	font-size: 16px;
 	line-height: 24px;
