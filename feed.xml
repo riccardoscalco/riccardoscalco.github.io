@@ -8,7 +8,6 @@
 
 			<item>
 				<title>Gamma correction on fragment shaders.</title>
-				<description>This post is about the usage of gamma correction on fragment shaders, what it is and when it is appropriate to apply gamma correction. I'll try to simplify the reasoning as much as possible giving space to the math behind gamma correction.</description>
 				<link>
 					http://127.0.0.1:38123/blog/gamma-correction-on-fragment-shaders/
 				</link>
@@ -19,7 +18,6 @@
 
 			<item>
 				<title>Inspired by the chaos game.</title>
-				<description>Reading about chaos theory and fractals, I discovered a family of algorithms known as chaos game. The term “chaos game” refers to a method of creating fractals, using a polygon and a point selected at random inside it. I created a similar implementation in GLSL.</description>
 				<link>
 					https://riccardoscalco.it/blog/inspired-by-the-chaos-game/
 				</link>
@@ -30,7 +28,6 @@
 
 			<item>
 				<title>Warp the coordinate space.</title>
-				<description>Given a function drawing a regular lattice on the canvas and a coordinate transformation, I used function composition to warp the lattice. The present post offers a basic introduction to the OpenGL graphics pipeline.</description>
 				<link>
 					https://riccardoscalco.it/blog/warp-the-coordinate-space/
 				</link>
@@ -41,7 +38,6 @@
 
 			<item>
 				<title>Switch space quarters iteratively.</title>
-				<description>Subdivide the canvas in quarters and then switch the top-left quarter with the bottom-right, and the top-right quarter with the bottom-left. Then apply the same partition to each quarter, and switch its quarters. The infinite iteration of the above procedure result to be equivalent to a point reflection.</description>
 				<link>
 					https://riccardoscalco.it/blog/switch-space-quarters-iteratively/
 				</link>
