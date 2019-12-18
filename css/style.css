@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Courier+Prime|EB+Garamond:400,400i,600&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime:400,700|EB+Garamond:400,400i,600&display=swap');
 
 :root {
 	--max-width: 520px;
@@ -547,6 +547,7 @@ section article > h3 {
 	margin: 0;
 	font-size: 16px;
 	line-height: 24px;
+	font-weight: 700;
 	font-family: "Courier Prime", Courier, monospace;
 }
 
