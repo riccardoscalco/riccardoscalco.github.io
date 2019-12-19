@@ -24,5 +24,20 @@ Have a look at the `package.json` for the details.
 ## Fonts
 
 * "Courier Prime", https://github.com/quoteunquoteapps/CourierPrime
-* "EB Garamond", https://github.com/georgd/EB-Garamond
+* "EB Garamond", https://github.com/octaviopardo/EBGaramond12, https://github.com/georgd/EB-Garamond
+
+Tools used to get the woff2 files:
+
+* https://google-webfonts-helper.herokuapp.com
+* https://github.com/google/woff2
+
+#### Open Source Font Attribution (https://fonts.google.com/attribution)
+
+```
+EBGaramond[wght].ttf: Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+EBGaramond-Italic[wght].ttf: Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)
+CourierPrime-Regular.ttf: Copyright 2015 The Courier Prime Project Authors (https://github.com/quoteunquoteapps/CourierPrime).
+CourierPrime-Bold.ttf: Copyright 2015 The Courier Prime Project Authors (https://github.com/quoteunquoteapps/CourierPrime).
+```
+
 
