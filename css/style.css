@@ -2,7 +2,7 @@
 	font-family: "EB Garamond";
 	font-style: normal;
 	font-weight: 600;
-	font-display: block;
+	font-display: swap;
 	src:
 		url("../fonts/eb-garamond-v12-latin-600.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-600.woff") format("woff");
@@ -12,7 +12,7 @@
 	font-family: "EB Garamond";
 	font-style: italic;
 	font-weight: 400;
-	font-display: block;
+	font-display: swap;
 	src:
 		url("../fonts/eb-garamond-v12-latin-italic.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-italic.woff") format("woff");
@@ -22,7 +22,7 @@
 	font-family: "EB Garamond";
 	font-style: normal;
 	font-weight: 400;
-	font-display: block;
+	font-display: swap;
 	src:
 		url("../fonts/eb-garamond-v12-latin-regular.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-regular.woff") format("woff");
@@ -32,6 +32,7 @@
 	font-family: "EB Garamond Small Caps";
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src:
 		url("../fonts/ebgaramondsc12-regular-webfont.woff2") format("woff2"),
 		url("../fonts/ebgaramondsc12-regular-webfont.woff") format("woff");
@@ -41,7 +42,7 @@
 	font-family: "Courier Prime";
 	font-style: normal;
 	font-weight: 400;
-	font-display: block;
+	font-display: swap;
 	src:
 		url("../fonts/courier-prime-v1-latin-regular.woff2") format("woff2"),
 		url("../fonts/courier-prime-v1-latin-regular.woff") format("woff");
@@ -51,7 +52,7 @@
 	font-family: "Courier Prime";
 	font-style: normal;
 	font-weight: 700;
-	font-display: block;
+	font-display: swap;
 	src:
 		url("../fonts/courier-prime-v1-latin-700.woff2") format("woff2"),
 		url("../fonts/courier-prime-v1-latin-700.woff") format("woff");
