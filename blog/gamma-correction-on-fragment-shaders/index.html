@@ -78,7 +78,7 @@
 		<main>
 			<article>
 				<h1>
-					Gamma correction on fragment shaders.
+					Gamma correction on fragment shaders
 				</h1>
 				<section>
 					<p>
@@ -87,7 +87,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>Input and output of a camera.</h2>
+					<h2>Input and output of a camera</h2>
 					<p>
 						Let $l$ be the luminance of a ray of light of a given colour. Do not worry about what a ray of light is, for the sake of simplicity, we say that $l$ is a positive number in $[0, 1]$.
 					</p>
@@ -109,7 +109,7 @@
 					</p>
 				</section>
 				<section>
-					<h2>The power-law expression.</h2>
+					<h2>The power-law expression</h2>
 					<p>
 						Summing up, cameras transform the original signal $l$ to $F_{\gamma_c}(l)$. Monitors, on the contrary, apply the inverse operation to get back the original signal on the screen. The diagram below represents the series of operation performed on the original luminance value.
 						$$l \xrightarrow{\text{camera}} F_{\gamma_c}(l) \xrightarrow{\text{monitor}} F^{-1}_{\gamma_m}\Big(F_{\gamma_c}(l)\Big)$$
@@ -126,7 +126,7 @@
 					</figure>
 				</section>
 				<section>
-					<h2>Gamma correction on fragment shaders.</h2>
+					<h2>Gamma correction on fragment shaders</h2>
 					<p>
 						When working with fragment shaders, colour settings <em>implicitly</em> depend on the gamma inverse transformation operated by monitors. Artists adjust the RGB value $x$ in the shader according the colour $F^{-1}_{\gamma}(x) = x^{\gamma}$ visible on the screen. <small>Note that the relationship between RGB values defined on the shader and the colours emitted on the screen is not linear.</small>
 					</p>
@@ -169,7 +169,7 @@ vec4 gradientOfGrays (vec2 p) {
 					</figure>
 				</section>
 				<section>
-					<h2>Human colour perception.</h2>
+					<h2>Human colour perception</h2>
 					<p>
 						On the previous sections we described <em>how</em> cameras and monitors manage the luminance values, but we did not say <em>why</em>. Well, the reason is that <em>human vision has a nonlinear perceptual response to luminance</em>.
 					</p>
@@ -185,7 +185,7 @@ vec4 gradientOfGrays (vec2 p) {
 					</blockquote>
 				</section>
 				<section>
-					<h2>Appropriate use of gamma correction.</h2>
+					<h2>Appropriate use of gamma correction</h2>
 					<p>
 						Do we need to apply gamma correction on fragment shaders? It depends on the meaning we assign to the RGB values we are setting on the shader. Look at the formula $F^{-1}_{\gamma_m}(F_{\gamma_c}(l)) = l$, it means that the monitor emits the same colour observed by the camera. Instead, the colours stored on the digital image are not equal to the original colours, they are gamma-corrected. When we are setting RGB colours on a shader, are they the original colours or the gamma-corrected? If we think they are the original colours, then we need to apply the gamma correction so to have the same colour on output: $(x^{\frac{1}{\gamma}})^{\gamma} = x$.
 					</p>
@@ -197,7 +197,7 @@ vec4 gradientOfGrays (vec2 p) {
 			</article>
 		</main>
 		<footer>
-			<p><span>©</span> Riccardo Scalco.</p>
+			<p><span>©</span> Riccardo Scalco</p>
 			<p>
 				The content of this website is licensed under the
 				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
