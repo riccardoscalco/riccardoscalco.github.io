@@ -2,8 +2,8 @@
 	font-family: "EB Garamond";
 	font-style: normal;
 	font-weight: 600;
+	font-display: block;
 	src:
-		local(""),
 		url("../fonts/eb-garamond-v12-latin-600.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-600.woff") format("woff");
 }
@@ -12,6 +12,7 @@
 	font-family: "EB Garamond";
 	font-style: italic;
 	font-weight: 400;
+	font-display: block;
 	src:
 		url("../fonts/eb-garamond-v12-latin-italic.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-italic.woff") format("woff");
@@ -21,15 +22,26 @@
 	font-family: "EB Garamond";
 	font-style: normal;
 	font-weight: 400;
+	font-display: block;
 	src:
 		url("../fonts/eb-garamond-v12-latin-regular.woff2") format("woff2"),
 		url("../fonts/eb-garamond-v12-latin-regular.woff") format("woff");
 }
 
 @font-face {
+	font-family: "EB Garamond Small Caps";
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url("../fonts/ebgaramondsc12-regular-webfont.woff2") format("woff2"),
+		url("../fonts/ebgaramondsc12-regular-webfont.woff") format("woff");
+}
+
+@font-face {
 	font-family: "Courier Prime";
 	font-style: normal;
 	font-weight: 400;
+	font-display: block;
 	src:
 		url("../fonts/courier-prime-v1-latin-regular.woff2") format("woff2"),
 		url("../fonts/courier-prime-v1-latin-regular.woff") format("woff");
@@ -39,6 +51,7 @@
 	font-family: "Courier Prime";
 	font-style: normal;
 	font-weight: 700;
+	font-display: block;
 	src:
 		url("../fonts/courier-prime-v1-latin-700.woff2") format("woff2"),
 		url("../fonts/courier-prime-v1-latin-700.woff") format("woff");
@@ -71,6 +84,7 @@ body {
 	font-variant: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-kerning: normal;
 	-webkit-text-size-adjust: 100%;
 	font-size: 18px;
 	line-height: 27px;
@@ -173,9 +187,10 @@ section article > img {
 
 article > h1 {
 	max-width: var(--max-width, 520px);
-	font-size: 1.4rem;
-	line-height: 2.1rem;
-	font-weight: 600;
+	font-size: 40px;
+	line-height: 45px;
+	font-weight: 400;
+	font-family: "EB Garamond Small Caps", serif;
 	padding-bottom: 25px;
 	margin: 0 auto 25px auto;
 }
@@ -261,6 +276,18 @@ section > figure > div.grid-of-images + figcaption {
 }
 
 /* end figcaption */
+
+/* sup and sub */
+
+sup {
+	font-variant-position: super;
+}
+
+sub {
+	font-variant-position: sub;
+}
+
+/* end sup and sub */
 
 /* p */
 
@@ -551,6 +578,11 @@ p > small {
 
 /* h2 */
 
+h2 {
+	font-family: "EB Garamond Small Caps", serif;
+	font-weight: 400;
+}
+
 section > h2 {
 	display: block;
 	position: relative;
@@ -560,9 +592,8 @@ section > h2 {
 	right: 0;
 	float: none;
 	padding: 0;
-	font-size: 18px;
-	line-height: 27px;
-	font-weight: 600;
+	font-size: 16px;
+	line-height: 18px;
 }
 
 @media (min-width: 975px) {
@@ -570,16 +601,16 @@ section > h2 {
 		position: absolute;
 		width: 180px;
 		margin: 0;
-		top: 0;
+		top: 5px;
 		left: 0;
 	}
 }
 
 section > header > h2 {
-	font-size: 30px;
+	font-size: 40px;
 	line-height: 45px;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 30px 0;
 }
 
 /* end h2 */
@@ -587,7 +618,7 @@ section > header > h2 {
 /* h3 */
 
 section article > h3 {
-	padding: 10px 0 5px 0;
+	padding: 10px 0 0 0;
 	margin: 0;
 	font-size: 16px;
 	line-height: 24px;
