@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Create a 3D scene with fragment shaders.</title>
+		<meta name="description" content="Volume ray casting on fragment shaders." />
+		<meta
+			name="keywords"
+			content="3D scene, volume ray casting, volume ray marching, volumetric ray casting, generative design, creative coding, computational art, mathematics, GLSL, fragment shader"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="Generative Art" />
+		<link rel="canonical" href="https://riccardoscalco.it/blog/volume-ray-casting/" />
+
+		<!-- Katex -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body,{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
+		<!-- End Katex -->
+
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Create a 3D scene with fragment shaders." />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="article:section" content="Generative Art" />
+		<meta
+			property="og:description"
+			content="Volume ray casting on fragment shaders."
+		/>
+		<meta property="og:image" content="https://riccardoscalco.it/blog/volume-ray-casting/images/featured.png" />
+		<meta property="og:url" content="https://riccardoscalco.it/blog/volume-ray-casting/" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+
+	</head>
+	<body>
+		<header>
+			<p>§</p>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">create a 3D scene with fragment shaders</a>/</li>
+				</ul>
+			</nav>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<h1>
+					Create a 3D scene with fragment shaders
+				</h1>
+				<section>
+					<h2>Three different functions for three different jobs</h2>
+					<p>
+						In this blog post, I revisit the code for the implementation of a 3D scene of a cube with the only use of fragment shaders.
+						<small>Please <a class="external" href="https://github.com/riccardoscalco/riccardoscalco.github.io/issues">open an issue</a> to leave comments or questions about this post.</small>
+					</p>
+					<p>
+						I am going to use the volume ray casting procedure &ndash; also known as volume ray marching &ndash; to visualize the 3D scene. With the purpose to fully understand the implementation details, here I am going to recognize and possibly separate the different steps involved in the procedure.
+						<small>
+							Have a look at <a class="external" href="https://www.youtube.com/watch?v=Cfe5UQ-1L9Q">this nice video tutorial</a> from Inigo Quilez.
+						</small>
+					</p>
+					<p>
+						The implementation shows three functions for three different jobs.
+						The <strong>projection function</strong> maps the two-dimensional coordinate of the fragment shader to a direction of observation in the 3D scene. The <strong>ray casting function</strong> finds the distance between the camera and the object surface along a given direction of observation. The <strong>signed distance function</strong> returns the minimum distance between a point in the 3D scene and the object surface.
+						<small>
+							GLSL does not provide first-class functions. As a consequence, it is fairly difficult to keep things well separated. For example, when we would like to pass function $g$ as an argument to function $f$, we are instead forced to call $g$ inside $f$.
+						</small>
+					</p>
+					<p>
+						To visualize a 3D scene onto a 2D screen, we should be able to find which point in the scene appears at a given pixel. In other words, we need to map the pixel position &ndash; i.e. the fragment coordinates &ndash; to a position in the three-dimensional world.
+					</p>
+					<p>
+						The procedure follows two steps. First, the projection function maps the fragment coordinate to a direction of observation &ndash; actually a unit vector in the 3D space. Second, the ray casting function finds the point in the 3D scene we are looking at.
+					</p>
+					<p>
+						These two operations are sufficient to map the <code>vec2</code> of the fragment coordinate to the <code>vec3</code> of a point in the scene. Consequently, we can define the fragment colour as a function of some properties of the point in the 3D space.
+					</p>
+				</section>
+				<section>
+					<h2>The projection function</h2>
+					<p>
+						The projection function takes in input the two-dimensional fragment coordinate and returns a three-dimensional unit vector. The unit vector describes the direction of observation from the camera. The function is bijective, i.e. it establishes a one to one relation between the <code>vec2</code> in input and the <code>vec3</code> in output.
+					</p>
+					<figure id="listing1">
+						<pre><code>vec3 projection (vec2 p) {
+  float F = -2.;
+  return normalize(vec3(p.x, p.y, F));
+}</code></pre>
+						<figcaption>
+							<h3>Listing 1</h3>
+							<p>GLSL implementation of the projection function.</p>
+						</figcaption>
+					</figure>
+					<p>
+						As shown in <a href="#listing1">Listing 1</a>, the returned unit vector depends also on the parameter $F$, which is related to the angle of view of the camera according to the relation $\alpha = \arctan \frac{1}{F}$.
+						<small>
+							We may use the term "focal length" for the parameter $F$ because the <a class="external" href="https://en.wikipedia.org/wiki/Angle_of_view">angle of view</a> of a camera is usually expressed as $\alpha = \arctan \frac{D}{2F}$, where $D$ is the image format dimension and $F$ the focal length of the camera. In our case $D = 2$ and the formula becomes $\alpha = \arctan \frac{1}{F}$.
+						</small>
+					</p>
+					<p>
+						<a href="#figure1">Figure 1</a> shows a geometrical interpretation of the projection function. A screen covering the interval $[-1, 1],$ on the $x$ and $y$-axis, is placed at position $z = F$. Given a point $\vec{p}$ on the screen, with fragment coordinates $x$ and $y$, the projection function returns the unit vector $\vec{p}/|\vec{p}|$, with $\vec{p} = (x, y, F)$.
+					</p>
+					<figure id="figure1" style="max-width: 520px; margin: auto;">
+						<img src="./images/figure1.svg" alt="Projection function" />
+						<figcaption>
+							<h3>Figure 1.</h3>
+							<p>Geometric interpretation of the projection function. The projection function returns the unit vector $\vec{p}/|\vec{p}|$, with $\vec{p} = (x, y, F)$, where $x$ and $y$ are the fragment coordinates.</p>
+							<p>The figure shows only axes $y$ and $z$, the $x$-axis goes inside the screen and it has the same role as the $y$-axis.</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>The ray casting function</h2>
+					<p>
+						Given the unit vector returned by the projection function, the volume ray casting function returns the <em>approximated</em> distance, along that vector, between the camera and the object in the 3D scene.
+					</p>
+					<p>
+						The implementation presented in <a href="#listing2">Listing 2</a> makes use of the signed distance function <code>d</code>, which returns the minimum distance between the point <code>q</code> and the surface. The signed distance function will be discussed in the next section.</p>
+					<figure id="listing2">
+						<pre><code>float rayCast (vec3 rayOrigin, vec3 rayDirection) {
+  float t = 0.;
+
+  for (int i = 0; i < 100; i++) {
+    vec3 q = rayOrigin + t * rayDirection;
+    float h = d(q);
+
+    if (h < 0.001) {
+      break;
+    }
+
+    t += h;
+
+    if (h > 20.) {
+      break;
+    }
+  }
+
+  return t;
+}</code></pre>
+						<figcaption>
+							<h3>Listing 2.</h3>
+							<p>Function <code>rayCast</code> takes in input the ray origin and the ray direction and returns the distance between the ray origin and the intercepted point at the surface.</p>
+							<p>Function <code>d</code> is the signed distance function and it will be discussed in the next section.</p>
+							<p>Condition <code>h < 0.001</code> means that the approximated distance differs from the correct one by less than $0.001$.</p>
+							<p>Condition <code>h > 20</code> means that objects farther than $20$ units are not visible.</p>
+						</figcaption>
+					</figure>
+					<p>For instance, <a href="#figure2">Figure 2</a> shows a ray starting at the camera position $Q_0$ and intercepting the sphere surface at point $Q$. Intermediate points $Q_1$, $Q_2$, &#8230;, $Q_n$ represent the intermediate values of point <code>q = rayOrigin + t * rayDirection</code> at each loop. In general, at each loop the approximation is better: $Q_n$ is nearer than $Q_{n - 1}$.</p>
+					<figure id="figure2" style="margin: 25px auto;">
+						<div><img src="./images/figure2.svg" alt="" style="min-width: 650px; padding: 20px 0; margin: auto;"/></div>
+						<figcaption>
+							<h3>Figure 2.</h3>
+							<p>
+								The volume ray casting function calculates the distance between the ray origin $Q_0$ &ndash; the camera position &ndash; and the intercepted point $Q$ (if any) at the object surface. Intermediate points $Q_1$, $Q_2$ and so on represent the intermediate values of point <code>q = rayOrigin + t * rayDirection</code> at each loop. The radius of the circle at each intermediate point shows the distance <code>h = d(q)</code> between the point and the surface.
+								</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>The signed distance function</h2>
+					<p>
+						In the previous section, we assumed to have the signed distance function <code>d</code> called inside the ray casting procedure. This section will introduce the function.
+						<small>The signed distance function is the most interesting part of our algorithm because it describes the 3D scene and, consequently, changes from scene to scene.</small>
+					</p>
+					<p>
+						Given a surface $S$ in a metric space and a point $\vec{q}$ in that space, the signed distance function (aka SDF) returns the minimum distance of $\vec{q}$ from the surface. For example, the distance of point $\vec{q}$ from a sphere of radius $r$ centred at the origin is $d(\vec{q}) = |\vec{q}| - r$. Note that the function returns positive or negative values &ndash; hence the term <em>signed</em>. As a convention, here we are using positive values for points outside the sphere and negative ones for points inside it.
+					</p>
+					<figure>
+						<pre><code>float sphereSDF (vec3 q) {
+  return distance(q) - r;
+}</code></pre>
+						<figcaption>
+							<h3>Listing 3.</h3>
+							<p>GLSL implementation of the signed distance function (SDF) of a sphere of radius $r$ centred at the origin.</p>
+						</figcaption>
+					</figure>
+					<p>
+						Similarly, it is possible to define the signed distance function of a box centred at the origin and oriented with its sides parallel with the coordinate axis. For the derivation, have a look at <a class="external" href="https://youtu.be/62-pRVZuS5c">this video</a> from Inigo Quilez.
+					</p>
+					<figure>
+						<pre><code>float cubeSDF (vec3 q) {
+  vec3 s = vec3(0.5);
+  return length(max(abs(q) - s, 0));
+}</code></pre>
+						<figcaption>
+							<h3>Listing 4.</h3>
+							<p>GLSL implementation of the signed distance function (SDF) of a box of sides $2s$ centred at the origin. The function implements a cube of side $1$.</p>
+						</figcaption>
+					</figure>
+					<p>
+						Moreover, the <strong>normal vector</strong> at any point on the surface can be defined by means of the gradient of the surface SDF:
+						$$
+						\vec{n}(\vec{q}) = \frac{\nabla d(\vec{q})}{|\nabla d(\vec{q})|}
+						$$
+					</p>
+					<p>The numerical implementation of the normal vector is presented in <a href="#listing5">Listing 3</a>, it makes use of the <a class="external" href="https://en.wikipedia.org/wiki/Symmetric_derivative">symmetric derivative</a> numerical method.</p>
+					<figure id="listing5">
+						<pre><code>vec3 normal (vec3 q) {
+  vec2 e = vec2(0.0001, 0.);
+  return normalize(vec3(
+    d(q + e.xyy) - d(q - e.xyy),
+    d(q + e.yxy) - d(q - e.yxy),
+    d(q + e.yyx) - d(q - e.yyx)
+  ));
+}</code></pre>
+						<figcaption>
+							<h3>Listing 5.</h3>
+							<p>
+								GLSL implementation of the normal vector at point $\vec{q}$ on the surface described by the SDF function $d$. The <a class="external" href="https://en.wikipedia.org/wiki/Symmetric_derivative">symmetric derivative</a> uses a value of $\epsilon = 0.0001$ which, in general, needs to be adjusted according to the surface shape.
+							</p>
+						</figcaption>
+					</figure>
+				</section>
+				<section>
+					<h2>The 3D scene</h2>
+					<p>
+						The above sections describe how to define a 3D scene and how to map the fragment coordinates to a point in the 3D scene. Consequently, we can assign the <code>fragColor</code> depending on some properties of the <code>vec3</code> vector in the three-dimensional space.
+					</p>
+					<figure>
+						<pre><code>void main () {
+  vec2 p = vUv;
+
+  // Center coordinate
+  p = 2. * p - vec2(1.);
+
+  // Set focal length and camera position
+  float F = -1.5;
+  vec3 rayOrigin = vec3(0., 0., 2.);
+
+  // Find the ray direction
+  vec3 rayDirection = projection(p, F);
+
+  // Calculate distance between
+  // the camera and the surface
+  float t = rayCast (rayOrigin, rayDirection);
+
+  // Initialize color
+  vec3 color = vec3(1.);
+
+  // Set color to the normal if the object 
+  // is not too far
+  if (t < 20.) {
+    // Find the point in the 3D space
+    // and the surface normal
+    vec3 q = rayOrigin + t * rayDirection;
+    vec3 normal = calcNormal(q);
+    color = normalize(normal);
+  }
+
+  gl_FragColor = vec4(color, 1.);
+}</code></pre>
+						<figcaption>
+							<h3>Listing 6.</h3>
+							<p>
+								The <code>main</code> function produces a 3D cube with faces coloured according to their normal vector. In order to better visualize the cube, in the image below the cube has been slightly rotated by means of the <a class="external" href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">Rodrigues' rotation formula</a>.
+								<img alt="3D cube created with a fragment shader" src="images/image.png" />
+							</p>
+							<p>Please have a look at the following <a class="external" href="https://www.npmjs.com/package/glsl-rodrigues-rotation">npm module</a> to apply the cube rotation in the <code>main</code> function.</p>
+						</figcaption>
+					</figure>
+					<p>Please suggest improvements and corrections opening an issue on the website <a href="https://github.com/riccardoscalco/riccardoscalco.github.io/issues">repository</a>, thanks.</p>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<p><span>©</span> Riccardo Scalco</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<!-- <script>
+		const arc = (cx, cy, r, startAngle, endAngle) => {
+			const start = [r * Math.cos(startAngle) + cx, r * Math.sin(startAngle) + cy];
+			const end = [r * Math.cos(endAngle) + cx, r * Math.sin(endAngle) + cy];
+			const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+			
+			return `M ${start[0]} ${start[1]} A ${r} ${r} 0 ${largeArcFlag} 0 ${end[0]} ${end[1]}`;
+		}
+
+		window.arc = arc;
+	</script> -->
+</html>

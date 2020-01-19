@@ -249,11 +249,12 @@ section > figure > figcaption {
 	margin: 10px auto;
 }
 
-section > figure > div.grid-of-images + figcaption {
+section > figure > div + figcaption {
 	position: relative;
 	max-width: unset;
 	width: 100%;
 	margin-top: 10px;
+	right: unset;
 }
 
 /* 975 = 525 + 20 * 2 + 180 * 2 + 25 * 2 */
@@ -816,6 +817,15 @@ main > aside {
 }
 
 /* end .grid-of-images */
+
+/* div */
+
+figure > div {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+/* div */
 
 /* katex */
 .katex {

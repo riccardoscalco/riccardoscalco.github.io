@@ -1,0 +1,54 @@
+<svg
+	version="1.1"
+	width="500" height="500"
+	viewBox="0 0 500 500"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<style>
+		text {
+			font-size: 16px;
+			font-weight: bold;
+			font-family: "Courier New", Courier, monospace;
+		}
+	</style>
+
+	<defs>
+		<pattern id="lines" viewBox="0,0,10,10" width="3%" height="3%">
+			<line x1="0" x2="8" y1="8" y2="0" stroke="#353839" stroke-opacity=".3" stroke-linecap="square"/>
+			<line x1="8" x2="10" y1="10" y2="8" stroke="#353839" stroke-opacity=".3" stroke-linecap="square"/>
+		</pattern>
+	</defs>
+	
+
+	<line x1="250" y1="0" x2="250" y2="500" stroke="#353839" />
+	<line x1="0" y1="250" x2="500" y2="250" stroke="#353839" />
+	<text x="500" y="250" dx="-20" dy="20" fill="#353839">z</text>
+	<text x="250" y="0" dx="10" dy="20" fill="#353839">y</text>
+	<text x="250" y="250" dx="10" dy="20" fill="#353839">O</text>
+
+	<g stroke="#353839" stroke-width="0.5" stroke-dasharray="3,3">
+		<line x1="50" y1="150" x2="250" y2="150" />
+		<line x1="50" y1="350" x2="250" y2="350" />
+	</g>
+	<text x="250" y="150" dx="10" dy="-5" fill="#353839">1</text>
+	<text x="250" y="350" dx="10" dy="15" fill="#353839">-1</text>
+
+	<line x1="50" y1="150" x2="50" y2="350" stroke="#1a4876" stroke-width="3"/>
+	<circle cx="50" cy="250" r="3" stroke="none" fill="#1a4876" />
+	<text x="50" y="250" dx="-20" dy="20" fill="#1a4876">F</text>
+
+	<circle r="100" cx="250" cy="250" stroke="#1a4876" fill="none" />
+
+	<line x1="250" y1="250" x2="50" y2="188.322" stroke="#1a4876" stroke-width="1" stroke-dasharray="3,3"/>
+	<line x1="250" y1="250" x2="154" y2="220.5" stroke="#1a4876" stroke-width="3" />
+	<circle cx="50" cy="188.322" r="3" stroke="none" fill="#1a4876" />
+	<text x="50" y="188.322" dx="-10" dy="4" fill="#1a4876" style="text-anchor: end;">p</text>
+
+	<text x="165" y="250" dx="0" dy="-8" fill="#1a4876" style="text-anchor: middle;">a</text>
+
+	<circle cx="250" cy="250" r="3" stroke="none" fill="#353839" />
+
+	<path d="M 178.33064753263136 227.89787528521111 A 75 75 0 0 0 175 250" stroke="#1a4876" fill="none" />
+	<path d="M 181.1974216313261 228.78196027380267 A 72 72 0 0 0 178 250" stroke="#1a4876" fill="none" />
+
+</svg>

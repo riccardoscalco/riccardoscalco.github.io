@@ -1,0 +1,63 @@
+<svg
+	version="1.1"
+	width="900" height="500"
+	viewBox="0 0 900 500"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<style>
+		text {
+			fill: #353839;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: "Courier New", Courier, monospace;
+		}
+	</style>
+
+	<defs>
+		<pattern id="lines" viewBox="0,0,10,10" width="2%" height="2%">
+			<line x1="0" x2="8" y1="8" y2="0" stroke="#353839" stroke-opacity=".5" stroke-linecap="square"/>
+			<line x1="8" x2="10" y1="10" y2="8" stroke="#353839" stroke-opacity=".5" stroke-linecap="square"/>
+		</pattern>
+	</defs>
+
+	<circle r="150" cx="200" cy="250" stroke="none" fill="url(#lines)" />
+	<line x1="200" y1="0" x2="200" y2="500" stroke="#353839" />
+	<line x1="0" y1="250" x2="900" y2="250" stroke="#353839" />
+	<text x="900" y="250" dx="-20" dy="20">z</text>
+	<text x="200" y="0" dx="-20" dy="20">y</text>
+	<circle cx="200" cy="250" r="3" stroke="none" fill="#353839" />
+	<circle cx="200" cy="100" r="3" stroke="none" fill="#353839" />
+	<line x1="200" y1="250" x2="200" y2="100" stroke="#353839" stroke-width="2"/>
+	<text x="200" y="100" dx="-20" dy="3">r</text>
+
+	<line x1="850" y1="250" x2="275" y2="120.096" stroke="#1a4876" stroke-width="2"/>
+
+	<circle r="3" cx="850" cy="250" stroke="none" fill="#1a4876" />
+	<circle r="500" cx="850" cy="250" stroke="#1a4876" fill="none" stroke-width="1"/>
+	<line x2="850" y2="250" x1="850" y1="180" stroke-width="1" stroke="#1a4876" stroke-dasharray="4,4"/>
+	<text x="850" y="180" dy="-10" style="text-anchor: middle; fill: #1a4876;">Q0</text>
+
+	<circle r="3" cx="362.291" cy="139.817" stroke="none" fill="#1a4876" />
+	<circle r="46.16" cx="362.291" cy="139.817" stroke="#1a4876" fill="none" stroke-width="1"/>
+	<line x2="362.291" y2="139.817" x1="362.291" y1="69.817" stroke-width="1" stroke="#1a4876" stroke-dasharray="4,4"/>
+	<text x="362.291" y="69.817" dy="-10" style="text-anchor: middle; fill: #1a4876;">Q1</text>
+
+	<circle r="3" cx="317.266" cy="129.645" stroke="none" fill="#1a4876" />
+	<circle r="18.038" cx="317.266" cy="129.645" stroke="#1a4876" fill="none" stroke-width="1"/>
+	<line x2="317.266" y2="129.645" x1="317.266" y1="59.645" stroke-width="1" stroke="#1a4876" stroke-dasharray="4,4"/>
+	<text x="317.266" y="59.645" dy="-10" style="text-anchor: middle; fill: #1a4876;">Q2</text>
+
+	<circle r="3" cx="299.672" cy="125.67" stroke="none" fill="#1a4876" />
+	<circle r="9.35" cx="299.672" cy="125.67" stroke="#1a4876" fill="none" stroke-width="1"/>
+	<line x1="299.672" y1="125.67" x2="299.672" y2="195.27" stroke-width="1" stroke="#1a4876" stroke-dasharray="4,4"/>
+	<text x="299.672" y="195.27" dy="10" style="text-anchor: middle; fill: #1a4876;">Q3</text>
+
+	<circle r="3" cx="290.552" cy="123.609" stroke="none" fill="#1a4876" />
+	<circle r="5.48" cx="290.552" cy="123.609" stroke="#1a4876" fill="none" stroke-width="1"/>
+	<line x2="290.552" y2="123.609" x1="290.552" y1="53.6" stroke-width="1" stroke="#1a4876" stroke-dasharray="4,4"/>
+	<text x="290.552" y="53.609" dy="-10" style="text-anchor: middle; fill: #1a4876;">Q4</text>
+
+	<circle r="3" cx="275" cy="120.096" stroke="none" fill="#1a4876" />
+	<text x="275" y="120.096" dy="-10" style="text-anchor: middle; fill: #1a4876;">Q</text>
+
+</svg>

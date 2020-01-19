@@ -7,12 +7,22 @@
 		<atom:link href="https://riccardoscalco.it/feed.xml" rel="self" type="application/rss+xml" />
 
 			<item>
-				<title>Gamma correction on fragment shaders.</title>
+				<title>Create a 3D scene with fragment shaders.</title>
 				<link>
-					http://127.0.0.1:38123/blog/gamma-correction-on-fragment-shaders/
+					https://riccardoscalco.it/blog/volume-ray-casting/
 				</link>
 				<guid isPermaLink="true">
-					http://127.0.0.1:38123/blog/gamma-correction-on-fragment-shaders/
+					https://riccardoscalco.it/blog/volume-ray-casting/
+				</guid>
+			</item>
+
+			<item>
+				<title>Gamma correction on fragment shaders.</title>
+				<link>
+					https://riccardoscalco.it/blog/gamma-correction-on-fragment-shaders/
+				</link>
+				<guid isPermaLink="true">
+					https://riccardoscalco.it/blog/gamma-correction-on-fragment-shaders/
 				</guid>
 			</item>
 
