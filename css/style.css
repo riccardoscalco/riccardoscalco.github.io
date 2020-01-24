@@ -678,7 +678,7 @@ body > footer {
 /* span */
 
 body > footer > p:first-child > span::after {
-	content: " 2019";
+	content: " 2020";
 }
 
 /* end span */
