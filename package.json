@@ -24,7 +24,7 @@
   "devDependencies": {
     "prettier": "1.19.1",
     "stylelint": "^12.0.1",
-    "vnu-jar": "^19.9.4",
+    "vnu-jar": "^20.2.28",
     "stylelint-config-standard": "^19.0.0"
   },
   "stylelint": {
