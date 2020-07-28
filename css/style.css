@@ -354,6 +354,12 @@ section article > p {
 	line-height: 24px;
 }
 
+main > footer > p {
+	max-width: unset;
+	font-size: 16px;
+	line-height: 24px;
+}
+
 section > figure > figcaption > p {
 	font-size: 16px;
 	line-height: 24px;
@@ -451,6 +457,10 @@ a {
 body > header a {
 	color: var(--black, #353839);
 	text-decoration: none;
+}
+
+main > footer > p > a {
+	color: var(--black);
 }
 
 body > header > nav > ul > li > a {
@@ -671,6 +681,10 @@ body > footer {
 	body > footer {
 		grid-template-columns: 1fr 525px 1fr;
 	}
+}
+
+main > footer {
+	height: 50px;
 }
 
 /* end body > footer */
