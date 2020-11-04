@@ -179,7 +179,12 @@ figcaption > p > img {
 }
 
 section article > img {
-	border: 10px solid var(--light-gray, #eee);
+	border: 5px solid var(--light-gray, #eee);
+}
+
+body > header > a > img {
+	width: 30px;
+	height: 30px;
 }
 
 /* end img */
@@ -471,15 +476,28 @@ body > header > nav > ul > li > a {
 	text-decoration-thickness: 0.1em;
 } */
 
-body > header > nav > ul > li:first-child > a {
-	padding-left: 0;
-}
-
 a.external::after {
 	position: relative;
 	content: "\FEFF°";
 	color: #933;
 	font-feature-settings: "caps" 1;
+}
+
+body > header > a:first-child {
+	grid-area: left;
+	width: 100%;
+}
+
+body > header > a:last-child {
+	justify-self: end;
+}
+
+body > header > a:last-child::after {
+	content: "///";
+}
+
+body > header > nav > ul > li:first-child > a {
+	padding-left: 0;
 }
 
 /* end a */
