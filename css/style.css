@@ -453,10 +453,6 @@ body > header > nav > ul {
 a {
 	color: var(--red, #933);
 	text-decoration: none;
-
-	/* text-decoration-style: solid; */
-
-	/* text-underline-offset: 2.5px; */
 }
 
 body > header a {
@@ -469,12 +465,18 @@ main > footer > p > a {
 }
 
 body > header > nav > ul > li > a {
-	padding: 0 10px;
+	padding: 0 5px;
 }
 
-/* a:hover {
-	text-decoration-thickness: 0.1em;
-} */
+@media screen and (min-width: 460px) {
+	body > header > nav > ul > li > a {
+		padding: 0 10px;
+	}
+}
+
+a:hover {
+	text-decoration: underline;
+}
 
 a.external::after {
 	position: relative;
@@ -485,19 +487,33 @@ a.external::after {
 
 body > header > a:first-child {
 	grid-area: left;
-	width: 100%;
 }
 
 body > header > a:last-child {
 	justify-self: end;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 body > header > a:last-child::after {
-	content: "///";
+	background-image: url("/assets/github-pr.svg");
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	content: "";
 }
 
 body > header > nav > ul > li:first-child > a {
 	padding-left: 0;
+}
+
+body > header > a:last-child:hover {
+	background-color: var(--light-gray);
 }
 
 /* end a */
@@ -753,14 +769,14 @@ body > header > nav > ul > li:first-child {
 body > header {
 	width: 100%;
 	margin: 0;
-	padding: 0 25px;
+	padding: 0 15px;
 	box-sizing: border-box;
 	height: 90px;
 	border-bottom: 1px solid var(--light-gray, #eee);
 	position: relative;
 	display: grid;
 	grid-template-rows: auto;
-	grid-template-columns: 20px auto 0;
+	grid-template-columns: 30px auto 0;
 	grid-template-areas: "left center right";
 	justify-items: start;
 	align-items: center;
@@ -770,6 +786,7 @@ body > header {
 @media screen and (min-width: 460px) {
 	body > header {
 		grid-template-columns: 30px auto 130px;
+		padding: 0 25px;
 	}
 }
 

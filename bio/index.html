@@ -40,29 +40,46 @@
 			name="twitter:description"
 			content="This website is a medium to express myself."
 		/>
-		<style></style>
+		<style>
+			section > ul {
+				list-style: none;
+				padding: 0;
+			}
+			section > ul > li {
+				padding-bottom: 20px;
+			}
+		</style>
 	</head>
 
 	<body>
 		<header>
-			<a href="/"><img alt="logo" src="/assets/images/7.png" /></a>
+			<a title="Surprise me" href="/blog/"
+				><img alt="surprise me" src="/assets/images/11.png"
+			/></a>
 			<nav>
 				<ul>
 					<li><a href="/">riccardoscalco.it</a>/</li>
 					<li><a href="./">bio</a>/</li>
 				</ul>
 			</nav>
-			<a href="/map"></a>
+			<a
+				title="Contribute to this page on Github"
+				href="https://github.com/riccardoscalco/riccardoscalco.github.io/blob/master/bio/index.html"
+			></a>
 		</header>
 		<main>
 			<section>
-				<h2>Availability</h2>
+				<h2>Get in touch</h2>
 				<p>Please contact me at riccardo@riccardoscalco.it.</p>
+			</section>
+			<section>
+				<h2>Availability</h2>
 				<p>
 					Currently, I am into
 					<a href="/data-visualisation/">data visualisation</a> at
-					<a class="external" href="http://nextbit.it/">Nextbit</a>. I am not
-					available for new projects.
+					<a class="external" href="http://nextbit.it/">Nextbit</a>. I create
+					digital experiences through the visual exploration of complex
+					phenomena, making big data scenarios accessible for everyone.
 				</p>
 			</section>
 			<section>
@@ -71,12 +88,13 @@
 				</h2>
 				<ul>
 					<li>
-						<strong>University of Zurich</strong> 2009 – 2012<br />
-						PhD in Computational Biochemistry
+						<strong>PhD in Computational Biochemistry</strong><br />
+						University of Zurich | 2009 – 2012
 					</li>
 					<li>
-						<strong>University of Parma</strong> 2005 – 2008<br />
-						Master's degree in Theoretical Physics
+						<strong>Master's degree in Theoretical Physics, with honors</strong
+						><br />
+						University of Parma | 2005 – 2008
 					</li>
 				</ul>
 			</section>
@@ -89,6 +107,7 @@
 						<em>Ultrametricity in Protein Folding Dynamics</em>
 						<br />J. Chem. Theory Comput., 2012, 8 (5), pp 1580–1588 |
 						<a
+							class="external"
 							href="http://www.biochem-caflisch.uzh.ch/sites/default/files/publist/pdfs/riccardos12jctc.pdf"
 							>link</a
 						>
@@ -101,6 +120,7 @@
 						>
 						<br />PLOS ONE 6(12): e27924 |
 						<a
+							class="external"
 							href="http://www.plosone.org/article/info:doi/10.1371/journal.pone.0027924"
 							>link</a
 						>
@@ -110,6 +130,7 @@
 						<em>Equilibrium distribution from distributed computing</em>
 						<br />J Phys Chem B. 2011 May 19;115(19):6358-65 |
 						<a
+							class="external"
 							href="http://www.biochem-caflisch.uzh.ch/sites/default/files/publist/pdfs/riccardos11.pdf"
 							>link</a
 						>
@@ -126,7 +147,7 @@
 				</a>
 				license.
 			</p>
-			<!-- <ul>
+			<ul>
 				<li>
 					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
 						<img src="/assets/observable.svg" alt="observable icon" />
@@ -147,7 +168,7 @@
 						<img src="/assets/twitter.svg" alt="twitter icon" />
 					</a>
 				</li>
-			</ul> -->
+			</ul>
 		</footer>
 	</body>
 </html>
