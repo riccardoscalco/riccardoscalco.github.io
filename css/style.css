@@ -178,7 +178,8 @@ figcaption > p > img {
 	}
 }
 
-section article > img {
+section article > img,
+section article > picture > img {
 	border: 5px solid var(--light-gray, #eee);
 }
 
