@@ -183,7 +183,8 @@ section article > picture > img {
 	border: 5px solid var(--light-gray, #eee);
 }
 
-body > header > a > img {
+body > header > a > img,
+body > header > a > picture > img {
 	width: 30px;
 	height: 30px;
 }
@@ -833,7 +834,6 @@ main > aside {
 	grid-row-gap: 20px;
 }
 
-.grid-of-images.one,
 .grid-of-images.two {
 	grid-template-columns: 1fr;
 }
@@ -843,18 +843,12 @@ main > aside {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
-	.grid-of-images.one,
 	.grid-of-images.two {
 		grid-template-columns: 1fr 1fr;
 	}
 }
 
 @media screen and (min-width: 780px) {
-	.grid-of-images.one {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
-
-	.grid-of-images.one,
 	.grid-of-images {
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
