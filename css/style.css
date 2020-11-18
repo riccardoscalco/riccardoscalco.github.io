@@ -70,6 +70,7 @@
 	--code: #ffd;
 	--gray: #ddd;
 	--light-gray: #eee;
+	--aspect-ratio: 1 / 1;
 }
 
 html,
@@ -125,6 +126,7 @@ article {
 
 section article {
 	padding: 0;
+	width: 100%;
 }
 
 /* end article */
@@ -178,9 +180,37 @@ figcaption > p > img {
 	}
 }
 
+/* Uncomment when property aspect-ratio become available */
+
+/* section article >picture {
+	display: block;
+	background-color: var(--light-gray);
+	aspect-ratio: var(--aspect-ratio);
+} */
+
+/* To remove when property aspect-ratio become available */
+section article > picture {
+	height: 0;
+	overflow: hidden;
+	padding-top: 100%;
+	width: 100%;
+	position: relative;
+	display: block;
+	background-color: var(--light-gray);
+}
+
 section article > img,
 section article > picture > img {
 	border: 5px solid var(--light-gray, #eee);
+}
+
+/* To remove when property aspect-ratio become available */
+section article > picture > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 body > header > a > img,
