@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>A glTF triangle.</title>
+		<meta
+			name="description"
+			content="Create a triangle model in glTF format."
+		/>
+		<meta
+			name="keywords"
+			content="generative design, creative coding, computational art, mathematics, glTF, 3D scenes"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="Generative Art" />
+		<link rel="canonical" href="https://riccardoscalco.it/blog/a-gltf-triangle/" />
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<!-- Open Graph Properties -->
+		<meta property="og:title" content="A glTF triangle." />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="article:section" content="Generative Art" />
+		<meta
+			property="og:description"
+			content="Create a triangle model in glTF format."
+		/>
+		<meta property="og:image" content="https://riccardoscalco.it/blog/a-gltf-triangle/images/featured.svg" />
+		<meta property="og:url" content="https://riccardoscalco.it/blog/a-gltf-triangle/" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+	</head>
+	<body>
+		<header>
+			<a title="Surprise me" href="/projects/slo-fuzz/"><img alt="surprise me" src="images/featured.svg"></a>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">a glTF triangle</a></li>
+				</ul>
+			</nav>
+			<a title="Contribute to this page on Github" href="https://github.com/riccardoscalco/riccardoscalco.github.io/blob/master/blog/a-gltf-triangle/index.html"></a>
+		</header>
+
+		<main>
+			<article>
+				<h1>
+					A gltf triangle
+				</h1>
+				<p>The present essay describes how to create a triangle model in glTF format. We will focus on the production of a buffer binary file with custom geometry and the description of buffer data by means of bufferViews and accessors.<small>Please have a look at the <a href="https://github.com/riccardoscalco/gltf-experiments">Github repository</a> for the code related to the present example, as well as for other experiments with the glTF format. To view a glTF scene, open the directory in a <a href="https://gltf-viewer.donmccurdy.com/">glTF viewer</a>.</small></p>
+				<section>
+					<h2>References</h2>
+					<p>The following text is based on the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/README.md">glTF tutorial</a> written by <strong>The Khronos Group</strong>. I strongly recommend to read the tutorial, it covers many of the concepts introduced here.</p>
+					<p>This essay has to be intended as a complement to the first five chapters of the tutorial. Some arguments discussed in the tutorial are missing here, like scenes and nodes, whereas other arguments are discussed with more details. In particular, we are going to see how to get a buffer binary file storing some custom geometry data, an argument that may be difficult to grasp at first glance.</p>
+				</section>
+
+				<section>
+					<h2>Define vertices indexes and positions</h2>
+					<p>We start by defining the triangle we want to draw. Let say we want the triangle with the first vertex at position <code>(1, 0, 0)</code>, the second vertex at position <code>(0, 1, 0)</code> and the third vertex at position <code>(0, 0, 0)</code>. Take a paper and a pencil and draw the triangle in a <a href="https://en.wikipedia.org/wiki/Right-hand_rule">right-handed</a> <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">cartesian coordinate system</a>, you will see that the <a href="https://www.khronos.org/opengl/wiki/Face_Culling">face direction</a> is counter-clockwise.
+						<small>The face direction is defined by the order of the three vertices that make up the triangle, as well as their apparent order on-screen, and its primary use is to allow the culling (removal) of not visible triangles on closed surfaces.</small></p>
+					<p>We can store the described triangle in a js object like the following:</p>
+					<figure>
+						<pre><code>const data = {
+  indexes: [
+    0,
+    1,
+    2
+  ],
+  vertices: [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 0
+  ]
+}
+</code></pre>
+						<figcaption>
+							<p>In order to draw the triangle from such data structure, we can interpret the data as follow: the first vertex has index <code>indexes[0]</code>, equals to <code>0</code>, and therefore its position is stored in the <em>first three</em> values of the <code>vertices</code> array. Similarly, the second vertex has index <code>indexes[1]</code>, equals to <code>1</code>, and therefore its position is stored in the <em>second three</em> values of the <code>vertices</code> array. The same holds for the third vertex.</p>
+						</figcaption>
+					</figure>
+					<p>Note that there are many possible ways to encode the wanted triangle in a data structure, the above definition is convenient because, as we will see, it resembles how data is going to be stored in buffers. The reason behind this data structure will be better understood once accessors and rendering modes will be introduced.</p>
+					<p>In the next section, we are going to store the data in a binary file.</p>
+				</section>
+
+				<section>
+					<h2>Store data in an external binary file</h2>
+					<p>Binary data is referred to by a buffer, a buffer <strong>URI</strong> may point to an external binary file or it may be a <strong>data URI</strong> that encodes the binary data directly in the glTF file.</p>
+					<p>There is not a unique way to store the data in a buffer, here we are going to use the same convention described in the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md">tutorial</a>. We first store indexes data as <code>UNSIGNED_SHORT</code> components and, with the appropriate byte offset, we later add vertices data to the buffer as <code>FLOAT</code> components. The code snippet below defines a function that takes <code>data</code> as input and writes a binary file called <code>buffer.bin</code> in the file system.</p>
+					<figure>
+						<pre style="max-width: unset;"><code>const fs = require('fs');
+
+module.exports = function (data) {
+  const {
+    indexes,
+    vertices
+  } = data;
+
+  const UNSIGNED_SHORT_BYTES = 2;
+  const FLOAT_BYTES = 4;
+  const verticesBytes = vertices.length * FLOAT_BYTES;
+  const indexesBytes = indexes.length * UNSIGNED_SHORT_BYTES;
+  const remainder = indexesBytes % FLOAT_BYTES
+  const paddingBytes = remainder ? FLOAT_BYTES - remainder : 0;
+  const byteLength = indexesBytes + paddingBytes + verticesBytes;
+  const buf = new ArrayBuffer(byteLength);
+  const dat = new DataView(buf, 0, byteLength);
+
+  for (let i = 0; i < indexesBytes; i+= UNSIGNED_SHORT_BYTES) {
+    dat.setUint16(i, indexes[i / UNSIGNED_SHORT_BYTES], true);
+  }
+
+  for (let j = indexesBytes + paddingBytes; j < byteLength; j += FLOAT_BYTES) {
+    dat.setFloat32(j, vertices[(j - indexesBytes - paddingBytes) / FLOAT_BYTES], true);
+  }
+
+  // const dataURI = `data:application/gltf-buffer;base64,${Buffer.from(buf).toString('base64')}`;
+  // console.log(dataURI);
+
+  fs.writeFile('buffer.bin', Buffer.from(buf), 'binary', function(err) {
+    if(err) {
+      console.log(err);
+    }
+  });
+}
+</code></pre>
+					<figcaption style="width: 100%; max-width: unset; position: relative;">
+						<p>File <code>write-buffer-file.js</code>. The exported function stores data in a buffer as described <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md#bufferviews">in the tutorial</a>. Note that we are going to store 3 <code>UNSIGNED_SHORT</code>, for a byte length of 3 * 2 = 6 bytes, and 3 * 3 <code>FLOAT</code>, for a byte length of 3 * 3 * 4 = 36 bytes. Adding 2 bytes (<code>paddingBytes</code> in the code) for the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md#data-alignment">data alignment</a>, we get a total of 44 bytes.</p>
+						<p>The commented lines would print the data URI.</p>
+					</figcaption>
+				</figure>
+			</section>
+			<section>
+				<h2>Create the node script</h2>
+				<p>The above function is meant to be used in <a href="https://nodejs.org/en/">node.js</a>. Create the script below and run it in order to get the binary file.</p>
+				<figure>
+					<pre><code>#!/usr/bin/env node
+
+const writeBuffer = require('./write-buffer-file');
+const data = {
+  indexes: [
+    0,
+    1,
+    2
+  ],
+  vertices: [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 0
+  ]
+}
+writeBuffer(data);
+</code></pre>
+					<figcaption>
+						<p>File <code>write-buffer.js</code>. Call this script in a terminal with <code>node write-buffer.js</code>.</p>
+					</figcaption>
+				</figure>
+				<p>In order to use the data encoded in the binary file, we need to appropriately describe, in the glTF file, <em>how</em> data is stored. In the next section, we are going to do that by means of <strong>buffer views</strong> and <strong>accessors</strong>.</p>
+				</section>
+
+				<section>
+					<h2>Describe data with buffer views and accessors</h2>
+					<p>In the previous section, we created a binary file containing two pieces of information: the vertices indexes and the vertices positions. With buffer views we describe these two <em>views</em> of data in the buffer.</p>
+					<figure>
+						<pre><code>"bufferViews": [
+  {
+    "buffer": 0,
+    "byteOffset": 0,
+    "byteLength": 6,
+    "target": 34963
+  },
+  {
+    "buffer": 0,
+    "byteOffset": 8,
+    "byteLength": 36,
+    "target": 34962
+  }
+],
+</code></pre>
+						<figcaption>
+							<p>The first view is made of 6 bytes, whereas the second view is made of 36 bytes, with a byte offset of 6 + 2 bytes (2 bytes for the alignment). Read more <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md#bufferviews">here</a>.</p>
+						</figcaption>
+					</figure>
+					<p>Accessors add additional information about the type and layout of the data described in the buffer views. In the first buffer view we have 3 elements of type <code>SCALAR</code> with components of type <code>UNSIGNED_SHORT</code>. In the second buffer we have 3 elements of type <code>VEC3</code> with components of type <code>FLOAT</code>.</p>
+					<figure>
+						<pre><code>"accessors": [
+  {
+    "bufferView": 0,
+    "byteOffset": 0,
+    "componentType": 5123,
+    "count": 3,
+    "type": "SCALAR",
+    "max": [2],
+    "min": [0]
+  },
+  {
+    "bufferView": 1,
+    "byteOffset": 0,
+    "componentType": 5126,
+    "count": 3,
+    "type": "VEC3",
+    "max": [1.0, 1.0, 0.0],
+    "min": [0.0, 0.0, 0.0]
+  }
+],
+</code></pre>
+						<figcaption>
+							<p>The first accessor points to the buffer view at position 0 in the <code>bufferViews</code> array, the second accessor instead points to the buffer view at position 1. In general, a buffer view can be referenced by multiple accessors and, when multiple accessors refer to the same buffer view, the <code>byteOffset</code> property describes where the data of the accessor starts.</p>
+							<p>Property <code>componentType</code> describes the type of the element's components (see the <a href="https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#accessor-element-size">mapping table</a>), each element has a fixed number of components depending on its type. Element and component types are used to compute the size of element accessible by accessor.</p>
+						</figcaption>
+					</figure>
+					<p>Buffer views and accessors completely describe the data stored in the buffer, now it is time to use this data.</p>
+				</section>
+
+				<section>
+					<h2>Define the meshes</h2>
+					<p>Having the data and its description, we are ready to define meshes that use the data. A mesh describes a geometric object that appears in the scene, and it is made of smaller building blocks called <strong>mesh primitive objects</strong>.</p>
+					<p>A mesh primitive may describe individual points, lines, or triangles according to the selected <a href="https://github.com/KhronosGroup/glTF/tree/master/specification/2.0#primitivemode">rendering mode</a>. Different rendering modes will use data in different ways, as described in the <a href="https://www.khronos.org/opengl/wiki/Primitive">OpenGL primitive documentation</a>.</p>
+					<p>The code below defines a single mesh, made of a single primitive, with vertices indices referenced in the first accessor (<code>"indices": 0</code>) and vertices positions in the second accessor (<code>"POSITION": 1</code>).</p>
+					<figure>
+						<pre><code>"meshes": [
+  {
+    "primitives": [
+      {
+        "attributes": {
+          "POSITION": 1
+        },
+        "indices": 0,
+        "mode" : 4
+      }
+    ]
+  }
+],
+</code></pre>
+						<figcaption>
+							<p>The default mode is 4, which defines a triangle mesh where three consecutive indices describe a single triangle. In our case, we only have 3 indexes, which means we only have one triangle.</p>
+						</figcaption>
+					</figure>
+				</section>
+				<script src="/lib/babylon.viewer.js"></script>
+
+				<section>
+					<h2>The final model</h2>
+					<p>In the previous sections we described some of the parts componing the final glTF file. We discussed about bufferViews and accessors for the interpretation of the buffer data, but we missed out the parts related to scenes and nodes, well covered in the tutorial.</p>
+					<p>You can see the full glTF file  in the <a href="https://github.com/riccardoscalco/gltf-experiments/blob/master/experiments/triangle/model.gltf">repository</a>.</p>
+					<p>Note that, at this stage, only one face of the model is visible, by default the one with counter-clockwise direction, as result of the face culling. Adding a bit of complexity to our example, we can easily obtain a double-faces triangle using the <code>TRIANGLE_STRIP</code> rendering mode. To do that, we assign <code>"mode": 5</code> to our primitive and create the binary file for a data structure with <code>"indexes": [0, 1, 2, 0]</code>. Having now different data, we need to update the first buffer view with <code>"byteLength": 8</code> and the first accessor with <code>"count": 4</code>.</p>
+					<p>In a double-faces triangle in <code>TRIANGLE_STRIP</code> mode, every group of 3 adjacent vertices forms a triangle. The first triangle, defined by indices <code>(0, 1, 2)</code>, has a counter-clockwise face direction. The second triangle, of indices <code>(1, 2, 0)</code>, also has a counter-clockwise face direction but, being in <code>TRIANGLE_STRIP</code> mode, the face direction is reversed (read the <a href="https://www.khronos.org/opengl/wiki/Primitive">documentation</a> for details).</p>
+				</section>
+
+				<section>
+					<h2>Summary</h2>
+					<p>The purpose of glTF is to define a format for the efficient transfer of 3D content over networks. The previous sections are based on the first five chapters of the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/README.md">glTF tutorial</a>. We discussed about the production and interpretation of a buffer binary file storing a custom geometry and we touched arguments like <strong>mesh primitives</strong> and <strong>rendering modes</strong>, key concepts for the creation of any 3D model.</p>
+				</section>
+
+			</article>
+		</main>
+
+		<footer>
+			<p><span>©</span> Riccardo Scalco</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/eidogram">
+						<img src="/assets/twitter.svg" alt="twitter icon" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
