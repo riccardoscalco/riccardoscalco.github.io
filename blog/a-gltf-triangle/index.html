@@ -94,6 +94,7 @@
 					<p>Binary data is referred to by a buffer, a buffer <strong>URI</strong> may point to an external binary file or it may be a <strong>data URI</strong> that encodes the binary data directly in the glTF file.</p>
 					<p>There is not a unique way to store the data in a buffer, here we are going to use the same convention described in the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md">tutorial</a>. We first store indexes data as <code>UNSIGNED_SHORT</code> components and, with the appropriate byte offset, we later add vertices data to the buffer as <code>FLOAT</code> components. The code snippet below defines a function that takes <code>data</code> as input and writes a binary file called <code>buffer.bin</code> in the file system.</p>
 					<figure>
+						<div>
 						<pre style="max-width: unset;"><code>const fs = require('fs');
 
 module.exports = function (data) {
@@ -130,7 +131,8 @@ module.exports = function (data) {
   });
 }
 </code></pre>
-					<figcaption style="width: 100%; max-width: unset; position: relative;">
+					</div>
+					<figcaption>
 						<p>File <code>write-buffer-file.js</code>. The exported function stores data in a buffer as described <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md#bufferviews">in the tutorial</a>. Note that we are going to store 3 <code>UNSIGNED_SHORT</code>, for a byte length of 3 * 2 = 6 bytes, and 3 * 3 <code>FLOAT</code>, for a byte length of 3 * 3 * 4 = 36 bytes. Adding 2 bytes (<code>paddingBytes</code> in the code) for the <a href="https://github.com/KhronosGroup/glTF-Tutorials/blob/master/gltfTutorial/gltfTutorial_005_BuffersBufferViewsAccessors.md#data-alignment">data alignment</a>, we get a total of 44 bytes.</p>
 						<p>The commented lines would print the data URI.</p>
 					</figcaption>
@@ -243,7 +245,6 @@ writeBuffer(data);
 						</figcaption>
 					</figure>
 				</section>
-				<script src="/lib/babylon.viewer.js"></script>
 
 				<section>
 					<h2>The final model</h2>
