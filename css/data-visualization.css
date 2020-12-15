@@ -11,11 +11,16 @@ article p {
 	line-height: 27px;
 }
 
-article.grid {
+main > section > article {
 	margin: 0;
 	padding: 50px 0 50px 0;
 	border-bottom: 1px dashed black;
 	border-bottom: 1px dashed var(--black);
+}
+
+div.grid:not(:last-child) {
+	margin: 0;
+	padding: 0px 0 50px 0;
 }
 
 article.grid:last-child {
@@ -37,24 +42,6 @@ figcaption {
 	display: block;
 	float: right;
 	padding: 5px 0 5px 0;
-}
-
-div > figure:last-child {
-	margin: 0 40px 10px 0;
-}
-
-div > figure:first-child {
-	margin: 10px 40px 0 0;
-}
-
-@media (max-width: 600px) {
-	div > figure:last-child {
-		margin: 0 0 10px 0;
-	}
-	
-	div > figure:first-child {
-		margin: 10px 0 0 0;
-	}
 }
 
 .content {
@@ -97,6 +84,13 @@ div > figure:first-child {
 	grid-auto-flow: row;
 }
 
+@media (max-width: 760px) {
+	.grid {
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+	}
+}
+
 .layout .q1 {
 	grid-area: q1;
 }
@@ -114,7 +108,7 @@ div > figure:first-child {
 }
 
 .layout {
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto auto;
 	grid-template-areas:
 		"q1 q2"
@@ -123,7 +117,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto auto auto auto;
 		grid-template-areas:
 		"q2"
@@ -150,7 +144,7 @@ div > figure:first-child {
 }
 
 .layout-three {
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"q1 q2"
@@ -160,7 +154,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout-three {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto auto auto auto;
 		grid-template-areas:
 		"q2"
@@ -191,7 +185,7 @@ div > figure:first-child {
 }
 
 .layout-big {
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"q1 q2"
@@ -205,7 +199,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout-big {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto auto auto auto;
 		grid-template-areas:
 		"q1"
@@ -245,7 +239,7 @@ div > figure:first-child {
 }
 
 .layout-many {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"q1 q1 q1 q1"
@@ -255,7 +249,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout-many {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 		grid-template-rows: auto auto auto auto auto auto auto auto;
 		grid-template-areas:
 		"q1 q1"
@@ -287,7 +281,7 @@ div > figure:first-child {
 }
 
 .layout-two-small {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"q1 q1 q2 q2"
@@ -297,7 +291,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout-two-small {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto auto auto auto auto;
 		grid-template-areas:
 		"q2"
@@ -317,7 +311,7 @@ div > figure:first-child {
 }
 
 .layout-one {
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas:
 		"q1 q2";
@@ -325,7 +319,7 @@ div > figure:first-child {
 
 @media (max-width: 760px) {
 	.layout-one {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: auto auto;
 		grid-template-areas:
 		"q2"
@@ -348,4 +342,61 @@ div > figure:first-child {
 	display: block;
 	padding: 0;
 	font-size: inherit;
+}
+
+.layout-2c-2r {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"q1 q2"
+		"q3 q4";
+}
+
+@media (max-width: 760px) {
+	.layout-2c-2r {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+		"q2"
+		"q1"
+		"q3"
+		"q4";
+	}
+}
+
+.layout-3c-1r {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"q1 q2 q3";
+}
+
+@media (max-width: 760px) {
+	.layout-3c-1r {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-template-rows: auto auto;
+		grid-template-areas:
+		"q1 q2"
+		"q3 .";
+	}
+}
+
+.layout-6c-2r {
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+		"q1 q1 q1 q2 q2 q2"
+		"q3 q3 q4 q4 q5 q5";
+}
+
+@media (max-width: 760px) {
+	.layout-6c-2r {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+		"q1 q1"
+		"q2 q2"
+		"q3 q4"
+		"q5 .";
+	}
 }

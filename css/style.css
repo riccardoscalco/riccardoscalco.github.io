@@ -148,6 +148,10 @@ blockquote {
 	}
 }
 
+header blockquote {
+	max-width: unset;
+}
+
 /* end blockquote */
 
 /* footer */
@@ -359,6 +363,11 @@ body > header p {
 
 body > header > p {
 	grid-area: left;
+	width: 100%;
+}
+
+body header blockquote > p {
+	max-width: unset;
 	width: 100%;
 }
 
