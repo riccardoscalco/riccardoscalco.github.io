@@ -858,6 +858,37 @@ main > aside {
 
 /* end aside */
 
+/* .aside-left-3c */
+
+.aside-left-3c {
+	width: 100%;
+	max-width: var(--max-width);
+	margin: auto;
+	position: relative;
+	margin-top: var(--vertical-margin, 40px);
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+	grid-template-areas:
+		"A"
+		"B";
+	justify-items: start;
+	align-items: start;
+	grid-column-gap: 20px;
+	grid-row-gap: 0;
+}
+
+/* 975 = 525 + 20 * 2 + 180 * 2 + 25 * 2 */
+@media (min-width: 975px) {
+	.aside-left-3c {
+		max-width: 100%;
+		grid-template-areas: "A A B";
+		grid-template-columns: 1fr var(--max-width) 1fr;
+	}
+}
+
+/* end .aside-left-3c */
+
 /* .grid-of-images */
 
 .grid-of-images {
