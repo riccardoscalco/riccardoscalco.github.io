@@ -352,11 +352,6 @@ body > header > p {
 	width: 100%;
 }
 
-body header blockquote > p {
-	max-width: unset;
-	width: 100%;
-}
-
 section > header > p {
 	font-size: 26px;
 	line-height: 39px;
@@ -396,6 +391,11 @@ section > figure > figcaption > p {
 	font-size: 16px;
 	line-height: 24px;
 	display: inline;
+}
+
+body header blockquote > p {
+	max-width: unset;
+	width: 100%;
 }
 
 body > footer > p:last-child {
