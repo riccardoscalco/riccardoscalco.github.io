@@ -352,7 +352,7 @@ body > header > p {
 	width: 100%;
 }
 
-section > header > p {
+main > header > p {
 	font-size: 26px;
 	line-height: 39px;
 	margin: 10px 0;
@@ -360,14 +360,14 @@ section > header > p {
 }
 
 @media screen and (min-width: 460px) {
-	section > header > p {
+	main > header > p {
 		font-size: 30px;
 		line-height: 45px;
 	}
 }
 
 @media screen and (min-width: 1120px) {
-	section > header > p {
+	main > header > p {
 		max-width: 795px;
 	}
 }
@@ -385,6 +385,13 @@ main > footer > p {
 	max-width: unset;
 	font-size: 16px;
 	line-height: 24px;
+}
+
+section > header > p {
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 5px;
+	display: block;
 }
 
 section > figure > figcaption > p {
@@ -670,6 +677,13 @@ section > h2 {
 	line-height: 18px;
 }
 
+section > header > h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+}
+
 @media (min-width: 975px) {
 	section > h2 {
 		position: absolute;
@@ -680,7 +694,7 @@ section > h2 {
 	}
 }
 
-section > header > h2 {
+main > header > h2 {
 	font-size: 40px;
 	line-height: 45px;
 	padding: 0;
@@ -819,6 +833,34 @@ body > header {
 @media screen and (min-width: 760px) {
 	body > header {
 		grid-template-columns: 1fr 520px 1fr;
+	}
+}
+
+main > header {
+	position: relative;
+	margin: var(--vertical-margin, 40px) 0;
+}
+
+section > header {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: var(--max-width, 520px);
+	margin: 20px auto;
+	right: 0;
+	float: none;
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+@media (min-width: 975px) {
+	section > header {
+		position: absolute;
+		width: 180px;
+		margin: 0;
+		top: 5px;
+		left: 0;
 	}
 }
 
