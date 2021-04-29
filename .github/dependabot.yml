@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  reviewers:
+  - riccardoscalco
+  assignees:
+  - riccardoscalco
+  ignore:
+  - dependency-name: stylelint
+    versions:
+    - 13.11.0
+    - 13.9.0
