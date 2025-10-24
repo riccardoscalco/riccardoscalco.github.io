@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image with Browser Header</title>
+  <style>
+    .browser-header {
+      position: relative;
+      display: inline-block; /* Ensures only the image content is affected */
+      border: 2px solid #f1f1f1;
+      border-radius: 8px; /* Rounded top corners */
+      padding-top: 30px;
+    }
+
+    .browser-header::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px; /* Height of the browser-like header */
+      background-color: #f1f1f1; /* Light gray for the browser bar */
+      /* border-radius: 8px 8px 0 0; Rounded top corners */
+      z-index: 1;
+    }
+
+    .browser-header::after {
+      content: '•••';
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      font-size: 18px;
+      color: #888;
+      letter-spacing: 5px; /* Spacing between dots */
+      z-index: 2;
+    }
+
+    .browser-header img {
+      display: block; /* Removes the gap below the image */
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="browser-header">
+    <img width="1000px" src="assets/images/addaframe/screen.png" alt="Example image">
+  </div>
+</body>
+</html>
