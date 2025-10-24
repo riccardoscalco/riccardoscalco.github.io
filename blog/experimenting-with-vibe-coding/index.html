@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Experimenting with Vibe Coding.</title>
+		<meta
+			name="description"
+			content="Personal notes and reflections from experimenting with AI-driven coding for building a web application."
+		/>
+		<meta
+			name="keywords"
+			content="vibe coding, AI coding, artificial intelligence, web development, Next.js, programming, software development"
+		/>
+		<meta name="robots" content="index,follow" />
+		<link rel="author" href="humans.txt" />
+		<link rel="license" href="copyright.txt" />
+		<meta name="subject" content="Software Development" />
+		<link rel="canonical" href="https://riccardoscalco.it/blog/experimenting-with-vibe-coding/" />
+		<script src="/index.js"></script>
+		<link href="/css/normalize.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+
+		<!-- Open Graph Properties -->
+		<meta property="og:title" content="Experimenting with Vibe Coding." />
+		<meta property="og:type" content="article" />
+		<meta property="article:author" content="Riccardo Scalco" />
+		<meta property="article:section" content="Software Development" />
+		<meta
+			property="og:description"
+			content="Personal notes and reflections from experimenting with AI-driven coding for building a web application."
+		/>
+		<meta property="og:image" content="https://riccardoscalco.it/blog/experimenting-with-vibe-coding/images/et4-screen-2100.webp" />
+		<meta property="og:url" content="https://riccardoscalco.it/blog/experimenting-with-vibe-coding/" />
+		<meta property="og:site_name" content="riccardoscalco.it" />
+		<meta property="og:locale" content="en_US" />
+	</head>
+	<body>
+		<header>
+			<a title="Surprise me" href="/data-visualisation/"><img alt="surprise me" src="images/featured.png"></a>
+			<nav>
+				<ul>
+					<li><a href="/">riccardoscalco.it</a>/</li>
+					<li><a href="/blog">blog</a>/</li>
+					<li><a href="./">experimenting with vibe coding</a></li>
+				</ul>
+			</nav>
+			<a title="Contribute to this page on Github" href="https://github.com/riccardoscalco/riccardoscalco.github.io/blob/master/blog/experimenting-with-vibe-coding/index.html"></a>
+		</header>
+
+		<main>
+			<article>
+				<h1>
+					Experimenting with Vibe Coding
+                </h1>
+				<section>
+					<p>
+						Recently, out of both curiosity and personal interest, I decided to run an experiment: building a small web application <strong>using vibe coding only</strong>.  
+						The whole thing lasted about two or three weeks, working no more than a couple of hours a day.
+						<small>
+							This post was born from a voice note, and during the correction phase I tried to maintain the conversational style that naturally emerged, limiting the modifications suggested by AI.
+						</small>
+					</p>
+					<p>
+						Since my goal was to explore vibe coding itself, I didn't want to take on anything too ambitious.  
+						I preferred to work on something simple—or at least manageable—using well-established web development patterns.  
+						I wasn't looking for complex visualizations; basic UI components like tables, buttons, and selectors were more than enough.
+					</p>
+					<p>
+						I also wanted the project to be <em>personally meaningful</em>—something that could be useful to me but also to others, with a practical angle.  
+						I ended up focusing on the problem of <strong>overlapping compositions among two or more ETFs</strong>.
+                        <small>
+                            An ETF (Exchange-Traded Fund) is an investment fund that tracks an index, commodity, bonds, or a basket of assets like an index fund, but trades like a stock on an exchange.
+                        </small>
+					</p>
+					<p>
+						As you know, an ETF is composed of many underlying assets, so when picking one, it makes sense to ask:  
+						<em>How different is this ETF's composition from the others I'm considering, and how much does it overlap with the ones I already own?</em>  
+					</p>
+                    <figure id="figure2" style="margin: 25px auto;">
+						<div><img src="./images/et4-screen-2100.webp" alt="" style="border-radius: 20px;"/></div>
+						<figcaption>
+							<p>
+							    The tool calculates overlap scores between ETFs, measures diversification through entropy analysis, and helps you identify which companies appear across multiple ETFs in your portfolio.
+                                Visit <a class="external" href="https://etfour.vercel.app/">etfour.vercel.app</a> for more information.
+							</p>
+						</figcaption>
+					</figure>
+					<p>
+						The topic itself isn't new—there are already apps that do this—but it felt simple enough to be a good candidate for an experiment driven by AI agents.
+					</p>
+					<p>
+						What follows are a few personal notes and reflections from that experience.  
+						I won't dive too deep into the technical side—just enough to set the context.  
+						For the record, I used <strong>Next.js</strong>, <strong>shadcn components</strong>, and <strong>Tailwind CSS</strong>.
+					</p>
+					<p>
+						As for the editor, I actually used two: I started with <strong>Zed</strong>, then switched to <strong>Cursor</strong>.
+						<small>
+							I switched to Cursor just because I wanted to explore the capabilities of both the editors.
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>A Spec-Driven Approach</h2>
+					<p>
+						I took a <strong>spec-driven approach</strong>—I asked the AI agent to create Markdown documents that defined the specs of what we were building in as much detail as reasonably possible.  
+						I say "as much detail," but really it was about finding the <em>right balance</em>: detailed enough to be useful, but short enough that I'd actually read them.
+                        <small>
+                            Have a look at <a class="external" href="https://github.com/github/spec-kit">GitHub's spec-kit</a>.
+                        </small>
+					</p>
+					<p>
+						The goal was to understand the reasoning process the AI would follow, so I could catch any wrong turns early on.  
+						This approach forced me to think ahead about how the app should come together: how to break it down into independent features, and how to orchestrate them into a decent user experience.
+					</p>
+					<p>
+						So instead of just telling the AI <em>"build an app that does this and that,"</em> I made <strong>smaller, atomic, functional requests</strong>, each contributing to a bigger goal that <em>I</em> understood—even if the AI didn't yet.
+					</p>
+				</section>
+
+				<section>
+					<h2>The Cognitive Load of Vibe Coding</h2>
+					<p>
+						The pace of vibe coding—almost <em>frenetic</em> at times—ended up being <strong>mentally exhausting</strong>.  
+						In the same amount of time, I managed to produce much more than I could have without AI, but that also meant more cognitive load: more code to read, more decisions to make, and the constant need to <strong>monitor what the AI was doing</strong>.
+					</p>
+					<p>
+						All of that took its toll.  
+						I think it's necessary to find a new balance when coding this way.  
+						Personally, I find <em>reading</em> code more tiring than <em>writing</em> it, and even though I didn't read every single line, just keeping an eye on the AI's output was energy-draining.
+					</p>
+				</section>
+
+				<section>
+					<h2>Code Ownership and Testing</h2>
+					<p>
+						Let's be honest: even though I had a clear mental model of what the AI wrote, <strong>not having written it myself</strong> meant I didn't fully "own" the code.  
+						That sense of mastery I get when writing by hand just wasn't there.
+					</p>
+					<p>
+						The only workaround I found was to move in <strong>small steps</strong>—after each new feature, write enough <strong>unit tests</strong> to cover it and protect it from regressions.
+					</p>
+					<p>
+						For context, even though the app is quite small, it's covered by about <strong>700 unit tests</strong> and <strong>50 end-to-end tests</strong>.  
+						<small>
+							This extensive test coverage was explicitly required in the specs to prevent breaking existing functionality and to maintain confidence in the codebase.
+						</small>
+						In the specs, I explicitly required that the tests be run regularly to prevent breaking existing functionality.
+					</p>
+				</section>
+
+				<section>
+					<h2>When AI Gets Stuck</h2>
+					<p>
+						In roughly <strong>95% of cases</strong>, the AI handled its tasks correctly.  
+						But there were moments when it ran into obstacles it couldn't overcome on its own.
+					</p>
+					<p>
+						In those situations, I had the clear impression that—even with simple problems—the AI would get stuck in a reasoning loop, repeating the same mistake over and over.
+					</p>
+					<p>
+						Based on this and on past experiences, I've come to believe that <strong>AI struggles to admit it can't do something</strong>.  
+						It seems to prefer making silly mistakes rather than stopping and saying, <em>"I can't proceed."</em>
+					</p>
+				</section>
+
+				<section>
+					<h2>The Cost Problem</h2>
+					<p>
+						Let's talk about costs.  
+						In this experiment, I used the free trials of Zed and Cursor, but I also spent some real money.  
+						Without those free trials, the three-week project would have cost <strong>just under €100</strong>—which, unfortunately, is too much for using AI agents on a regular basis.
+					</p>
+					<p>
+						That's interesting if I think back fifteen years, when I first started writing web software.  
+						Even though I worked on a cheap computer, I had access to the <strong>same tools professionals used</strong>—everything was free and open source.  
+						<small>
+							This democratization of tools was crucial for learning and professional development, allowing beginners to reach professional levels without financial barriers.
+						</small>
+						That meant I could reach a professional level even as a beginner.
+					</p>
+					<p>
+						Today, that's no longer the case.  
+						What a professional can afford is often out of reach for a newcomer.  
+						I really think <strong>costs need to come down</strong>, because vibe coding will only become more widespread from here.
+					</p>
+				</section>
+
+				<section>
+					<h2>A Paradigm Shift</h2>
+					<p>
+						To wrap up, I don't think this new way of programming is a passing fad.  
+						It's going to keep spreading and will eventually become the <strong>standard way</strong> to write code.
+					</p>
+					<p>
+						We're witnessing a <strong>paradigm shift</strong>: some low-level skills are becoming less critical, while others—especially architectural thinking—are becoming more important.
+					</p>
+					<p>
+						In short, having the <strong>mindset of an architect</strong> now matters more than the craftsmanship of a carpenter.  
+						The AI excels at recognizing and reproducing patterns, so what truly counts is understanding how to design and direct those patterns toward a coherent whole.
+					</p>
+				</section>
+			</article>
+		</main>
+
+		<footer>
+			<p><span>©</span> Riccardo Scalco</p>
+			<p>
+				The content of this website is licensed under the
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"
+					>CC BY 4.0</a
+				>
+				license.
+			</p>
+			<ul>
+				<li>
+					<a href="https://observablehq.com/@riccardoscalco?tab=notebooks">
+						<img src="/assets/observable.svg" alt="observable icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/riccardoscalco">
+						<img src="/assets/github.svg" alt="github icon" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/riccardoscalco_art/">
+						<img src="/assets/instagram.svg" alt="instagram icon" />
+					</a>
+				</li>
+
+			</ul>
+		</footer>
+	</body>
+</html>
