@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/riccardoscalco/blog#readme",
   "devDependencies": {
-    "prettier": "2.5.1",
+    "prettier": "2.8.4",
     "stylelint": "^13.13.0",
     "vnu-jar": "^21.4.9",
     "stylelint-config-standard": "^22.0.0"
